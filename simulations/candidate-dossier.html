@@ -43,7 +43,7 @@ dialog::backdrop{background:#050b15bb}dialog form{padding:0;margin:0;border:0}
   </header>
   <div class="body">
     <div class="eyebrow">Portfolio / Card 01 · Loan Officer + Branch Manager v13</div>
-    <h1>Mortgage Intelligence Agent</h1><p>Consolidate candidate and company research from FUB, NMLS, and MMI, reconcile identity and production figures, and generate a standardized recruiting profile.</p>
+    <h1>Mortgage Intelligence Agent</h1><p>Consolidate candidate and company research from CRM, NMLS, and MMI, reconcile identity and production figures, and generate a standardized recruiting profile.</p>
     <form id="research" novalidate>
       <label for="nmls">Sample NMLS number</label>
       <div class="controls">
@@ -70,7 +70,7 @@ dialog::backdrop{background:#050b15bb}dialog form{padding:0;margin:0;border:0}
         <button id="copy" type="button" disabled>Copy note</button>
       </section>
     </div>
-    <footer>Simulation only. All people, IDs, figures, and website URLs are fictional. Verification labels reflect simulated checks.</footer><details class="method"><summary>How we researched and validated Card 1</summary><p><strong>Identity and role.</strong> Read the FUB contact and activity records using authenticated requests. Use the candidate’s NMLS ID to reconcile license, sponsorship and branch registration. Cross-check the title against the company bio or directory.</p><p><strong>Production and transactions.</strong> The CRM template uses MMI individual and branch roster figures. The separate Model Match integration used OAuth and read tools getOriginator and listLoans. The documented method checks the originator ID, counts loan rows by reporting period, sums volume, and calculates purchase, refi and other shares from loan dollar amounts. The note reports 14-month, 7-month and YTD volume, 14-month units and product mix, plus branch metrics and roster counts for branch managers.</p><p><strong>What the numbers mean.</strong> Demo 101 shows 30 individual units over 14 months. Demo 102 shows 40 individual units and 100 branch units over 14 months. The handoff reports a successful live Branch Manager draft with a Gemini HTTP 200 response and reconciled Model Match figures. It does not state the transaction count from that live run.</p><p><strong>Connected workflow.</strong> The handoff describes read-only research. The blueprint separately proposes posting an approved timeline note through POST /v1/notes after human review.</p><p><strong>Sanitized Phase 1 study, cases 1 and 5.</strong> The solo Texas loan officer recorded 34 units and $11.4M over 14 months. The Western Pennsylvania manager recorded 47 personal units and $18.3M, alongside 114 branch units and $38.9M. The study lists HQ separately at 412 units and $142.5M. These are distinct scopes and the study figures are separate from the short-ID demo fixtures.</p><p><a href="https://docs.google.com/document/d/1HbNRTC6w04u8uxVQ8K-Zu0vY09XL3aBZ_mtvdXIToms/edit">Mr. E validation handoff</a> · <a href="https://drive.google.com/file/d/1_puOavduPX1KOkWCCqJAR1UJ7K4nuIpL/view">Integration blueprint</a></p></details>
+    <footer>Simulation only. All people, IDs, figures, and website URLs are fictional. Verification labels reflect simulated checks.</footer><details class="method"><summary>How we researched and validated Card 1</summary><p><strong>Identity and role.</strong> Read the CRM contact and activity records using authenticated requests. Use the candidate’s NMLS ID to reconcile license, sponsorship and branch registration. Cross-check the title against the company bio or directory.</p><p><strong>Production and transactions.</strong> The CRM template uses MMI individual and branch roster figures. The separate Model Match integration used OAuth and read tools getOriginator and listLoans. The documented method checks the originator ID, counts loan rows by reporting period, sums volume, and calculates purchase, refi and other shares from loan dollar amounts. The note reports 14-month, 7-month and YTD volume, 14-month units and product mix, plus branch metrics and roster counts for branch managers.</p><p><strong>What the numbers mean.</strong> Demo 101 shows 30 individual units over 14 months. Demo 102 shows 40 individual units and 100 branch units over 14 months. The handoff reports a successful live Branch Manager draft with a Gemini HTTP 200 response and reconciled Model Match figures. It does not state the transaction count from that live run.</p><p><strong>Connected workflow.</strong> The handoff describes read-only research. The blueprint separately proposes posting an approved timeline note through the CRM notes API after human review.</p><p><strong>Sanitized Phase 1 study, cases 1 and 5.</strong> The solo Texas loan officer recorded 34 units and $11.4M over 14 months. The Western Pennsylvania manager recorded 47 personal units and $18.3M, alongside 114 branch units and $38.9M. The study lists HQ separately at 412 units and $142.5M. These are distinct scopes and the study figures are separate from the short-ID demo fixtures.</p><p><a href="https://docs.google.com/document/d/1HbNRTC6w04u8uxVQ8K-Zu0vY09XL3aBZ_mtvdXIToms/edit">Mr. E validation handoff</a> · <a href="https://drive.google.com/file/d/1_puOavduPX1KOkWCCqJAR1UJ7K4nuIpL/view">Integration blueprint</a></p></details>
   </div>
 </main>
 <dialog id="source-preview" aria-labelledby="source-title">
@@ -83,7 +83,7 @@ dialog::backdrop{background:#050b15bb}dialog form{padding:0;margin:0;border:0}
 const get = id => document.getElementById(id);
 const form = get('research'), input = get('nmls'), run = get('run'), stop = get('stop');
 const status = get('status'), audit = get('audit'), note = get('note'), copy = get('copy');
-const steps = ['FUB · CRM lookup', 'NMLS · License lookup', 'MMI · Market research', 'Evidence validation'];
+const steps = ['CRM · Contact lookup', 'NMLS · License lookup', 'MMI · Market research', 'Evidence validation'];
 const profiles = {
   '101': {name:'Avery Demo', title:'Loan Officer', employer:'Juniper Example Lending', mmi:'Juniper Example Lending', companyId:'201', branchId:'301', states:'CO, TX'},
   '102': {name:'Morgan Demo', title:'Branch Manager', employer:'Harbor Example Mortgage', mmi:'Harbor Example Mortgage', companyId:'202', branchId:'302', states:'AZ, NM'}
@@ -209,7 +209,7 @@ form.addEventListener('submit', event => {
       const websiteLines = note.textContent.split('\n').filter(line => line.includes('https://'));
       note.textContent = note.textContent.replace(/ \[(?:Verified|Unverified)\]/g, '');
       const records = [
-        ['FUB', 'Candidate and CRM baseline'],
+        ['CRM', 'Candidate and CRM baseline'],
         ['NMLS', 'Licensure and registration'],
         ['MMI individual', 'Individual production']
       ];
@@ -270,7 +270,7 @@ stop.addEventListener('click', () => {
   paint(active,'stopped','Stopped');
   cancel();
   run.textContent = 'Rerun';
-  announce('Research stopped. Rerun to start from FUB.');
+  announce('Research stopped. Rerun to start from CRM.');
   run.focus();
 });
 get('reset').addEventListener('click', () => {

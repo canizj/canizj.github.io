@@ -41,9 +41,9 @@ dialog::backdrop{background:#050b15bb}dialog form{padding:0;margin:0;border:0}
     <div class="eyebrow">Portfolio / Card 02 · Page Audit v4</div>
     <h1>Quality Check</h1><p>Review the latest CRM conversation, tags, contact details, and employment. Trace findings to their sources and preview proposed corrections or follow-up actions.</p>
     <form id="audit-form">
-      <p><strong>Current Follow Up Boss page</strong><br>Avery Demo · Contact profile #204</p>
+      <p><strong>Current CRM page</strong><br>Avery Demo · Contact profile #204</p>
       <div class="controls">
-        <button class="primary" id="run">Run FUB Page Quality Check</button>
+        <button class="primary" id="run">Run CRM Page Quality Check</button>
         <button type="button" id="stop" disabled>Stop</button>
         <button type="button" id="reset">Reset</button>
       </div>
@@ -64,7 +64,7 @@ dialog::backdrop{background:#050b15bb}dialog form{padding:0;margin:0;border:0}
         <button type="button" id="copy" disabled>Copy summary</button>
       </section>
     </div>
-<section id="edit-preview"><h2>Want to edit the page?</h2><button id="preview-edits" type="button" aria-controls="edit-details" aria-expanded="false" disabled>Preview suggested edits</button><div id="edit-details" hidden><p>Employer: Pine Example Mortgage → Juniper Example Lending</p><p>Primary email: avery@pine.example → avery@juniper.example</p><p>Stage: New Lead → Contacted</p><p>Keep the tags and saved phone. Confirm the preferred number before editing it.</p></div></section><footer>Simulation only. The contact, records, and source checks are fictional. All checks run locally.</footer><details class="method"><summary>How we researched Card 2 and how live edits would work</summary><p><strong>Start from the open contact.</strong> The blueprint shows authenticated GET /v1/people/{id} and notes and calls queries scoped to the contact. The audit also reads the latest visible conversation from the open timeline.</p><p><strong>Reconcile the evidence.</strong> Compare tag placement and stage with the profile and latest reply. Compare saved email and phone with the reply and company directory. Check employer against NMLS sponsorship and role against the directory.</p><p><strong>Review and approve.</strong> The blueprint describes a separate approval step before PUT /v1/people/{id} for contact edits or POST /v1/notes for a timeline note. A connected version would re-read the contact, preserve existing phone numbers and unrelated tags, and submit only approved changes.</p><p><strong>What was tested.</strong> The handoff records a successful read-only Branch Manager research run. This Quality Check and edit preview use fictional data. The available records do not confirm a live write for this flow.</p><p><strong>Sanitized Phase 1 study.</strong> The study links records by synthetic FUB and NMLS IDs, separates branch location from HQ, and separates active from inactive licenses. Use those checks before carrying role, geography or production tags forward. Case 5 demonstrates a nine-tag proposal covering lender type, role, geography, volume band, purchase mix and enrichment status. The study does not supply a phone, email or conversation test for this profile, so those checks use fictional fixtures.</p><p><a href="https://docs.google.com/document/d/1HbNRTC6w04u8uxVQ8K-Zu0vY09XL3aBZ_mtvdXIToms/edit">Mr. E validation handoff</a> · <a href="https://drive.google.com/file/d/1_puOavduPX1KOkWCCqJAR1UJ7K4nuIpL/view">Integration blueprint</a></p></details>
+<section id="edit-preview"><h2>Want to edit the page?</h2><button id="preview-edits" type="button" aria-controls="edit-details" aria-expanded="false" disabled>Preview suggested edits</button><div id="edit-details" hidden><p>Employer: Pine Example Mortgage → Juniper Example Lending</p><p>Primary email: avery@pine.example → avery@juniper.example</p><p>Stage: New Lead → Contacted</p><p>Keep the tags and saved phone. Confirm the preferred number before editing it.</p></div></section><footer>Simulation only. The contact, records, and source checks are fictional. All checks run locally.</footer><details class="method"><summary>How we researched Card 2 and how live edits would work</summary><p><strong>Start from the open contact.</strong> The blueprint shows authenticated reads of the contact, notes, and call history. The audit also reads the latest visible conversation from the open timeline.</p><p><strong>Reconcile the evidence.</strong> Compare tag placement and stage with the profile and latest reply. Compare saved email and phone with the reply and company directory. Check employer against NMLS sponsorship and role against the directory.</p><p><strong>Review and approve.</strong> The blueprint describes a separate approval step before writing contact edits or a timeline note through the CRM API. A connected version would re-read the contact, preserve existing phone numbers and unrelated tags, and submit only approved changes.</p><p><strong>What was tested.</strong> The handoff records a successful read-only Branch Manager research run. This Quality Check and edit preview use fictional data. The available records do not confirm a live write for this flow.</p><p><strong>Sanitized Phase 1 study.</strong> The study links records by synthetic CRM and NMLS IDs, separates branch location from HQ, and separates active from inactive licenses. Use those checks before carrying role, geography or production tags forward. Case 5 demonstrates a nine-tag proposal covering lender type, role, geography, volume band, purchase mix and enrichment status. The study does not supply a phone, email or conversation test for this profile, so those checks use fictional fixtures.</p><p><a href="https://docs.google.com/document/d/1HbNRTC6w04u8uxVQ8K-Zu0vY09XL3aBZ_mtvdXIToms/edit">Mr. E validation handoff</a> · <a href="https://drive.google.com/file/d/1_puOavduPX1KOkWCCqJAR1UJ7K4nuIpL/view">Integration blueprint</a></p></details>
   </div>
 </main>
 <dialog id="source-preview" aria-labelledby="source-title">
@@ -78,17 +78,17 @@ const get = id => document.getElementById(id);
 const form = get('audit-form'), run = get('run'), stop = get('stop'), status = get('status');
 const audit = get('audit'), note = get('note'), copy = get('copy');
 const sources = [
-  ['FUB profile', 'Stage: New Lead. Tags: CO, Loan Officer, Replied. Assigned location: Denver, CO. Employer: Pine Example Mortgage. Phone: 202-555-0141. Email: avery@pine.example.'],
-  ['FUB conversation', 'Latest inbound reply, Nov 4: Avery confirmed the move to Juniper Example Lending, shared avery@juniper.example, and asked for an email follow-up next week.'],
+  ['CRM profile', 'Stage: New Lead. Tags: CO, Loan Officer, Replied. Assigned location: Denver, CO. Employer: Pine Example Mortgage. Phone: 202-555-0141. Email: avery@pine.example.'],
+  ['CRM conversation', 'Latest inbound reply, Nov 4: Avery confirmed the move to Juniper Example Lending, shared avery@juniper.example, and asked for an email follow-up next week.'],
   ['NMLS record', 'Active Colorado license. Current sponsor: Juniper Example Lending.'],
   ['Company directory', 'Avery Demo, Loan Officer, Denver, CO. Published contact: avery@juniper.example and 202-555-0142.']
 ];
 const checks = [
-  ['Profile tags & placement', 'CO and Loan Officer fit the directory and license. Replied is an activity tag. The latest reply supports changing the stage from New Lead to Contacted.', 'FUB profile + conversation, company directory, NMLS'],
-  ['Emails', 'Stale: avery@pine.example. Match: avery@juniper.example appears in both the directory and latest reply.', 'FUB profile + conversation, company directory'],
-  ['Phone numbers', 'FUB lists 202-555-0141. The directory lists 202-555-0142. Confirm the preferred number before replacing either.', 'FUB profile, company directory'],
-  ['Conversation thread', 'Nov 4: Avery confirmed the move and asked for an email follow-up next week.', 'FUB conversation'],
-  ['Employment & NMLS', 'FUB still lists Pine. NMLS shows Juniper as the active sponsor and the directory confirms the Loan Officer role.', 'FUB profile, NMLS, company directory']
+  ['Profile tags & placement', 'CO and Loan Officer fit the directory and license. Replied is an activity tag. The latest reply supports changing the stage from New Lead to Contacted.', 'CRM profile + conversation, company directory, NMLS'],
+  ['Emails', 'Stale: avery@pine.example. Match: avery@juniper.example appears in both the directory and latest reply.', 'CRM profile + conversation, company directory'],
+  ['Phone numbers', 'CRM lists 202-555-0141. The directory lists 202-555-0142. Confirm the preferred number before replacing either.', 'CRM profile, company directory'],
+  ['Conversation thread', 'Nov 4: Avery confirmed the move and asked for an email follow-up next week.', 'CRM conversation'],
+  ['Employment & NMLS', 'CRM still lists Pine. NMLS shows Juniper as the active sponsor and the directory confirms the Loan Officer role.', 'CRM profile, NMLS, company directory']
 ];
 let timer, active = -1;
 function resetResults() {
@@ -153,7 +153,7 @@ stop.addEventListener('click', () => {
 });
 get('reset').addEventListener('click', () => {
   resetResults();
-  run.textContent = 'Run FUB Page Quality Check';
+  run.textContent = 'Run CRM Page Quality Check';
   status.textContent = 'Ready to audit the open contact profile.';
   run.focus();
 });
