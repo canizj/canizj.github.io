@@ -1,0 +1,11 @@
+.capability-tags.expertise span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 18px;
+  overflow-wrap: anywhere;
+}
+
+.capability-tags.expertise, #portfolio .portfolio-title-group .capability-tags, #recruiting-workflows .workflow-capabilities { margin-bottom: 24px; }
