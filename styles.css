@@ -235,3 +235,15 @@ main h3, main .credential h3, main .card-copy h3, main .evidence-copy h3 {
   letter-spacing: -.02em;
 }
 main h4 { font: 700 1.0625rem/1.4 var(--sans); }
+.expertise span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  line-height: 18px;
+}
+.case-study .capability-tags {
+  margin: 1rem 0 1.5rem;
+}
+.case-study .capability-tags-end {
+  margin: 1.5rem 0 0;
+}
