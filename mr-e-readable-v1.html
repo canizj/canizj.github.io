@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#292b31"><meta name="description" content="Mr. E: a demonstrated Chrome extension proof of concept for mortgage recruiting research, verification, and recruiter-reviewed CRM notes."><title>Mr. E | Jason Caniz</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="readability-v1.css"><style>.workflow-demo{margin-top:2.5rem}.workflow-demo h3{margin:0 0 .5rem;font-size:1.5rem}.workflow-demo iframe{display:block;width:100%;height:950px;border:0;margin:1rem 0}</style><script defer src="simulation-frames.js"></script></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap header-inner"><a class="wordmark" href="index.html">Jason Caniz<span class="wordmark-dot">.</span></a><nav class="site-nav" style="display:flex;position:static;padding:0" aria-label="Case study navigation"><a href="index.html#portfolio">← Projects</a></nav></div></header>
+<main id="main">
+
+<section class="section portfolio-section"><div class="wrap">
+<p class="eyebrow">01 / AI &amp; AUTOMATION</p>
+<h1>Mr. E<em>.</em></h1>
+<h2>AI-assisted architecture for mortgage recruiting.</h2>
+<p class="hero-lead">A proof of concept for candidate research, NMLS identity verification, and CRM data unification, with recruiters reviewing the results before any update.</p>
+</div></section>
+<section class="section section-light"><div class="wrap about-grid">
+<div><p class="eyebrow dark-eyebrow">THE CHALLENGE</p><h2>Optimizing data aggregation <em>for recruitment.</em></h2></div>
+<div class="about-text"><p class="about-primary">Mortgage recruiting data is spread across production reports, NMLS records, and the CRM. Comparing it across tabs takes time and leaves room for manual entry errors.</p><p>I designed an AI-assisted workflow to reconcile that evidence in one place and give recruiters explicit control over CRM updates.</p></div>
+</div></section>
+<section class="section"><div class="wrap"><p class="eyebrow">THE WORKFLOW</p><h2>Research. Verify. <em>Review.</em></h2>
+<div class="credentials-grid">
+<article class="credential"><div><p>01 / DATA EXTRACTION &amp; VERIFICATION</p><h3>Integrating distributed intelligence into a unified, actionable profile.</h3><span>Automate the synthesis of production figures from Model Match or MMI, NMLS identity evidence, and historical CRM data into one view.</span><p><strong>The broader vision.</strong> Run automated cross-platform audits, flag conflicting records, and scan entire branch rosters for top-producing loan officers and branch managers whose titles are missing from the CRM.</p><p><strong>ROI &amp; business impact.</strong> Reduce time spent switching tabs and assembling profiles. Give recruiters better evidence before outreach, with the goal of improving connect-to-meeting conversion and lowering research cost per candidate.</p></div></article>
+<article class="credential"><div><p>02 / QUALITY ASSURANCE &amp; SYSTEM UPDATE</p><h3>Maintaining operational integrity and scaling CRM data hygiene.</h3><span>Generate detailed, standardized CRM notes so recruiters can validate, edit, and approve updates without drafting them from scratch.</span><p><strong>The broader vision.</strong> Triage new message leads, surface missed calls, and log recruiter feedback. Use that context to suggest the next action and flag stale or incomplete CRM records for review.</p><p><strong>ROI &amp; business impact.</strong> Reduce routine data cleanup and give recruiters more time for relationship building. Support a growing candidate pipeline without requiring administrative effort to grow at the same rate.</p></div></article>
+</div></div></section>
+<section class="section" id="recruiting-workflows"><div class="wrap">
+<p class="eyebrow">THREE RECRUITING WORKFLOWS</p>
+<h2>AI-assisted workflows <em>for recruiting decisions.</em></h2>
+<p class="hero-lead">Try the three workflows I designed to consolidate research, surface corrections, and explain candidate fit. Each simulation uses fictional or sanitized records.</p>
+<article class="workflow-demo"><p class="eyebrow">01 / CANDIDATE DOSSIER GENERATION</p><h3>Mortgage Intelligence Agent</h3><p>Consolidate candidate and company research from the CRM, NMLS, and a production data platform, reconcile identity and production figures, and generate a standardized recruiting profile.</p><iframe title="Mortgage Intelligence Agent simulation" src="simulations/candidate-dossier.html" data-simulation loading="lazy"></iframe></article>
+<article class="workflow-demo"><p class="eyebrow">02 / CRM CONVERSATION ANALYSIS</p><h3>Quality Check</h3><p>Review the latest CRM conversation, tags, contact details, and employment. Trace findings to their sources and preview proposed corrections or follow-up actions.</p><iframe title="Quality Check simulation" src="simulations/crm-quality-check.html" data-simulation loading="lazy"></iframe></article>
+<article class="workflow-demo"><p class="eyebrow">03 / CANDIDATE FIT EVALUATION</p><h3>Leader Matching</h3><p>Rank five partner campaigns by role, geography, licensing context, production, and recruiting priorities. Choose a leader to see what fits, what holds the match back, and up to three alternatives.</p><iframe title="Leader Matching simulation" src="simulations/leader-matching.html" data-simulation loading="lazy"></iframe></article>
+</div></section>
+<section class="section section-light"><div class="wrap about-grid">
+<div><p class="eyebrow dark-eyebrow">THE RESULT</p><h2>Independent <em>Chrome extension proof of concept.</em></h2></div>
+<div class="about-text"><p class="about-primary">I built and tested a Chrome extension that combines Model Match production data with NMLS identity evidence in an editable CRM note. I also used Gemini with MMI to research and reconcile production figures for the same workflow.</p><p>The documented validation covered the read-only research and draft workflow.</p><h3>How it connects to any CRM</h3><p>Follow Up Boss was the CRM used in the proof of concept. To connect another CRM, authenticate with its API and map its contact IDs, fields, activity records, and notes to a common format. The same research and review workflow uses that format to prepare a draft and preview changes.</p><p>After recruiter approval, the connector maps the approved changes back to the destination fields and submits them through the CRM API. This approach can work with any CRM that exposes the required read and write operations and grants the appropriate permissions.</p><a class="button button-dark" href="index.html">Return to homepage <span aria-hidden="true">↗</span></a></div>
+</div></section>
+</main><footer><div class="wrap footer-inner"><p>Jason Caniz<span>.</span></p><span>Technology & Analytics · Mr. E case study</span></div></footer>
+</body></html>
