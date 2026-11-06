@@ -79,11 +79,16 @@
 }
 
 .about-grid {
-  grid-template-columns: minmax(0, 880px);
+  grid-template-columns: minmax(0, 550px);
+  justify-content: center;
   gap: 28px;
 }
-.about-video {
-  max-width: 440px;
+#about h2,
+#about .eyebrow {
+  text-align: center;
+}
+#about h2 {
+  margin-bottom: 32px;
 }
 .about-video-link {
   margin-top: 10px;
