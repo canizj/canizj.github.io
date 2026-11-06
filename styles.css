@@ -169,3 +169,14 @@
 #about .about-text > p {
   max-width: none;
 }
+.header-inner:has(.header-logo) { min-height: 140px; gap: 16px; }
+.wordmark:has(.header-logo) { display: inline-flex; align-items: center; justify-content: center; width: clamp(200px, 19vw, 240px); flex-shrink: 0; }
+.header-logo { width: 130px; height: 130px; }
+@media (min-width: 651px) and (max-width: 1050px) {
+  .header-inner:has(.header-logo) .site-nav { flex-wrap: wrap; justify-content: flex-end; gap: 10px 16px; }
+}
+@media (max-width: 650px) {
+  .header-inner:has(.header-logo) { min-height: 112px; }
+  .header-logo { width: 96px; height: 96px; }
+  .header-inner:has(.header-logo) .site-nav { top: 100%; }
+}
