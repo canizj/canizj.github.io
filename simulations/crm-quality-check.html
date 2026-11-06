@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mr. E Gemini Brain | Quality Check</title>
+<style>
+:root{color-scheme:dark;--ink:#eef4ff;--muted:#a8b9d4;--line:#304363;--panel:#111e34;--blue:#85b7ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#172d50,#080f20 70%);color:var(--ink);font:16px/1.5 system-ui,sans-serif;padding:0}
+main{max-width:920px;margin:auto;background:#0b1528;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 20px 80px #0007}
+header,.body{padding:clamp(16px,4vw,32px)}header{display:flex;align-items:center;gap:12px;background:#101e36;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.mark{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#203e6c;color:#a7ceff;font-size:25px}
+.brand{font-weight:700}.badge,.eyebrow{font:700 12px/1.4 ui-monospace,monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--blue)}
+.badge{margin-left:auto;border:1px solid var(--line);border-radius:30px;padding:5px 10px}
+h1{font-size:clamp(25px,5vw,39px);letter-spacing:-.035em;margin:5px 0 8px;line-height:1.12}h2{font-size:16px;margin:0 0 12px}p{margin:0 0 14px;color:var(--muted)}
+form{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin:22px 0 16px}
+label{display:block;font-weight:650;margin-bottom:6px}.controls{display:flex;flex-wrap:wrap;gap:8px}
+input,button{font:inherit;min-height:44px;border:1px solid var(--line);border-radius:9px;padding:8px 13px}
+input{min-width:0;flex:1 1 185px;background:#080f20;color:var(--ink)}button{background:#172945;color:var(--ink);cursor:pointer;font-weight:650}
+button.primary{background:#2662d4;border-color:#568afa}button:disabled{opacity:.55;cursor:default}
+:focus-visible{outline:3px solid #9acbff;outline-offset:3px}
+.hint,.status,footer{font-size:13px;color:var(--muted)}.hint{margin:8px 0 0}.status{min-height:24px;margin-bottom:12px}.error{color:#ffb6bb}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;min-width:0}
+ol{padding:0;margin:0;list-style:none}li{display:grid;grid-template-columns:26px 1fr;gap:8px;padding:9px 0;border-top:1px solid var(--line)}
+.dot{border:1px solid var(--line);border-radius:50%;width:24px;height:24px;text-align:center;font-size:13px;line-height:22px;color:var(--muted)}
+li[data-state="active"] .dot{color:#fff;background:#2662d4;animation:pulse 1s infinite alternate}
+li[data-state="done"] .dot{color:#9df3cc;background:#183c39}li small{display:block;color:var(--muted)}
+@keyframes pulse{to{box-shadow:0 0 0 4px #6c9eff55}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+.note{white-space:pre-wrap;overflow-wrap:anywhere;color:var(--ink);font:14px/1.55 system-ui,sans-serif;margin:0 0 12px}.note:empty{display:none} .sources{margin:0 0 16px;border-top:1px solid var(--line);padding-top:12px} .sources a{color:var(--blue)} .sources ul{padding-left:20px} .sources li{display:list-item;border:0;padding:4px 0} .sources article{margin-top:12px} .sources article:target{outline:2px solid var(--blue);outline-offset:4px}
+footer{margin-top:16px}@media(max-width:650px){.grid{grid-template-columns:1fr}}
+.panel{min-height:360px;display:flex;flex-direction:column}.verification{font-weight:700;color:var(--blue)}
+#audit li{min-height:54px}.sources{margin:8px 0 0}.sources h2{margin:0 0 4px}
+.sources ul{margin:0;padding-left:18px}.sources li{font-size:13px;padding:2px 0}
+.source-profiles{font-size:13px;margin:6px 0 0}
+.note-content{flex:1;margin-bottom:12px}#copy{align-self:flex-start}
+dialog{max-width:min(90vw,400px);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:20px}
+dialog::backdrop{background:#050b15bb}dialog form{padding:0;margin:0;border:0}
+.method,#edit-preview{border-top:1px solid var(--line);padding-top:12px;margin-top:16px}.method summary{cursor:pointer;font-weight:700;margin-bottom:10px}.method a{color:var(--blue)}</style>
+<main>
+  <header><span class="mark" aria-hidden="true">✦</span><div class="brand">Mr. E Gemini Brain</div><span class="badge">Simulation</span></header>
+  <div class="body">
+    <div class="eyebrow">Portfolio / Card 02 · Page Audit v4</div>
+    <h1>Quality Check</h1><p>Review the latest CRM conversation, tags, contact details, and employment. Trace findings to their sources and preview proposed corrections or follow-up actions.</p>
+    <form id="audit-form">
+      <p><strong>Current Follow Up Boss page</strong><br>Avery Demo · Contact profile #204</p>
+      <div class="controls">
+        <button class="primary" id="run">Run FUB Page Quality Check</button>
+        <button type="button" id="stop" disabled>Stop</button>
+        <button type="button" id="reset">Reset</button>
+      </div>
+    </form>
+    <p id="status" class="status" role="status">Ready to audit the open contact profile.</p>
+    <div class="grid">
+      <section class="panel" aria-labelledby="audit-title">
+        <h2 id="audit-title">Research audit</h2>
+        <ol id="audit"></ol>
+        <section class="sources" id="sources" hidden>
+          <h2>Sources</h2>
+          <ul id="links"></ul>
+        </section>
+      </section>
+      <section class="panel" aria-labelledby="report-title">
+        <h2 id="report-title">Profile quality summary</h2>
+        <div class="note-content"><p id="placeholder">The summary appears after the page audit.</p><pre class="note" id="note"></pre></div>
+        <button type="button" id="copy" disabled>Copy summary</button>
+      </section>
+    </div>
+<section id="edit-preview"><h2>Want to edit the page?</h2><button id="preview-edits" type="button" aria-controls="edit-details" aria-expanded="false" disabled>Preview suggested edits</button><div id="edit-details" hidden><p>Employer: Pine Example Mortgage → Juniper Example Lending</p><p>Primary email: avery@pine.example → avery@juniper.example</p><p>Stage: New Lead → Contacted</p><p>Keep the tags and saved phone. Confirm the preferred number before editing it.</p></div></section><footer>Simulation only. The contact, records, and source checks are fictional. All checks run locally.</footer><details class="method"><summary>How we researched Card 2 and how live edits would work</summary><p><strong>Start from the open contact.</strong> The blueprint shows authenticated GET /v1/people/{id} and notes and calls queries scoped to the contact. The audit also reads the latest visible conversation from the open timeline.</p><p><strong>Reconcile the evidence.</strong> Compare tag placement and stage with the profile and latest reply. Compare saved email and phone with the reply and company directory. Check employer against NMLS sponsorship and role against the directory.</p><p><strong>Review and approve.</strong> The blueprint describes a separate approval step before PUT /v1/people/{id} for contact edits or POST /v1/notes for a timeline note. A connected version would re-read the contact, preserve existing phone numbers and unrelated tags, and submit only approved changes.</p><p><strong>What was tested.</strong> The handoff records a successful read-only Branch Manager research run. This Quality Check and edit preview use fictional data. The available records do not confirm a live write for this flow.</p><p><strong>Sanitized Phase 1 study.</strong> The study links records by synthetic FUB and NMLS IDs, separates branch location from HQ, and separates active from inactive licenses. Use those checks before carrying role, geography or production tags forward. Case 5 demonstrates a nine-tag proposal covering lender type, role, geography, volume band, purchase mix and enrichment status. The study does not supply a phone, email or conversation test for this profile, so those checks use fictional fixtures.</p><p><a href="https://docs.google.com/document/d/1HbNRTC6w04u8uxVQ8K-Zu0vY09XL3aBZ_mtvdXIToms/edit">Mr. E validation handoff</a> · <a href="https://drive.google.com/file/d/1_puOavduPX1KOkWCCqJAR1UJ7K4nuIpL/view">Integration blueprint</a></p></details>
+  </div>
+</main>
+<dialog id="source-preview" aria-labelledby="source-title">
+  <h2 id="source-title"></h2>
+  <p id="source-detail"></p>
+  <form method="dialog"><button autofocus>Close</button></form>
+</dialog>
+<script>
+'use strict';
+const get = id => document.getElementById(id);
+const form = get('audit-form'), run = get('run'), stop = get('stop'), status = get('status');
+const audit = get('audit'), note = get('note'), copy = get('copy');
+const sources = [
+  ['FUB profile', 'Stage: New Lead. Tags: CO, Loan Officer, Replied. Assigned location: Denver, CO. Employer: Pine Example Mortgage. Phone: 202-555-0141. Email: avery@pine.example.'],
+  ['FUB conversation', 'Latest inbound reply, Nov 4: Avery confirmed the move to Juniper Example Lending, shared avery@juniper.example, and asked for an email follow-up next week.'],
+  ['NMLS record', 'Active Colorado license. Current sponsor: Juniper Example Lending.'],
+  ['Company directory', 'Avery Demo, Loan Officer, Denver, CO. Published contact: avery@juniper.example and 202-555-0142.']
+];
+const checks = [
+  ['Profile tags & placement', 'CO and Loan Officer fit the directory and license. Replied is an activity tag. The latest reply supports changing the stage from New Lead to Contacted.', 'FUB profile + conversation, company directory, NMLS'],
+  ['Emails', 'Stale: avery@pine.example. Match: avery@juniper.example appears in both the directory and latest reply.', 'FUB profile + conversation, company directory'],
+  ['Phone numbers', 'FUB lists 202-555-0141. The directory lists 202-555-0142. Confirm the preferred number before replacing either.', 'FUB profile, company directory'],
+  ['Conversation thread', 'Nov 4: Avery confirmed the move and asked for an email follow-up next week.', 'FUB conversation'],
+  ['Employment & NMLS', 'FUB still lists Pine. NMLS shows Juniper as the active sponsor and the directory confirms the Loan Officer role.', 'FUB profile, NMLS, company directory']
+];
+let timer, active = -1;
+function resetResults() {
+  clearTimeout(timer);
+  active = -1;
+  audit.replaceChildren(...checks.map(([label], index) => {
+    const row = document.createElement('li');
+    row.innerHTML = '<span class="dot" aria-hidden="true"></span><div><strong></strong><small>Waiting</small></div>';
+    row.querySelector('.dot').textContent = index + 1;
+    row.querySelector('strong').textContent = label;
+    return row;
+  }));
+  note.textContent = '';
+  get('placeholder').hidden = false;
+  get('sources').hidden = true;
+  run.disabled = false;
+  stop.disabled = true;
+  copy.disabled = true;
+  get('preview-edits').disabled = true;
+  get('preview-edits').setAttribute('aria-expanded','false');
+  get('edit-details').hidden = true;
+}
+function advance(index) {
+  active = index;
+  const row = audit.children[index];
+  row.dataset.state = 'active';
+  row.setAttribute('aria-current', 'step');
+  row.querySelector('small').textContent = 'Checking…';
+  status.textContent = 'Checking ' + checks[index][0] + '…';
+  timer = setTimeout(() => {
+    row.dataset.state = 'done';
+    row.removeAttribute('aria-current');
+    row.querySelector('small').textContent = 'Reviewed · ' + checks[index][2];
+    if (index + 1 < checks.length) return advance(index + 1);
+    active = -1;
+    run.disabled = false;
+    run.textContent = 'Rerun Page Quality Check';
+    if (document.activeElement === stop) run.focus();
+    stop.disabled = true;
+    get('placeholder').hidden = true;
+    get('sources').hidden = false;
+    copy.disabled = false;
+    get('preview-edits').disabled = false;
+    note.textContent = ['Avery Demo · Quality Check', 'Needs review: update employer, email and stage. Confirm the preferred phone before editing.', ...checks.map(([label, finding]) => label + '\n' + finding)].join('\n\n');
+    status.textContent = 'Page audit complete. Summary ready to review.';
+  }, 650);
+}
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  if (active !== -1) return;
+  resetResults();
+  stop.disabled = false;
+  stop.focus();
+  run.disabled = true;
+  advance(0);
+});
+stop.addEventListener('click', () => {
+  resetResults();
+  run.textContent = 'Rerun Page Quality Check';
+  status.textContent = 'Audit stopped.';
+  run.focus();
+});
+get('reset').addEventListener('click', () => {
+  resetResults();
+  run.textContent = 'Run FUB Page Quality Check';
+  status.textContent = 'Ready to audit the open contact profile.';
+  run.focus();
+});
+for (const [label, detail] of sources) {
+  const item = document.createElement('li');
+  const link = document.createElement('a');
+  link.href = '#source-preview';
+  link.textContent = label;
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    get('source-title').textContent = label;
+    get('source-detail').textContent = detail;
+    get('source-preview').showModal();
+  });
+  item.append(link);
+  get('links').append(item);
+}
+copy.addEventListener('click', async () => {
+  const summary = note.textContent;
+  try {
+    await navigator.clipboard.writeText(summary);
+    if (note.textContent === summary) status.textContent = 'Summary copied.';
+  } catch {
+    if (note.textContent !== summary) return;
+    const range = document.createRange();
+    range.selectNodeContents(note);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+    let copied = false;
+    try { copied = document.execCommand('copy'); } catch {}
+    if (copied) selection.removeAllRanges();
+    status.textContent = copied ? 'Summary copied.' : 'Summary selected. Press Ctrl+C or Command+C.';
+  }
+});
+get('preview-edits').addEventListener('click', () => {
+  const details = get('edit-details');
+  details.hidden = !details.hidden;
+  get('preview-edits').setAttribute('aria-expanded', String(!details.hidden));
+});
+resetResults();
+</script>
+</html>

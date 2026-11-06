@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mr. E Gemini Brain | Mortgage Intelligence Agent</title>
+<style>
+:root{color-scheme:dark;--ink:#eef4ff;--muted:#a8b9d4;--line:#304363;--panel:#111e34;--blue:#85b7ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#172d50,#080f20 70%);color:var(--ink);font:16px/1.5 system-ui,sans-serif;padding:0}
+main{max-width:920px;margin:auto;background:#0b1528;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 20px 80px #0007}
+header,.body{padding:clamp(16px,4vw,32px)}header{display:flex;align-items:center;gap:12px;background:#101e36;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.mark{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#203e6c;color:#a7ceff;font-size:25px}
+.brand{font-weight:700}.badge,.eyebrow{font:700 12px/1.4 ui-monospace,monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--blue)}
+.badge{margin-left:auto;border:1px solid var(--line);border-radius:30px;padding:5px 10px}
+h1{font-size:clamp(25px,5vw,39px);letter-spacing:-.035em;margin:5px 0 8px;line-height:1.12}h2{font-size:16px;margin:0 0 12px}p{margin:0 0 14px;color:var(--muted)}
+form{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin:22px 0 16px}
+label{display:block;font-weight:650;margin-bottom:6px}.controls{display:flex;flex-wrap:wrap;gap:8px}
+input,button{font:inherit;min-height:44px;border:1px solid var(--line);border-radius:9px;padding:8px 13px}
+input{min-width:0;flex:1 1 185px;background:#080f20;color:var(--ink)}button{background:#172945;color:var(--ink);cursor:pointer;font-weight:650}
+button.primary{background:#2662d4;border-color:#568afa}button:disabled{opacity:.55;cursor:default}
+:focus-visible{outline:3px solid #9acbff;outline-offset:3px}
+.hint,.status,footer{font-size:13px;color:var(--muted)}.hint{margin:8px 0 0}.status{min-height:24px;margin-bottom:12px}.error{color:#ffb6bb}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;min-width:0}
+ol{padding:0;margin:0;list-style:none}li{display:grid;grid-template-columns:26px 1fr;gap:8px;padding:9px 0;border-top:1px solid var(--line)}
+.dot{border:1px solid var(--line);border-radius:50%;width:24px;height:24px;text-align:center;font-size:13px;line-height:22px;color:var(--muted)}
+li[data-state="active"] .dot{color:#fff;background:#2662d4;animation:pulse 1s infinite alternate}
+li[data-state="done"] .dot{color:#9df3cc;background:#183c39}li small{display:block;color:var(--muted)}
+@keyframes pulse{to{box-shadow:0 0 0 4px #6c9eff55}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+.note{white-space:pre-wrap;overflow-wrap:anywhere;color:var(--ink);font:14px/1.55 system-ui,sans-serif;margin:0 0 12px}.note:empty{display:none} .sources{margin:0 0 16px;border-top:1px solid var(--line);padding-top:12px} .sources a{color:var(--blue)} .sources ul{padding-left:20px} .sources li{display:list-item;border:0;padding:4px 0} .sources article{margin-top:12px} .sources article:target{outline:2px solid var(--blue);outline-offset:4px}
+footer{margin-top:16px}@media(max-width:650px){.grid{grid-template-columns:1fr}}
+.panel{min-height:710px;display:flex;flex-direction:column}.verification{font-weight:700;color:var(--blue)}
+#audit li{min-height:54px}.sources{margin:8px 0 0}.sources h2{margin:0 0 4px}
+.sources ul{margin:0;padding-left:18px}.sources li{font-size:13px;padding:2px 0}
+.source-profiles{font-size:13px;margin:6px 0 0}
+.note-content{flex:1;margin-bottom:12px}#copy{align-self:flex-start}
+dialog{max-width:min(90vw,400px);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:20px}
+dialog::backdrop{background:#050b15bb}dialog form{padding:0;margin:0;border:0}
+.method,#edit-preview{border-top:1px solid var(--line);padding-top:12px;margin-top:16px}.method summary{cursor:pointer;font-weight:700;margin-bottom:10px}.method a{color:var(--blue)}</style>
+<main>
+  <header>
+    <span class="mark" aria-hidden="true">✦</span>
+    <div class="brand">Mr. E Gemini Brain</div>
+    <span class="badge">Simulation</span>
+  </header>
+  <div class="body">
+    <div class="eyebrow">Portfolio / Card 01 · Loan Officer + Branch Manager v13</div>
+    <h1>Mortgage Intelligence Agent</h1><p>Consolidate candidate and company research from FUB, NMLS, and MMI, reconcile identity and production figures, and generate a standardized recruiting profile.</p>
+    <form id="research" novalidate>
+      <label for="nmls">Sample NMLS number</label>
+      <div class="controls">
+        <input id="nmls" type="text" inputmode="numeric" autocomplete="off" maxlength="3" aria-describedby="hint" value="101">
+        <button class="primary" id="run" type="submit">Run</button>
+        <button id="stop" type="button" disabled>Stop</button>
+        <button id="reset" type="button">Reset</button>
+      </div>
+      <p class="hint" id="hint">Try 101 for Loan Officer or 102 for Branch Manager.</p>
+    </form>
+    <div class="status" id="status" role="status" aria-atomic="true">Sample 101 is loaded. Click Run to generate the Loan Officer note.</div>
+    <div class="grid">
+      <section class="panel" aria-labelledby="audit-title">
+        <h2 id="audit-title">Research audit</h2>
+        <ol id="audit"></ol>
+        <section class="sources" id="sources" aria-label="Research sources" hidden></section>
+      </section>
+      <section class="panel" aria-labelledby="note-title">
+        <h2 id="note-title">CRM note</h2>
+        <p class="hint" id="candidate" hidden></p>
+        <p id="placeholder">The draft appears after validation.</p>
+        <div class="note-content" role="region" aria-label="Fictional CRM note"><pre class="note" id="note"></pre></div>
+
+        <button id="copy" type="button" disabled>Copy note</button>
+      </section>
+    </div>
+    <footer>Simulation only. All people, IDs, figures, and website URLs are fictional. Verification labels reflect simulated checks.</footer><details class="method"><summary>How we researched and validated Card 1</summary><p><strong>Identity and role.</strong> Read the FUB contact and activity records using authenticated requests. Use the candidate’s NMLS ID to reconcile license, sponsorship and branch registration. Cross-check the title against the company bio or directory.</p><p><strong>Production and transactions.</strong> The CRM template uses MMI individual and branch roster figures. The separate Model Match integration used OAuth and read tools getOriginator and listLoans. The documented method checks the originator ID, counts loan rows by reporting period, sums volume, and calculates purchase, refi and other shares from loan dollar amounts. The note reports 14-month, 7-month and YTD volume, 14-month units and product mix, plus branch metrics and roster counts for branch managers.</p><p><strong>What the numbers mean.</strong> Demo 101 shows 30 individual units over 14 months. Demo 102 shows 40 individual units and 100 branch units over 14 months. The handoff reports a successful live Branch Manager draft with a Gemini HTTP 200 response and reconciled Model Match figures. It does not state the transaction count from that live run.</p><p><strong>Connected workflow.</strong> The handoff describes read-only research. The blueprint separately proposes posting an approved timeline note through POST /v1/notes after human review.</p><p><strong>Sanitized Phase 1 study, cases 1 and 5.</strong> The solo Texas loan officer recorded 34 units and $11.4M over 14 months. The Western Pennsylvania manager recorded 47 personal units and $18.3M, alongside 114 branch units and $38.9M. The study lists HQ separately at 412 units and $142.5M. These are distinct scopes and the study figures are separate from the short-ID demo fixtures.</p><p><a href="https://docs.google.com/document/d/1HbNRTC6w04u8uxVQ8K-Zu0vY09XL3aBZ_mtvdXIToms/edit">Mr. E validation handoff</a> · <a href="https://drive.google.com/file/d/1_puOavduPX1KOkWCCqJAR1UJ7K4nuIpL/view">Integration blueprint</a></p></details>
+  </div>
+</main>
+<dialog id="source-preview" aria-labelledby="source-title">
+  <h2 id="source-title">Source preview</h2>
+  <p>Hi! Thanks for trying the Mr. E chat demo.</p>
+  <form method="dialog"><button autofocus>Close</button></form>
+</dialog>
+<script>
+'use strict';
+const get = id => document.getElementById(id);
+const form = get('research'), input = get('nmls'), run = get('run'), stop = get('stop');
+const status = get('status'), audit = get('audit'), note = get('note'), copy = get('copy');
+const steps = ['FUB · CRM lookup', 'NMLS · License lookup', 'MMI · Market research', 'Evidence validation'];
+const profiles = {
+  '101': {name:'Avery Demo', title:'Loan Officer', employer:'Juniper Example Lending', mmi:'Juniper Example Lending', companyId:'201', branchId:'301', states:'CO, TX'},
+  '102': {name:'Morgan Demo', title:'Branch Manager', employer:'Harbor Example Mortgage', mmi:'Harbor Example Mortgage', companyId:'202', branchId:'302', states:'AZ, NM'}
+};
+let timer, active = -1, revision = 0;
+function announce(message, error = false) {
+  status.textContent = message;
+  status.classList.toggle('error', error);
+}
+function paint(index, state, detail) {
+  const row = audit.children[index];
+  row.dataset.state = state;
+  row.querySelector('small').textContent = detail;
+  if (state === 'active') row.setAttribute('aria-current','step');
+  else row.removeAttribute('aria-current');
+}
+function clearResults() {
+  audit.replaceChildren(...steps.map((step, index) => {
+    const row = document.createElement('li');
+    row.innerHTML = '<span class="dot" aria-hidden="true"></span><div><strong></strong><small>Waiting</small></div>';
+    row.querySelector('.dot').textContent = index + 1;
+    row.querySelector('strong').textContent = step;
+    return row;
+  }));
+  note.textContent = '';
+  get('sources').hidden = true;
+  get('sources').replaceChildren();
+  get('candidate').hidden = true;
+  get('placeholder').hidden = false;
+  copy.disabled = true;
+}
+function setRunning(running) {
+  input.readOnly = running;
+  run.disabled = running;
+  stop.disabled = !running;
+}
+function cancel() {
+  clearTimeout(timer);
+  revision += 1;
+  active = -1;
+  setRunning(false);
+}
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  if (active !== -1) return;
+  const id = input.value.trim();
+  if (!Object.hasOwn(profiles, id)) {
+    input.setAttribute('aria-invalid','true');
+    announce('Enter a fictional sample number, 101 or 102.', true);
+    input.focus();
+    return;
+  }
+  revision += 1;
+  clearResults();
+  setRunning(true);
+  stop.focus();
+  const {name, title, employer, mmi, companyId, branchId, states} = profiles[id];
+  const matches = employer === mmi;
+  const findings = [
+    'Mock ' + title + ' record found for ' + name + '.',
+    'Mock license marked active at ' + employer + '.',
+    'Mock individual and branch production records list ' + mmi + '.',
+    matches ? 'Name, ID and employer agree across the mock records.' : 'Name and ID agree. Employer differs between NMLS and MMI.'
+  ];
+  function next(index) {
+    active = index;
+    paint(index,'active','In progress');
+    announce('Running ' + steps[index] + '…');
+    timer = setTimeout(() => {
+      paint(index,'done',findings[index]);
+      if (index + 1 < steps.length) {
+        next(index + 1);
+        return;
+      }
+      const returnFocus = document.activeElement === stop;
+      cancel();
+      run.textContent = 'Rerun';
+      const candidate = get('candidate');
+      candidate.textContent = name + (matches ? '' : ' · Employer mismatch: MMI figures withheld');
+      candidate.hidden = false;
+      note.textContent = [
+        'Title: ' + title,
+        'NMLS ID #: ' + id,
+        'Licensure: ' + states,
+        '',
+        'Company: ' + employer,
+        'Company NMLS #: ' + companyId,
+        ...(title === 'Branch Manager' ? [
+          '',
+          'Branch NMLS #: ' + branchId,
+          'Branch 14 Mo Vol: 32,000,000',
+          'Branch 14 Mo Units: 100',
+          'Branch Purchase %: 70.00',
+          'Branch Refi %: 25.00',
+          'Branch Other %: 5.00',
+          '',
+          '• 4 LOs at branch location',
+          '• 1 BMs at branch location',
+          '• 2 LOs not producing at branch location'
+        ] : []),
+        '',
+        '14 Mo Vol: ' + (title === 'Loan Officer' ? '8,100,000' : '10,400,000'),
+        '7 Mo Vol: ' + (title === 'Loan Officer' ? '4,500,000' : '5,700,000'),
+        'YTD Vol: ' + (title === 'Loan Officer' ? '5,800,000' : '7,200,000'),
+        '14 Mo Units: ' + (title === 'Loan Officer' ? '30' : '40'),
+        'Purchase %: 75.00',
+        'Refi %: 20.00',
+        'Other %: 5.00',
+        '',
+        ...(title === 'Loan Officer' ? [
+          'Company Website: https://juniperlending.example/avery-demo [Verified]',
+          'Zillow: https://zillow.example/lender-profile/avery-demo [Verified]',
+          'Instagram: https://instagram.example/averydemo [Unverified]',
+          'Other Website: https://loanofficerdirectory.example/avery-demo [Verified]'
+        ] : [
+          'Company Website: https://harbormortgage.example/branches/morgan-demo [Verified]',
+          'LinkedIn: https://linkedin.example/in/morgan-demo [Verified]',
+          'Facebook: https://facebook.example/morgandemomortgage [Unverified]',
+          'Other Website: https://branchdirectory.example/morgan-demo [Verified]'
+        ])
+      ].join('\n');
+      get('placeholder').hidden = true;
+      const websiteLines = note.textContent.split('\n').filter(line => line.includes('https://'));
+      note.textContent = note.textContent.replace(/ \[(?:Verified|Unverified)\]/g, '');
+      const records = [
+        ['FUB', 'Candidate and CRM baseline'],
+        ['NMLS', 'Licensure and registration'],
+        ['MMI individual', 'Individual production']
+      ];
+      if (title === 'Branch Manager') records.push(['MMI branch', 'Branch production and headcount']);
+      function previewLink(label) {
+        const link = document.createElement('a');
+        link.href = '#source-preview';
+        link.textContent = label;
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          get('source-title').textContent = label;
+          get('source-preview').showModal();
+        });
+        return link;
+      }
+      const sources = get('sources');
+      const heading = document.createElement('h2');
+      heading.textContent = 'Sources';
+      const list = document.createElement('ul');
+      for (const [label, description] of records) {
+        const item = document.createElement('li');
+        item.append(previewLink(label), ' · ' + description);
+        list.append(item);
+      }
+      const profiles = document.createElement('p');
+      profiles.className = 'source-profiles';
+      profiles.append('Website checks · ');
+      websiteLines.forEach((line, index) => {
+        const label = line.split(': ')[0];
+        const verified = line.endsWith('[Verified]');
+        const badge = document.createElement('abbr');
+        badge.className = 'verification';
+        badge.title = verified ? 'Verified' : 'Unverified';
+        badge.setAttribute('aria-label', badge.title);
+        badge.textContent = verified ? 'V' : 'U';
+        profiles.append(index ? ' · ' : '', previewLink(label), ' ', badge);
+      });
+      const key = document.createElement('p');
+      key.className = 'source-profiles';
+      key.textContent = 'V = Verified · U = Unverified';
+      sources.append(heading, list, profiles, key);
+      sources.hidden = false;
+      copy.disabled = !matches;
+      announce(matches ? 'Validation complete. CRM draft ready to review.' : 'Employer mismatch flagged. CRM draft ready for manual review.');
+      if (returnFocus) run.focus();
+    }, 900);
+  }
+  next(0);
+});
+input.addEventListener('input', () => {
+  input.removeAttribute('aria-invalid');
+  revision += 1;
+  clearResults();
+  run.textContent = 'Run';
+  announce('Ready for a sample number.');
+});
+stop.addEventListener('click', () => {
+  paint(active,'stopped','Stopped');
+  cancel();
+  run.textContent = 'Rerun';
+  announce('Research stopped. Rerun to start from FUB.');
+  run.focus();
+});
+get('reset').addEventListener('click', () => {
+  cancel();
+  form.reset();
+  input.removeAttribute('aria-invalid');
+  clearResults();
+  run.textContent = 'Run';
+  announce('Reset. Sample 101 is ready to run.');
+  input.focus();
+});
+copy.addEventListener('click', async () => {
+  const current = revision;
+  try {
+    await navigator.clipboard.writeText(note.textContent);
+    if (current === revision) announce('Note copied. You can paste it anywhere.');
+  } catch {
+    if (current !== revision) return;
+    const selection = window.getSelection();
+    const range = document.createRange();
+    range.selectNodeContents(note);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    let copied = false;
+    try {
+      copied = document.execCommand('copy');
+    } catch {
+      // Keep the note selected for manual copying.
+    }
+    if (copied) {
+      selection.removeAllRanges();
+      announce('Note copied. You can paste it anywhere.');
+    } else {
+      announce('Note selected. Press Ctrl+C or Command+C to copy it.');
+    }
+  }
+});
+clearResults();
+</script>
+</html>

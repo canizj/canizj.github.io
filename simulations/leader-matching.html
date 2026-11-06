@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mr. E Gemini Brain | Leader Matching</title>
+<style>
+:root{color-scheme:dark;--ink:#eef4ff;--muted:#a8b9d4;--line:#304363;--panel:#111e34;--blue:#85b7ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#172d50,#080f20 70%);color:var(--ink);font:16px/1.5 system-ui,sans-serif;padding:0}
+main{max-width:920px;margin:auto;background:#0b1528;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 20px 80px #0007}
+header,.body{padding:clamp(16px,4vw,32px)}header{display:flex;align-items:center;gap:12px;background:#101e36;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.mark{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#203e6c;color:#a7ceff;font-size:25px}
+.brand{font-weight:700}.badge,.eyebrow{font:700 12px/1.4 ui-monospace,monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--blue)}
+.badge{margin-left:auto;border:1px solid var(--line);border-radius:30px;padding:5px 10px}
+h1{font-size:clamp(25px,5vw,39px);letter-spacing:-.035em;margin:5px 0 8px;line-height:1.12}h2{font-size:16px;margin:0 0 12px}p{margin:0 0 14px;color:var(--muted)}
+form{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin:22px 0 16px}
+label{display:block;font-weight:650;margin-bottom:6px}.controls{display:flex;flex-wrap:wrap;gap:8px}
+input,button{font:inherit;min-height:44px;border:1px solid var(--line);border-radius:9px;padding:8px 13px}
+input{min-width:0;flex:1 1 185px;background:#080f20;color:var(--ink)}button{background:#172945;color:var(--ink);cursor:pointer;font-weight:650}
+button.primary{background:#2662d4;border-color:#568afa}button:disabled{opacity:.55;cursor:default}
+:focus-visible{outline:3px solid #9acbff;outline-offset:3px}
+.hint,.status,footer{font-size:13px;color:var(--muted)}.hint{margin:8px 0 0}.status{min-height:24px;margin-bottom:12px}.error{color:#ffb6bb}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;min-width:0}
+ol{padding:0;margin:0;list-style:none}li{display:grid;grid-template-columns:26px 1fr;gap:8px;padding:9px 0;border-top:1px solid var(--line)}
+.dot{border:1px solid var(--line);border-radius:50%;width:24px;height:24px;text-align:center;font-size:13px;line-height:22px;color:var(--muted)}
+li[data-state="active"] .dot{color:#fff;background:#2662d4;animation:pulse 1s infinite alternate}
+li[data-state="done"] .dot{color:#9df3cc;background:#183c39}li small{display:block;color:var(--muted)}
+@keyframes pulse{to{box-shadow:0 0 0 4px #6c9eff55}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+.note{white-space:pre-wrap;overflow-wrap:anywhere;color:var(--ink);font:14px/1.55 system-ui,sans-serif;margin:0 0 12px}.note:empty{display:none} .sources{margin:0 0 16px;border-top:1px solid var(--line);padding-top:12px} .sources a{color:var(--blue)} .sources ul{padding-left:20px} .sources li{display:list-item;border:0;padding:4px 0} .sources article{margin-top:12px} .sources article:target{outline:2px solid var(--blue);outline-offset:4px}
+footer{margin-top:16px}@media(max-width:650px){.grid{grid-template-columns:1fr}}
+.panel{min-height:360px;display:flex;flex-direction:column}.verification{font-weight:700;color:var(--blue)}
+#audit li{min-height:54px}.sources{margin:8px 0 0}.sources h2{margin:0 0 4px}
+.sources ul{margin:0;padding-left:18px}.sources li{font-size:13px;padding:2px 0}
+.source-profiles{font-size:13px;margin:6px 0 0}
+.note-content{flex:1;margin-bottom:12px}#copy{align-self:flex-start}
+dialog{max-width:min(90vw,400px);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:20px}
+dialog::backdrop{background:#050b15bb}dialog form{padding:0;margin:0;border:0}
+.method,#edit-preview{border-top:1px solid var(--line);padding-top:12px;margin-top:16px}.method summary{cursor:pointer;font-weight:700;margin-bottom:10px}.method a{color:var(--blue)}select{font:inherit;min-height:44px;border:1px solid var(--line);border-radius:9px;padding:8px;background:#080f20;color:var(--ink);max-width:100%}.controls select{flex:1 1 230px;min-width:0}.sources a{color:var(--blue)}#audit li{display:block;padding:10px 0}#audit li[aria-current]{color:var(--blue)}.fit-card{border-top:1px solid var(--line);padding:10px 0}.fit-card p{margin:4px 0}.fit-card summary{cursor:pointer;font-weight:700}.focus{margin-top:12px}</style>
+
+<main><header><span class="mark" aria-hidden="true">✦</span><div class="brand">Mr. E Gemini Brain</div><span class="badge">Simulation</span></header>
+<div class="body"><div class="eyebrow">Portfolio / Card 03 · Leader Matching v3</div><h1>Leader Matching</h1><p>Rank five partner campaigns by role, geography, licensing context, production, and recruiting priorities. Choose a leader to see what fits, what holds the match back, and up to three alternatives.</p>
+<form id="match"><label for="candidate">Candidate scenario</label><div class="controls"><select id="candidate"><option value="0">Texas solo loan officer</option><option value="1">Atlanta protected partner</option><option value="2">Charlotte consumer-direct loan officer</option><option value="3">Charlotte county-level loan officer</option><option value="4">Western Pennsylvania branch manager</option></select><button class="primary" id="run">Run Leader Match</button><button type="button" id="stop" disabled>Stop</button><button type="button" id="reset">Reset</button></div><div class="focus"><label for="leader">Leader of focus</label><select id="leader"><option value="">None · rank across campaigns</option></select></div></form>
+<p class="status" id="status" role="status">Ready to check the selected candidate.</p>
+<div class="grid"><section class="panel"><h2>Matching audit</h2><ol id="audit"></ol><section class="sources"><h2>Sources</h2><ul><li><a href="#research" data-source="candidate">Sanitized candidate case</a></li><li><a href="#research" data-source="matrix">Partner campaign matrix · rows 13–384</a></li><li><a href="#research" data-source="dnc">Do Not Call protections · column AL</a></li></ul></section></section>
+<section class="panel"><h2>Routing decision</h2><div class="note-content"><p id="placeholder">The recommendation appears after the checks.</p><div id="result"></div></div></section></div>
+<footer>Simulation only. Candidate and partner identities are sanitized. Routing decisions stay in this demo.</footer>
+<details id="research" class="method"><summary>How we researched and validated the matches</summary><p>The Phase 1 sanitized study defines five cases and eight partner campaign rows. The audit compares candidate role, county and metro, production windows, product mix and employer restrictions. Protected employer rules take priority. Candidate totals are not proof of self-generated production in a different period.</p><p>This prototype compares eight sanitized campaigns locally. The ranking prioritizes eligible or pending candidates, then geography, role and product mix. A high rank can still be blocked or pending evidence. In a connected workflow, FUB provides the candidate baseline, NMLS supplies licensure and registered location, MMI supplies production evidence, and the Partner Sheet supplies campaign criteria and column AL protections.</p><p><a href="https://docs.google.com/document/d/1HbNRTC6w04u8uxVQ8K-Zu0vY09XL3aBZ_mtvdXIToms/edit">Mr. E validation handoff</a> · <a href="https://drive.google.com/file/d/1_puOavduPX1KOkWCCqJAR1UJ7K4nuIpL/view">Integration blueprint</a></p></details></div></main>
+<dialog id="preview" aria-labelledby="source-title"><h2 id="source-title"></h2><p id="source-text"></p><form method="dialog"><button autofocus>Close</button></form></dialog>
+<script>
+'use strict';
+const cases = [["Texas solo loan officer","Austin, Travis County, TX · 34 units · $11.4M / 14 months","Leader F · Pond Foxtrot (row 203)","Texas and the loan officer role fit. 18% refi is below the 70% ceiling. G and H require producing direct reports. Confirm $2.5M in six-month self-generated volume before routing. The study cites $5.5M over seven months, a different window and measure.","Role fit · production evidence pending"],["Atlanta protected partner","Atlanta, Fulton County, GA · Producing Branch Manager · $45.5M branch volume","No routing · Do Not Call","Protected Partner 01 triggers the sheet-wide employer and DBA check in column AL. The study also flags internal anti-poaching rules. Geography and volume cannot override the stop.","Blocked · protected partner"],["Charlotte consumer-direct loan officer","Charlotte, Mecklenburg County, NC · 138 units · $32.4M / 14 months","No routing · Self-generation and mix","Zero self-generated business and zero purchase share disqualify the candidate under the applicable campaign rules. The 53% refi share also exceeds Leader B’s 35% cap.","Blocked · campaign requirements"],["Charlotte county-level loan officer","Charlotte, Mecklenburg County, NC · 51 units · $28.3M / 14 months","Leader E · Pond Echo (row 185)","Mecklenburg is an exact county match and 37% refi clears the 70% cap. The study ranks F, D and A as alternatives. Confirm the required self-generated volume and units in the correct windows before routing.","Exact county fit · production evidence pending"],["Western Pennsylvania branch manager","Pittsburgh, Allegheny County, PA · 47 personal units · 114 branch units","Leader A · Pond Alpha (row 13)","Exact Western PA metro and role fit. The study lists Leader B as secondary, with 17% refi below its 35% cap. Confirm campaign-specific self-generated thresholds. Keep personal, HQ and branch volume separate.","Top study recommendation · pending eligibility review"]];
+const get = id => document.getElementById(id);
+const form = get('match'), candidate = get('candidate'), run = get('run'), stop = get('stop');
+const audit = get('audit'), status = get('status'), result = get('result');
+const checks = ['Employer and Do Not Call', 'Role and geography', 'Production and product mix', 'Routing decision'];
+
+const campaigns = [["A","Alpha",13,"Western PA, Northern OH, Southeast corridor","Loan Officer / Branch Manager","8+ self-generated units per month or campaign dollar threshold",70],["B","Bravo",56,"PA and Southeast priority; nationwide expansion","Loan Officer / Branch Manager","$2M self-generated per month",35],["C","Charlie",73,"Central/Eastern PA, VA and NC markets","Loan Officer / Builder Specialist","$6M self-generated over 12 months",null],["D","Delta",130,"Mecklenburg and Wake counties; Mid-Atlantic secondary","Self-generated Loan Officer","$3.5M over 6 months and 2 self-sourced units per month",70],["E","Echo",185,"Mecklenburg, Brunswick, New Hanover and Pender counties","Loan Officer","$6M self-generated over 12 months",70],["F","Foxtrot",203,"Midwest, statewide Texas and selected Southeast markets","Loan Officer","$2.5M self-generated over 6 months",70],["G","Golf",380,"Texas first, then South Central and Southeast","Branch / Area Manager or Owner with producing reports","$2.5M self-generated and producing direct reports",70],["H","Hotel",384,"Texas first, then Central/West, TN and FL","Branch / Area / National Manager or Owner with producing reports","2 self-generated units per month and producing direct reports",70]];
+const candidateFacts = [[18,82,false,0,{"F":3,"B":1}],[45,null,true,null,{"A":2,"B":2,"G":2}],[53,0,false,0,{"E":3,"D":3,"A":2,"C":1,"B":1}],[37,63,false,0,{"E":3,"D":3,"F":2,"A":2,"C":1,"B":1}],[17,72,false,4,{"A":3,"B":2}]];
+const leader = get('leader');
+for (const [id, pond, row] of campaigns) {
+  const option = document.createElement('option');
+  option.value = id;
+  option.textContent = 'Leader ' + id + ' · Pond ' + pond + ' (row ' + row + ')';
+  leader.append(option);
+}
+function compare(campaign, caseIndex) {
+  const [id, pond, row, market, role, threshold, refiCap] = campaign;
+  const [refi, purchase, protectedEmployer, reports, geography] = candidateFacts[caseIndex];
+  const manager = caseIndex === 1 || caseIndex === 4;
+  const roleFits = manager ? 'ABGH'.includes(id) : !'GH'.includes(id);
+  const geo = geography[id] || 0;
+  const mixFails = (refiCap !== null && refi >= refiCap) || (id === 'C' && purchase !== null && purchase < 80);
+  const productionFails = caseIndex === 2;
+  const blocked = protectedEmployer || !roleFits || mixFails || productionFails;
+  const score = (blocked ? 0 : 100) + geo * 10 + (roleFits ? 4 : 0) + (mixFails ? 0 : 2);
+  const status = protectedEmployer ? 'Blocked · Do Not Call' : blocked ? 'Does not qualify' : geo ? 'Potential fit · evidence pending' : 'Coverage unconfirmed';
+  return {id, pond, row, score, status, geo, roleFits, mixFails, productionFails, protectedEmployer, blocked, reasons:[
+    ['Role', role + ' · ' + (roleFits ? 'role aligns' : 'role mismatch') + ('GH'.includes(id) ? (reports === null ? ' · producing reports unconfirmed' : ' · ' + reports + ' producing LOs on roster · direct reporting unconfirmed') : '')],
+    ['Geography', market + ' · ' + (geo === 3 ? 'priority match' : geo === 2 ? 'regional match' : geo === 1 ? 'secondary coverage' : 'coverage unconfirmed')],
+    ['Production', threshold + ' · ' + (productionFails ? 'candidate has zero self-generated business' : 'confirm self-generated figures for the required period')],
+    ['Product mix', id === 'C' ? 'Purchase minimum 80% · candidate ' + (purchase === null ? 'share unavailable' : purchase + '%') : 'Refi below ' + refiCap + '% · candidate ' + refi + '%'],
+    ['Employer protection', protectedEmployer ? 'Sheet-wide hard stop under column AL' : 'No sheet-wide block recorded for this case. Confirm row-specific employer and DBA rules before routing.']
+  ]};
+}
+function renderRanking(caseIndex) {
+  const matches = campaigns.map(campaign => compare(campaign, caseIndex)).sort((a,b) => b.score - a.score || a.row - b.row);
+  const heading = document.createElement('h3');
+  heading.textContent = leader.value ? 'Focused compatibility' : 'Top five leader comparisons';
+  const context = document.createElement('p');
+  context.textContent = cases[caseIndex][1];
+  result.replaceChildren(heading, context);
+  function show(match, prefix, open) {
+    const detail = document.createElement('details');
+    detail.className = 'fit-card';
+    detail.open = open;
+    const summary = document.createElement('summary');
+    summary.textContent = prefix + 'Leader ' + match.id + ' · Pond ' + match.pond + ' · ' + match.status;
+    detail.append(summary);
+    const row = document.createElement('p');
+    row.textContent = 'Partner Sheet row ' + match.row;
+    detail.append(row);
+    for (const [label, finding] of match.reasons) {
+      const p = document.createElement('p');
+      p.textContent = label + ' · ' + finding;
+      detail.append(p);
+    }
+    result.append(detail);
+  }
+  if (!leader.value) {
+    matches.slice(0,5).forEach((match,index) => show(match, (index+1) + '. ', index === 0));
+    return;
+  }
+  const focus = matches.find(match => match.id === leader.value);
+  function paragraph(label, text) {
+    const p = document.createElement('p');
+    const strong = document.createElement('strong');
+    strong.textContent = label + ' ';
+    p.append(strong, text);
+    result.append(p);
+  }
+  const strengths = [];
+  if (focus.roleFits) strengths.push('target role aligns');
+  if (focus.geo) strengths.push(focus.geo === 3 ? 'priority market match' : 'market is within campaign coverage');
+  if (!focus.mixFails && !focus.reasons[3][1].includes('unavailable')) strengths.push(focus.reasons[3][1]);
+  const gaps = [];
+  if (focus.protectedEmployer) gaps.push('Do Not Call blocks routing across all campaigns');
+  if (!focus.roleFits) gaps.push(focus.reasons[0][1]);
+  if (!focus.geo) gaps.push('market coverage is unconfirmed');
+  if (focus.mixFails || focus.reasons[3][1].includes('unavailable')) gaps.push(focus.reasons[3][1]);
+  gaps.push(focus.reasons[2][1]);
+  if (!focus.protectedEmployer) gaps.push('confirm campaign-specific employer and DBA protections');
+  if (focus.roleFits && 'GH'.includes(focus.id)) gaps.push('confirm producing direct reports');
+  paragraph('Leader ' + focus.id + ' · Pond ' + focus.pond + ' (row ' + focus.row + ')', focus.status);
+  paragraph('Why it fits', strengths.length ? strengths.join(' · ') : 'No confirmed strengths for this campaign.');
+  paragraph('What holds it back', gaps.join(' · '));
+  const alternatives = matches.filter(match => match.id !== focus.id && !match.blocked && match.geo).slice(0,3);
+  if (!alternatives.length) {
+    paragraph('Other leaders', focus.protectedEmployer ? 'None. Do Not Call applies across campaigns.' : 'No other campaign shows enough alignment for a shortlist.');
+    return;
+  }
+  const title = document.createElement('h3');
+  title.textContent = 'Other potential fits';
+  result.append(title);
+  for (const match of alternatives) {
+    const market = match.geo === 3 ? 'priority market' : match.geo === 2 ? 'regional coverage' : 'secondary coverage';
+    paragraph('Leader ' + match.id + ' · Pond ' + match.pond, market + ', role aligns, and ' + match.reasons[3][1] + '.');
+  }
+  paragraph('Before routing', 'Verify each campaign’s self-generated production requirements and employer protections.');
+
+}
+
+let timer;
+function running(value) {
+  clearTimeout(timer);
+  run.disabled = value;
+  stop.disabled = !value;
+  candidate.disabled = value;
+  leader.disabled = value;
+}
+function resetResults() {
+  running(false);
+  audit.replaceChildren(...checks.map(label => {
+    const row = document.createElement('li');
+    const text = document.createElement('span');
+    text.textContent = label + ' · Waiting';
+    row.append(text);
+    return row;
+  }));
+  result.replaceChildren();
+  get('placeholder').hidden = false;
+  run.textContent = 'Run Leader Match';
+  status.textContent = 'Ready to check the selected candidate.';
+}
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  if (run.disabled) return;
+  resetResults();
+  const caseIndex = Number(candidate.value);
+  running(true);
+  stop.focus();
+  function advance(index) {
+    const row = audit.children[index];
+    row.setAttribute('aria-current','step');
+    row.firstChild.textContent = checks[index] + ' · Checking';
+    status.textContent = row.firstChild.textContent;
+    timer = setTimeout(() => {
+      row.removeAttribute('aria-current');
+      row.firstChild.textContent = checks[index] + ' · Reviewed';
+      if (index + 1 < checks.length) return advance(index + 1);
+      const focusRun = document.activeElement === stop;
+      running(false);
+      renderRanking(caseIndex);
+      get('placeholder').hidden = true;
+      run.textContent = 'Rerun Leader Match';
+      status.textContent = 'Routing review complete.';
+      if (focusRun) run.focus();
+    }, 600);
+  }
+  advance(0);
+});
+stop.addEventListener('click', () => { resetResults(); status.textContent = 'Matching stopped.'; run.focus(); });
+candidate.addEventListener('change', resetResults);
+leader.addEventListener('change', () => { if (result.children.length) renderRanking(Number(candidate.value)); });
+get('reset').addEventListener('click', () => { form.reset(); resetResults(); candidate.focus(); });
+for (const link of document.querySelectorAll('[data-source]')) {
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    const [name, profile] = cases[Number(candidate.value)];
+    const source = link.dataset.source;
+    get('source-title').textContent = link.textContent;
+    get('source-text').textContent = source === 'candidate' ? name + ' · ' + profile : source === 'matrix' ? 'Study pages 2–4 list role, geography, volume and mix thresholds by partner row.' : 'Study pages 5–6 show how the Atlanta case is blocked by employer and DBA protections.';
+    get('preview').showModal();
+  });
+}
+resetResults();
+</script></html>
