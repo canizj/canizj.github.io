@@ -180,3 +180,12 @@
   .header-logo { width: 96px; height: 96px; }
   .header-inner:has(.header-logo) .site-nav { top: 100%; }
 }
+
+.google-case-study p:not(.eyebrow) {
+  font-family: var(--sans);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  max-width: 70ch;
+  color: inherit;
+}
+.google-case-study .section-light { color: #292b31; }
