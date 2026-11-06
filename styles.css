@@ -147,3 +147,22 @@
   font-size: 13px;
   text-underline-offset: 3px;
 }
+
+.cohort-row {
+  display: grid;
+  grid-template-columns: minmax(0, 650px) minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+  width: min(100%, 1000px);
+}
+.cohort-note {
+  margin: 0;
+  padding: 24px;
+  background: #dce5e3;
+  color: var(--ink);
+}
+@media (max-width: 850px) {
+  .cohort-row {
+    grid-template-columns: minmax(0, 650px);
+  }
+}
