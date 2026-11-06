@@ -79,7 +79,7 @@
 }
 
 .about-grid {
-  grid-template-columns: minmax(0, 550px);
+  grid-template-columns: minmax(0, 913px);
   justify-content: center;
   gap: 28px;
 }
@@ -165,4 +165,8 @@
   .cohort-row {
     grid-template-columns: minmax(0, 650px);
   }
+}
+
+#about .about-text > p {
+  max-width: none;
 }
