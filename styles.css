@@ -82,6 +82,9 @@
   grid-template-columns: minmax(0, 880px);
   gap: 28px;
 }
+.about-video {
+  max-width: 440px;
+}
 .about-video-link {
   margin-top: 10px;
 }
@@ -109,6 +112,12 @@
   }
 }
 
+.housing-card {
+  width: min(100%, 1000px);
+}
+.cohort-card {
+  width: min(100%, 650px);
+}
 .teaching-card {
   width: min(100%, 880px);
 }
