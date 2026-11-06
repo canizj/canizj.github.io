@@ -157,8 +157,7 @@
 }
 .cohort-note {
   margin: 0;
-  padding: 24px;
-  background: #dce5e3;
+  font-weight: 700;
   color: var(--ink);
 }
 @media (max-width: 850px) {
