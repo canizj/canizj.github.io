@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mr. E | Unified Recruiting Bot</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#080f20;color:#eef4ff;font:16px/1.55 system-ui,sans-serif;padding:0}main{max-width:none;margin:0}.bot,.evidence{background:#0b1528;border:1px solid #304363;border-radius:16px}.bot{overflow:hidden}.header,.missions,.evidence{padding:clamp(14px,3vw,22px)}.header{display:flex;gap:12px;align-items:center;background:#111e34}.mark{display:grid;place-items:center;border-radius:10px;background:#203e6c;color:#a7ceff;width:40px;height:40px;flex:none;font-size:24px}.header h1{font-size:21px;margin:0}.header p{margin:0;color:#b8c9df;font-size:14px}.missions{display:flex;flex-wrap:wrap;gap:8px;border-bottom:1px solid #304363}.missions button{flex:1 1 150px;padding:9px;border:1px solid #526d92;border-radius:8px;background:#162844;color:#eef4ff;font:inherit;font-weight:650;cursor:pointer;min-height:44px}.missions button[aria-selected=true]{background:#2456a1;border-color:#8ab8ff}.intro{margin:0;padding:12px clamp(14px,3vw,22px) 0;color:#b8c9df}iframe{display:block;width:100%;border:0;height:700px}[hidden]{display:none!important}.evidence{margin-top:18px}h2{margin:0 0 8px;font-size:20px}.evidence>p{margin:0 0 12px;color:#c2cfe0}details{padding:10px 0;border-top:1px solid #304363}summary{cursor:pointer;font-weight:650}a{color:#a4caff}:focus-visible{outline:3px solid #9acbff;outline-offset:2px}
+.header .robot{display:flex;align-items:center;justify-content:center;gap:8px;width:56px;height:56px;border-radius:15px;background:radial-gradient(circle at 40% 28%,#536b7d,#1b2938);border:1px solid #526c83}.robot span{width:8px;height:14px;border-radius:8px;background:#a7e7ff;box-shadow:0 0 8px #72d7ff}</style>
+<main><section class="bot" aria-labelledby="bot-title"><header class="header"><span class="mark robot" aria-hidden="true"><span></span><span></span></span><div><h1 id="bot-title">Meet Mr. E</h1><p>Choose a mission · Interactive simulation</p></div></header>
+<div class="missions" role="tablist" aria-label="Recruiting missions"><button type="button" role="tab" id="tab-0" aria-controls="mission-0" aria-selected="true" tabindex="0">Candidate Research</button><button type="button" role="tab" id="tab-1" aria-controls="mission-1" aria-selected="false" tabindex="-1">Quality Check</button><button type="button" role="tab" id="tab-2" aria-controls="mission-2" aria-selected="false" tabindex="-1">Leader Matching</button></div>
+<section id="mission-0" role="tabpanel" aria-labelledby="tab-0" ><iframe title="Candidate Research: Generate a Loan Officer or Branch Manager dossier." allow="clipboard-write" data-page="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;Mr. E Gemini Brain | Mortgage Intelligence Agent&lt;/title&gt;
+&lt;style&gt;
+:root{color-scheme:dark;--ink:#eef4ff;--muted:#a8b9d4;--line:#304363;--panel:#111e34;--blue:#85b7ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#172d50,#080f20 70%);color:var(--ink);font:16px/1.5 system-ui,sans-serif;padding:0}
+main{max-width:920px;margin:auto;background:#0b1528;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 20px 80px #0007}
+header,.body{padding:clamp(16px,4vw,32px)}header{display:flex;align-items:center;gap:12px;background:#101e36;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.mark{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#203e6c;color:#a7ceff;font-size:25px}
+.brand{font-weight:700}.badge,.eyebrow{font:700 12px/1.4 ui-monospace,monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--blue)}
+.badge{margin-left:auto;border:1px solid var(--line);border-radius:30px;padding:5px 10px}
+h1{font-size:clamp(25px,5vw,39px);letter-spacing:-.035em;margin:5px 0 8px;line-height:1.12}h2{font-size:16px;margin:0 0 12px}p{margin:0 0 14px;color:var(--muted)}
+form{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin:22px 0 16px}
+label{display:block;font-weight:650;margin-bottom:6px}.controls{display:flex;flex-wrap:wrap;gap:8px}
+input,button{font:inherit;min-height:44px;border:1px solid var(--line);border-radius:9px;padding:8px 13px}
+input{min-width:0;flex:1 1 185px;background:#080f20;color:var(--ink)}button{background:#172945;color:var(--ink);cursor:pointer;font-weight:650}
+button.primary{background:#2662d4;border-color:#568afa}button:disabled{opacity:.55;cursor:default}
+:focus-visible{outline:3px solid #9acbff;outline-offset:3px}
+.hint,.status,footer{font-size:13px;color:var(--muted)}.hint{margin:8px 0 0}.status{min-height:24px;margin-bottom:12px}.error{color:#ffb6bb}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;min-width:0}
+ol{padding:0;margin:0;list-style:none}li{display:grid;grid-template-columns:26px 1fr;gap:8px;padding:9px 0;border-top:1px solid var(--line)}
+.dot{border:1px solid var(--line);border-radius:50%;width:24px;height:24px;text-align:center;font-size:13px;line-height:22px;color:var(--muted)}
+li[data-state=&quot;active&quot;] .dot{color:#fff;background:#2662d4;animation:pulse 1s infinite alternate}
+li[data-state=&quot;done&quot;] .dot{color:#9df3cc;background:#183c39}li small{display:block;color:var(--muted)}
+@keyframes pulse{to{box-shadow:0 0 0 4px #6c9eff55}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+.note{white-space:pre-wrap;overflow-wrap:anywhere;color:var(--ink);font:14px/1.55 system-ui,sans-serif;margin:0 0 12px}.note:empty{display:none} .sources{margin:0 0 16px;border-top:1px solid var(--line);padding-top:12px} .sources a{color:var(--blue)} .sources ul{padding-left:20px} .sources li{display:list-item;border:0;padding:4px 0} .sources article{margin-top:12px} .sources article:target{outline:2px solid var(--blue);outline-offset:4px}
+footer{margin-top:16px}@media(max-width:650px){.grid{grid-template-columns:1fr}}
+.panel{min-height:710px;display:flex;flex-direction:column}.verification{font-weight:700;color:var(--blue)}
+#audit li{min-height:54px}.sources{margin:8px 0 0}.sources h2{margin:0 0 4px}
+.sources ul{margin:0;padding-left:18px}.sources li{font-size:13px;padding:2px 0}
+.source-profiles{font-size:13px;margin:6px 0 0}
+.note-content{flex:1;margin-bottom:12px}#copy{align-self:flex-start}
+dialog{max-width:min(90vw,400px);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:20px}
+dialog::backdrop{background:#050b15bb}dialog form{padding:0;margin:0;border:0}
+.method,#edit-preview{border-top:1px solid var(--line);padding-top:12px;margin-top:16px}.method summary{cursor:pointer;font-weight:700;margin-bottom:10px}.method a{color:var(--blue)}body{background:transparent;padding:0;min-height:0}main{border:0;border-radius:0;box-shadow:none;background:transparent}.body{padding:clamp(12px,3vw,20px)}h1{font-size:1.45rem;margin-top:0}.panel{min-height:0;overflow:visible}.grid{align-items:stretch}.status{margin-bottom:8px}form:not([method]){margin:12px 0;padding:12px}.note-content{overflow:visible}footer{font-size:14px}.copy-feedback{margin:8px 0 0;font-size:14px;color:#c5d9ef}&lt;/style&gt;
+&lt;main&gt;
+
+  &lt;div class=&quot;body&quot;&gt;
+
+    &lt;h1&gt;Mortgage Intelligence Agent&lt;/h1&gt;&lt;p&gt;Consolidate candidate and company research from CRM, NMLS, and MMI, reconcile identity and production figures, and generate a standardized recruiting profile.&lt;/p&gt;
+    &lt;form id=&quot;research&quot; novalidate&gt;
+      &lt;label for=&quot;nmls&quot;&gt;Sample NMLS number&lt;/label&gt;
+      &lt;div class=&quot;controls&quot;&gt;
+        &lt;input id=&quot;nmls&quot; type=&quot;text&quot; inputmode=&quot;numeric&quot; autocomplete=&quot;off&quot; maxlength=&quot;3&quot; aria-describedby=&quot;hint&quot; value=&quot;101&quot;&gt;
+        &lt;button class=&quot;primary&quot; id=&quot;run&quot; type=&quot;submit&quot;&gt;Run&lt;/button&gt;
+        &lt;button id=&quot;stop&quot; type=&quot;button&quot; disabled&gt;Stop&lt;/button&gt;
+        &lt;button id=&quot;reset&quot; type=&quot;button&quot;&gt;Reset&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;p class=&quot;hint&quot; id=&quot;hint&quot;&gt;Try 101 for Loan Officer or 102 for Branch Manager.&lt;/p&gt;
+    &lt;/form&gt;
+    &lt;div class=&quot;status&quot; id=&quot;status&quot; role=&quot;status&quot; aria-atomic=&quot;true&quot;&gt;Sample 101 is loaded. Click Run to generate the Loan Officer note.&lt;/div&gt;
+    &lt;div class=&quot;grid&quot;&gt;
+      &lt;section class=&quot;panel&quot; aria-labelledby=&quot;audit-title&quot;&gt;
+        &lt;h2 id=&quot;audit-title&quot;&gt;Research audit&lt;/h2&gt;
+        &lt;ol id=&quot;audit&quot;&gt;&lt;/ol&gt;
+        &lt;section class=&quot;sources&quot; id=&quot;sources&quot; aria-label=&quot;Research sources&quot; hidden&gt;&lt;/section&gt;
+      &lt;/section&gt;
+      &lt;section class=&quot;panel&quot; aria-labelledby=&quot;note-title&quot;&gt;
+        &lt;h2 id=&quot;note-title&quot;&gt;CRM note&lt;/h2&gt;
+        &lt;p class=&quot;hint&quot; id=&quot;candidate&quot; hidden&gt;&lt;/p&gt;
+        &lt;p id=&quot;placeholder&quot;&gt;The draft appears after validation.&lt;/p&gt;
+        &lt;div class=&quot;note-content&quot; role=&quot;region&quot; aria-label=&quot;Fictional CRM note&quot;&gt;&lt;pre class=&quot;note&quot; id=&quot;note&quot;&gt;&lt;/pre&gt;&lt;/div&gt;
+
+        &lt;button id=&quot;copy&quot; type=&quot;button&quot; disabled&gt;Copy note&lt;/button&gt;&lt;p class=&quot;copy-feedback&quot; id=&quot;copy-feedback&quot; role=&quot;status&quot;&gt;You can copy this note after the run.&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+    &lt;footer&gt;Simulation only. All people, IDs, figures, and website URLs are fictional. Verification labels reflect simulated checks.&lt;/footer&gt;
+  &lt;/div&gt;
+&lt;/main&gt;
+&lt;dialog id=&quot;source-preview&quot; aria-labelledby=&quot;source-title&quot;&gt;
+  &lt;h2 id=&quot;source-title&quot;&gt;Source preview&lt;/h2&gt;
+  &lt;p&gt;Hi! Thanks for trying the Mr. E chat demo.&lt;/p&gt;
+  &lt;form method=&quot;dialog&quot;&gt;&lt;button autofocus&gt;Close&lt;/button&gt;&lt;/form&gt;
+&lt;/dialog&gt;
+&lt;script&gt;
+'use strict';
+const get = id =&gt; document.getElementById(id);
+const form = get('research'), input = get('nmls'), run = get('run'), stop = get('stop');
+const status = get('status'), audit = get('audit'), note = get('note'), copy = get('copy');
+const steps = ['CRM · Contact lookup', 'NMLS · License lookup', 'MMI · Market research', 'Evidence validation'];
+const profiles = {
+  '101': {name:'Avery Demo', title:'Loan Officer', employer:'Juniper Example Lending', mmi:'Juniper Example Lending', companyId:'201', branchId:'301', states:'CO, TX'},
+  '102': {name:'Morgan Demo', title:'Branch Manager', employer:'Harbor Example Mortgage', mmi:'Harbor Example Mortgage', companyId:'202', branchId:'302', states:'AZ, NM'}
+};
+let timer, active = -1, revision = 0;
+function announce(message, error = false) {
+  status.textContent = message;
+  status.classList.toggle('error', error);
+}
+function paint(index, state, detail) {
+  const row = audit.children[index];
+  row.dataset.state = state;
+  row.querySelector('small').textContent = detail;
+  if (state === 'active') row.setAttribute('aria-current','step');
+  else row.removeAttribute('aria-current');
+}
+function clearResults() {
+  audit.replaceChildren(...steps.map((step, index) =&gt; {
+    const row = document.createElement('li');
+    row.innerHTML = '&lt;span class=&quot;dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;div&gt;&lt;strong&gt;&lt;/strong&gt;&lt;small&gt;Waiting&lt;/small&gt;&lt;/div&gt;';
+    row.querySelector('.dot').textContent = index + 1;
+    row.querySelector('strong').textContent = step;
+    return row;
+  }));
+  note.textContent = '';
+  get('sources').hidden = true;
+  get('sources').replaceChildren();
+  get('candidate').hidden = true;
+  get('placeholder').hidden = false;
+  copy.disabled = true;
+  get('copy-feedback').textContent = 'You can copy this note after the run.';
+}
+function setRunning(running) {
+  input.readOnly = running;
+  run.disabled = running;
+  stop.disabled = !running;
+}
+function cancel() {
+  clearTimeout(timer);
+  revision += 1;
+  active = -1;
+  setRunning(false);
+}
+form.addEventListener('submit', event =&gt; {
+  event.preventDefault();
+  if (active !== -1) return;
+  const id = input.value.trim();
+  if (!Object.hasOwn(profiles, id)) {
+    input.setAttribute('aria-invalid','true');
+    announce('Enter a fictional sample number, 101 or 102.', true);
+    input.focus();
+    return;
+  }
+  revision += 1;
+  clearResults();
+  setRunning(true);
+  stop.focus();
+  const {name, title, employer, mmi, companyId, branchId, states} = profiles[id];
+  const matches = employer === mmi;
+  const findings = [
+    'Mock ' + title + ' record found for ' + name + '.',
+    'Mock license marked active at ' + employer + '.',
+    'Mock individual and branch production records list ' + mmi + '.',
+    matches ? 'Name, ID and employer agree across the mock records.' : 'Name and ID agree. Employer differs between NMLS and MMI.'
+  ];
+  function next(index) {
+    active = index;
+    paint(index,'active','In progress');
+    announce('Running ' + steps[index] + '…');
+    timer = setTimeout(() =&gt; {
+      paint(index,'done',findings[index]);
+      if (index + 1 &lt; steps.length) {
+        next(index + 1);
+        return;
+      }
+      const returnFocus = document.activeElement === stop;
+      cancel();
+      run.textContent = 'Rerun';
+      const candidate = get('candidate');
+      candidate.textContent = name + (matches ? '' : ' · Employer mismatch: MMI figures withheld');
+      candidate.hidden = false;
+      note.textContent = [
+        'Title: ' + title,
+        'NMLS ID #: ' + id,
+        'Licensure: ' + states,
+        '',
+        'Company: ' + employer,
+        'Company NMLS #: ' + companyId,
+        ...(title === 'Branch Manager' ? [
+          '',
+          'Branch NMLS #: ' + branchId,
+          'Branch 14 Mo Vol: 32,000,000',
+          'Branch 14 Mo Units: 100',
+          'Branch Purchase %: 70.00',
+          'Branch Refi %: 25.00',
+          'Branch Other %: 5.00',
+          '',
+          '• 4 LOs at branch location',
+          '• 1 BMs at branch location',
+          '• 2 LOs not producing at branch location'
+        ] : []),
+        '',
+        '14 Mo Vol: ' + (title === 'Loan Officer' ? '8,100,000' : '10,400,000'),
+        '7 Mo Vol: ' + (title === 'Loan Officer' ? '4,500,000' : '5,700,000'),
+        'YTD Vol: ' + (title === 'Loan Officer' ? '5,800,000' : '7,200,000'),
+        '14 Mo Units: ' + (title === 'Loan Officer' ? '30' : '40'),
+        'Purchase %: 75.00',
+        'Refi %: 20.00',
+        'Other %: 5.00',
+        '',
+        ...(title === 'Loan Officer' ? [
+          'Company Website: https://juniperlending.example/avery-demo [Verified]',
+          'Zillow: https://zillow.example/lender-profile/avery-demo [Verified]',
+          'Instagram: https://instagram.example/averydemo [Unverified]',
+          'Other Website: https://loanofficerdirectory.example/avery-demo [Verified]'
+        ] : [
+          'Company Website: https://harbormortgage.example/branches/morgan-demo [Verified]',
+          'LinkedIn: https://linkedin.example/in/morgan-demo [Verified]',
+          'Facebook: https://facebook.example/morgandemomortgage [Unverified]',
+          'Other Website: https://branchdirectory.example/morgan-demo [Verified]'
+        ])
+      ].join('\n');
+      get('placeholder').hidden = true;
+      const websiteLines = note.textContent.split('\n').filter(line =&gt; line.includes('https://'));
+      note.textContent = note.textContent.replace(/ \[(?:Verified|Unverified)\]/g, '');
+      const records = [
+        ['CRM', 'Candidate and CRM baseline'],
+        ['NMLS', 'Licensure and registration'],
+        ['MMI individual', 'Individual production']
+      ];
+      if (title === 'Branch Manager') records.push(['MMI branch', 'Branch production and headcount']);
+      function previewLink(label) {
+        const link = document.createElement('a');
+        link.href = '#source-preview';
+        link.textContent = label;
+        link.addEventListener('click', event =&gt; {
+          event.preventDefault();
+          get('source-title').textContent = label;
+          get('source-preview').showModal();
+        });
+        return link;
+      }
+      const sources = get('sources');
+      const heading = document.createElement('h2');
+      heading.textContent = 'Sources';
+      const list = document.createElement('ul');
+      for (const [label, description] of records) {
+        const item = document.createElement('li');
+        item.append(previewLink(label), ' · ' + description);
+        list.append(item);
+      }
+      const profiles = document.createElement('p');
+      profiles.className = 'source-profiles';
+      profiles.append('Website checks · ');
+      websiteLines.forEach((line, index) =&gt; {
+        const label = line.split(': ')[0];
+        const verified = line.endsWith('[Verified]');
+        const badge = document.createElement('abbr');
+        badge.className = 'verification';
+        badge.title = verified ? 'Verified' : 'Unverified';
+        badge.setAttribute('aria-label', badge.title);
+        badge.textContent = verified ? 'V' : 'U';
+        profiles.append(index ? ' · ' : '', previewLink(label), ' ', badge);
+      });
+      const key = document.createElement('p');
+      key.className = 'source-profiles';
+      key.textContent = 'V = Verified · U = Unverified';
+      sources.append(heading, list, profiles, key);
+      sources.hidden = false;
+      copy.disabled = !matches;
+      announce(matches ? 'Validation complete. CRM draft ready to review.' : 'Employer mismatch flagged. CRM draft ready for manual review.');
+      if (returnFocus) run.focus();
+    }, 900);
+  }
+  next(0);
+});
+input.addEventListener('input', () =&gt; {
+  input.removeAttribute('aria-invalid');
+  revision += 1;
+  clearResults();
+  run.textContent = 'Run';
+  announce('Ready for a sample number.');
+});
+stop.addEventListener('click', () =&gt; {
+  paint(active,'stopped','Stopped');
+  cancel();
+  run.textContent = 'Rerun';
+  announce('Research stopped. Rerun to start from CRM.');
+  run.focus();
+});
+get('reset').addEventListener('click', () =&gt; {
+  cancel();
+  form.reset();
+  input.removeAttribute('aria-invalid');
+  clearResults();
+  run.textContent = 'Run';
+  announce('Reset. Sample 101 is ready to run.');
+  input.focus();
+});
+copy.addEventListener('click', async () =&gt; {
+  const current = revision;
+  try {
+    await navigator.clipboard.writeText(note.textContent);
+    if (current === revision) get('copy-feedback').textContent = 'Note copied. You can paste it anywhere.';
+  } catch {
+    if (current !== revision) return;
+    const selection = window.getSelection();
+    const range = document.createRange();
+    range.selectNodeContents(note);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    let copied = false;
+    try {
+      copied = document.execCommand('copy');
+    } catch {
+      // Keep the note selected for manual copying.
+    }
+    if (copied) {
+      selection.removeAllRanges();
+      get('copy-feedback').textContent = 'Note copied. You can paste it anywhere.';
+    } else {
+      get('copy-feedback').textContent = 'Note selected. Press Ctrl+C or Command+C to copy it.';
+    }
+  }
+});
+clearResults();
+&lt;/script&gt;
+&lt;/html&gt;
+"></iframe></section><section id="mission-1" role="tabpanel" aria-labelledby="tab-1" hidden><iframe title="Quality Check: Audit a CRM page and review suggested edits." allow="clipboard-write" data-page="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;Mr. E Gemini Brain | Quality Check&lt;/title&gt;
+&lt;style&gt;
+:root{color-scheme:dark;--ink:#eef4ff;--muted:#a8b9d4;--line:#304363;--panel:#111e34;--blue:#85b7ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#172d50,#080f20 70%);color:var(--ink);font:16px/1.5 system-ui,sans-serif;padding:0}
+main{max-width:920px;margin:auto;background:#0b1528;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 20px 80px #0007}
+header,.body{padding:clamp(16px,4vw,32px)}header{display:flex;align-items:center;gap:12px;background:#101e36;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.mark{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#203e6c;color:#a7ceff;font-size:25px}
+.brand{font-weight:700}.badge,.eyebrow{font:700 12px/1.4 ui-monospace,monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--blue)}
+.badge{margin-left:auto;border:1px solid var(--line);border-radius:30px;padding:5px 10px}
+h1{font-size:clamp(25px,5vw,39px);letter-spacing:-.035em;margin:5px 0 8px;line-height:1.12}h2{font-size:16px;margin:0 0 12px}p{margin:0 0 14px;color:var(--muted)}
+form{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin:22px 0 16px}
+label{display:block;font-weight:650;margin-bottom:6px}.controls{display:flex;flex-wrap:wrap;gap:8px}
+input,button{font:inherit;min-height:44px;border:1px solid var(--line);border-radius:9px;padding:8px 13px}
+input{min-width:0;flex:1 1 185px;background:#080f20;color:var(--ink)}button{background:#172945;color:var(--ink);cursor:pointer;font-weight:650}
+button.primary{background:#2662d4;border-color:#568afa}button:disabled{opacity:.55;cursor:default}
+:focus-visible{outline:3px solid #9acbff;outline-offset:3px}
+.hint,.status,footer{font-size:13px;color:var(--muted)}.hint{margin:8px 0 0}.status{min-height:24px;margin-bottom:12px}.error{color:#ffb6bb}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;min-width:0}
+ol{padding:0;margin:0;list-style:none}li{display:grid;grid-template-columns:26px 1fr;gap:8px;padding:9px 0;border-top:1px solid var(--line)}
+.dot{border:1px solid var(--line);border-radius:50%;width:24px;height:24px;text-align:center;font-size:13px;line-height:22px;color:var(--muted)}
+li[data-state=&quot;active&quot;] .dot{color:#fff;background:#2662d4;animation:pulse 1s infinite alternate}
+li[data-state=&quot;done&quot;] .dot{color:#9df3cc;background:#183c39}li small{display:block;color:var(--muted)}
+@keyframes pulse{to{box-shadow:0 0 0 4px #6c9eff55}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+.note{white-space:pre-wrap;overflow-wrap:anywhere;color:var(--ink);font:14px/1.55 system-ui,sans-serif;margin:0 0 12px}.note:empty{display:none} .sources{margin:0 0 16px;border-top:1px solid var(--line);padding-top:12px} .sources a{color:var(--blue)} .sources ul{padding-left:20px} .sources li{display:list-item;border:0;padding:4px 0} .sources article{margin-top:12px} .sources article:target{outline:2px solid var(--blue);outline-offset:4px}
+footer{margin-top:16px}@media(max-width:650px){.grid{grid-template-columns:1fr}}
+.panel{min-height:360px;display:flex;flex-direction:column}.verification{font-weight:700;color:var(--blue)}
+#audit li{min-height:54px}.sources{margin:8px 0 0}.sources h2{margin:0 0 4px}
+.sources ul{margin:0;padding-left:18px}.sources li{font-size:13px;padding:2px 0}
+.source-profiles{font-size:13px;margin:6px 0 0}
+.note-content{flex:1;margin-bottom:12px}#copy{align-self:flex-start}
+dialog{max-width:min(90vw,400px);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:20px}
+dialog::backdrop{background:#050b15bb}dialog form{padding:0;margin:0;border:0}
+.method,#edit-preview{border-top:1px solid var(--line);padding-top:12px;margin-top:16px}.method summary{cursor:pointer;font-weight:700;margin-bottom:10px}.method a{color:var(--blue)}body{background:transparent;padding:0;min-height:0}main{border:0;border-radius:0;box-shadow:none;background:transparent}.body{padding:clamp(12px,3vw,20px)}h1{font-size:1.45rem;margin-top:0}.panel{min-height:0;overflow:visible}.grid{align-items:stretch}.status{margin-bottom:8px}form:not([method]){margin:12px 0;padding:12px}.note-content{overflow:visible}footer{font-size:14px}.copy-feedback{margin:8px 0 0;font-size:14px;color:#c5d9ef}&lt;/style&gt;
+&lt;main&gt;
+
+  &lt;div class=&quot;body&quot;&gt;
+
+    &lt;h1&gt;Quality Check&lt;/h1&gt;&lt;p&gt;Review the latest CRM conversation, tags, contact details, and employment. Trace findings to their sources and preview proposed corrections or follow-up actions.&lt;/p&gt;
+    &lt;form id=&quot;audit-form&quot;&gt;
+      &lt;p&gt;&lt;strong&gt;Current CRM page&lt;/strong&gt;&lt;br&gt;Avery Demo · Contact profile #204&lt;/p&gt;
+      &lt;div class=&quot;controls&quot;&gt;
+        &lt;button class=&quot;primary&quot; id=&quot;run&quot;&gt;Run CRM Page Quality Check&lt;/button&gt;
+        &lt;button type=&quot;button&quot; id=&quot;stop&quot; disabled&gt;Stop&lt;/button&gt;
+        &lt;button type=&quot;button&quot; id=&quot;reset&quot;&gt;Reset&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+    &lt;p id=&quot;status&quot; class=&quot;status&quot; role=&quot;status&quot;&gt;Ready to audit the open contact profile.&lt;/p&gt;
+    &lt;div class=&quot;grid&quot;&gt;
+      &lt;section class=&quot;panel&quot; aria-labelledby=&quot;audit-title&quot;&gt;
+        &lt;h2 id=&quot;audit-title&quot;&gt;Research audit&lt;/h2&gt;
+        &lt;ol id=&quot;audit&quot;&gt;&lt;/ol&gt;
+        &lt;section class=&quot;sources&quot; id=&quot;sources&quot; hidden&gt;
+          &lt;h2&gt;Sources&lt;/h2&gt;
+          &lt;ul id=&quot;links&quot;&gt;&lt;/ul&gt;
+        &lt;/section&gt;
+      &lt;/section&gt;
+      &lt;section class=&quot;panel&quot; aria-labelledby=&quot;report-title&quot;&gt;
+        &lt;h2 id=&quot;report-title&quot;&gt;Profile quality summary&lt;/h2&gt;
+        &lt;div class=&quot;note-content&quot;&gt;&lt;p id=&quot;placeholder&quot;&gt;The summary appears after the page audit.&lt;/p&gt;&lt;pre class=&quot;note&quot; id=&quot;note&quot;&gt;&lt;/pre&gt;&lt;/div&gt;
+        &lt;button type=&quot;button&quot; id=&quot;copy&quot; disabled&gt;Copy summary&lt;/button&gt;&lt;p class=&quot;copy-feedback&quot; id=&quot;copy-feedback&quot; role=&quot;status&quot;&gt;You can copy this summary after the run.&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/div&gt;
+&lt;section id=&quot;edit-preview&quot;&gt;&lt;h2&gt;Want to edit the page?&lt;/h2&gt;&lt;button id=&quot;preview-edits&quot; type=&quot;button&quot; aria-controls=&quot;edit-details&quot; aria-expanded=&quot;false&quot; disabled&gt;Preview suggested edits&lt;/button&gt;&lt;div id=&quot;edit-details&quot; hidden&gt;&lt;p&gt;Employer: Pine Example Mortgage → Juniper Example Lending&lt;/p&gt;&lt;p&gt;Primary email: avery@pine.example → avery@juniper.example&lt;/p&gt;&lt;p&gt;Stage: New Lead → Contacted&lt;/p&gt;&lt;p&gt;Keep the tags and saved phone. Confirm the preferred number before editing it.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;footer&gt;Simulation only. The contact, records, and source checks are fictional. All checks run locally.&lt;/footer&gt;
+  &lt;/div&gt;
+&lt;/main&gt;
+&lt;dialog id=&quot;source-preview&quot; aria-labelledby=&quot;source-title&quot;&gt;
+  &lt;h2 id=&quot;source-title&quot;&gt;&lt;/h2&gt;
+  &lt;p id=&quot;source-detail&quot;&gt;&lt;/p&gt;
+  &lt;form method=&quot;dialog&quot;&gt;&lt;button autofocus&gt;Close&lt;/button&gt;&lt;/form&gt;
+&lt;/dialog&gt;
+&lt;script&gt;
+'use strict';
+const get = id =&gt; document.getElementById(id);
+const form = get('audit-form'), run = get('run'), stop = get('stop'), status = get('status');
+const audit = get('audit'), note = get('note'), copy = get('copy');
+const sources = [
+  ['CRM profile', 'Stage: New Lead. Tags: CO, Loan Officer, Replied. Assigned location: Denver, CO. Employer: Pine Example Mortgage. Phone: 202-555-0141. Email: avery@pine.example.'],
+  ['CRM conversation', 'Latest inbound reply, Nov 4: Avery confirmed the move to Juniper Example Lending, shared avery@juniper.example, and asked for an email follow-up next week.'],
+  ['NMLS record', 'Active Colorado license. Current sponsor: Juniper Example Lending.'],
+  ['Company directory', 'Avery Demo, Loan Officer, Denver, CO. Published contact: avery@juniper.example and 202-555-0142.']
+];
+const checks = [
+  ['Profile tags &amp; placement', 'CO and Loan Officer fit the directory and license. Replied is an activity tag. The latest reply supports changing the stage from New Lead to Contacted.', 'CRM profile + conversation, company directory, NMLS'],
+  ['Emails', 'Stale: avery@pine.example. Match: avery@juniper.example appears in both the directory and latest reply.', 'CRM profile + conversation, company directory'],
+  ['Phone numbers', 'CRM lists 202-555-0141. The directory lists 202-555-0142. Confirm the preferred number before replacing either.', 'CRM profile, company directory'],
+  ['Conversation thread', 'Nov 4: Avery confirmed the move and asked for an email follow-up next week.', 'CRM conversation'],
+  ['Employment &amp; NMLS', 'CRM still lists Pine. NMLS shows Juniper as the active sponsor and the directory confirms the Loan Officer role.', 'CRM profile, NMLS, company directory']
+];
+let timer, active = -1;
+function resetResults() {
+  clearTimeout(timer);
+  active = -1;
+  audit.replaceChildren(...checks.map(([label], index) =&gt; {
+    const row = document.createElement('li');
+    row.innerHTML = '&lt;span class=&quot;dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;div&gt;&lt;strong&gt;&lt;/strong&gt;&lt;small&gt;Waiting&lt;/small&gt;&lt;/div&gt;';
+    row.querySelector('.dot').textContent = index + 1;
+    row.querySelector('strong').textContent = label;
+    return row;
+  }));
+  note.textContent = '';
+  get('placeholder').hidden = false;
+  get('sources').hidden = true;
+  run.disabled = false;
+  stop.disabled = true;
+  copy.disabled = true;
+  get('copy-feedback').textContent = 'You can copy this summary after the run.';
+  get('preview-edits').disabled = true;
+  get('preview-edits').setAttribute('aria-expanded','false');
+  get('edit-details').hidden = true;
+}
+function advance(index) {
+  active = index;
+  const row = audit.children[index];
+  row.dataset.state = 'active';
+  row.setAttribute('aria-current', 'step');
+  row.querySelector('small').textContent = 'Checking…';
+  status.textContent = 'Checking ' + checks[index][0] + '…';
+  timer = setTimeout(() =&gt; {
+    row.dataset.state = 'done';
+    row.removeAttribute('aria-current');
+    row.querySelector('small').textContent = 'Reviewed · ' + checks[index][2];
+    if (index + 1 &lt; checks.length) return advance(index + 1);
+    active = -1;
+    run.disabled = false;
+    run.textContent = 'Rerun Page Quality Check';
+    if (document.activeElement === stop) run.focus();
+    stop.disabled = true;
+    get('placeholder').hidden = true;
+    get('sources').hidden = false;
+    copy.disabled = false;
+    get('copy-feedback').textContent = 'Feel free to copy this summary and paste it into another app.';
+    get('preview-edits').disabled = false;
+    note.textContent = ['Avery Demo · Quality Check', 'Needs review: update employer, email and stage. Confirm the preferred phone before editing.', ...checks.map(([label, finding]) =&gt; label + '\n' + finding)].join('\n\n');
+    status.textContent = 'Page audit complete. Summary ready to review.';
+  }, 650);
+}
+form.addEventListener('submit', event =&gt; {
+  event.preventDefault();
+  if (active !== -1) return;
+  resetResults();
+  stop.disabled = false;
+  stop.focus();
+  run.disabled = true;
+  advance(0);
+});
+stop.addEventListener('click', () =&gt; {
+  resetResults();
+  run.textContent = 'Rerun Page Quality Check';
+  status.textContent = 'Audit stopped.';
+  run.focus();
+});
+get('reset').addEventListener('click', () =&gt; {
+  resetResults();
+  run.textContent = 'Run CRM Page Quality Check';
+  status.textContent = 'Ready to audit the open contact profile.';
+  run.focus();
+});
+for (const [label, detail] of sources) {
+  const item = document.createElement('li');
+  const link = document.createElement('a');
+  link.href = '#source-preview';
+  link.textContent = label;
+  link.addEventListener('click', event =&gt; {
+    event.preventDefault();
+    get('source-title').textContent = label;
+    get('source-detail').textContent = detail;
+    get('source-preview').showModal();
+  });
+  item.append(link);
+  get('links').append(item);
+}
+copy.addEventListener('click', async () =&gt; {
+  const summary = note.textContent;
+  try {
+    await navigator.clipboard.writeText(summary);
+    if (note.textContent === summary) get('copy-feedback').textContent = 'Summary copied. You can paste it anywhere.';
+  } catch {
+    if (note.textContent !== summary) return;
+    const range = document.createRange();
+    range.selectNodeContents(note);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+    let copied = false;
+    try { copied = document.execCommand('copy'); } catch {}
+    if (copied) selection.removeAllRanges();
+    get('copy-feedback').textContent = copied ? 'Summary copied. You can paste it anywhere.' : 'Summary selected. Press Ctrl+C or Command+C.';
+  }
+});
+get('preview-edits').addEventListener('click', () =&gt; {
+  const details = get('edit-details');
+  details.hidden = !details.hidden;
+  get('preview-edits').setAttribute('aria-expanded', String(!details.hidden));
+});
+resetResults();
+&lt;/script&gt;
+&lt;/html&gt;"></iframe></section><section id="mission-2" role="tabpanel" aria-labelledby="tab-2" hidden><iframe title="Leader Matching: Rank five leaders or assess a leader of focus." data-page="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;Mr. E Gemini Brain | Leader Matching&lt;/title&gt;
+&lt;style&gt;
+:root{color-scheme:dark;--ink:#eef4ff;--muted:#a8b9d4;--line:#304363;--panel:#111e34;--blue:#85b7ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#172d50,#080f20 70%);color:var(--ink);font:16px/1.5 system-ui,sans-serif;padding:0}
+main{max-width:920px;margin:auto;background:#0b1528;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 20px 80px #0007}
+header,.body{padding:clamp(16px,4vw,32px)}header{display:flex;align-items:center;gap:12px;background:#101e36;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.mark{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#203e6c;color:#a7ceff;font-size:25px}
+.brand{font-weight:700}.badge,.eyebrow{font:700 12px/1.4 ui-monospace,monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--blue)}
+.badge{margin-left:auto;border:1px solid var(--line);border-radius:30px;padding:5px 10px}
+h1{font-size:clamp(25px,5vw,39px);letter-spacing:-.035em;margin:5px 0 8px;line-height:1.12}h2{font-size:16px;margin:0 0 12px}p{margin:0 0 14px;color:var(--muted)}
+form{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin:22px 0 16px}
+label{display:block;font-weight:650;margin-bottom:6px}.controls{display:flex;flex-wrap:wrap;gap:8px}
+input,button{font:inherit;min-height:44px;border:1px solid var(--line);border-radius:9px;padding:8px 13px}
+input{min-width:0;flex:1 1 185px;background:#080f20;color:var(--ink)}button{background:#172945;color:var(--ink);cursor:pointer;font-weight:650}
+button.primary{background:#2662d4;border-color:#568afa}button:disabled{opacity:.55;cursor:default}
+:focus-visible{outline:3px solid #9acbff;outline-offset:3px}
+.hint,.status,footer{font-size:13px;color:var(--muted)}.hint{margin:8px 0 0}.status{min-height:24px;margin-bottom:12px}.error{color:#ffb6bb}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;min-width:0}
+ol{padding:0;margin:0;list-style:none}li{display:grid;grid-template-columns:26px 1fr;gap:8px;padding:9px 0;border-top:1px solid var(--line)}
+.dot{border:1px solid var(--line);border-radius:50%;width:24px;height:24px;text-align:center;font-size:13px;line-height:22px;color:var(--muted)}
+li[data-state=&quot;active&quot;] .dot{color:#fff;background:#2662d4;animation:pulse 1s infinite alternate}
+li[data-state=&quot;done&quot;] .dot{color:#9df3cc;background:#183c39}li small{display:block;color:var(--muted)}
+@keyframes pulse{to{box-shadow:0 0 0 4px #6c9eff55}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+.note{white-space:pre-wrap;overflow-wrap:anywhere;color:var(--ink);font:14px/1.55 system-ui,sans-serif;margin:0 0 12px}.note:empty{display:none} .sources{margin:0 0 16px;border-top:1px solid var(--line);padding-top:12px} .sources a{color:var(--blue)} .sources ul{padding-left:20px} .sources li{display:list-item;border:0;padding:4px 0} .sources article{margin-top:12px} .sources article:target{outline:2px solid var(--blue);outline-offset:4px}
+footer{margin-top:16px}@media(max-width:650px){.grid{grid-template-columns:1fr}}
+.panel{min-height:360px;display:flex;flex-direction:column}.verification{font-weight:700;color:var(--blue)}
+#audit li{min-height:54px}.sources{margin:8px 0 0}.sources h2{margin:0 0 4px}
+.sources ul{margin:0;padding-left:18px}.sources li{font-size:13px;padding:2px 0}
+.source-profiles{font-size:13px;margin:6px 0 0}
+.note-content{flex:1;margin-bottom:12px}#copy{align-self:flex-start}
+dialog{max-width:min(90vw,400px);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:20px}
+dialog::backdrop{background:#050b15bb}dialog form{padding:0;margin:0;border:0}
+.method,#edit-preview{border-top:1px solid var(--line);padding-top:12px;margin-top:16px}.method summary{cursor:pointer;font-weight:700;margin-bottom:10px}.method a{color:var(--blue)}select{font:inherit;min-height:44px;border:1px solid var(--line);border-radius:9px;padding:8px;background:#080f20;color:var(--ink);max-width:100%}.controls select{flex:1 1 230px;min-width:0}.sources a{color:var(--blue)}#audit li{display:block;padding:10px 0}#audit li[aria-current]{color:var(--blue)}.fit-card{border-top:1px solid var(--line);padding:10px 0}.fit-card p{margin:4px 0}.fit-card summary{cursor:pointer;font-weight:700}.focus{margin-top:12px}body{background:transparent;padding:0;min-height:0}main{border:0;border-radius:0;box-shadow:none;background:transparent}.body{padding:clamp(12px,3vw,20px)}h1{font-size:1.45rem;margin-top:0}.panel{min-height:0;overflow:visible}.grid{align-items:stretch}.status{margin-bottom:8px}form:not([method]){margin:12px 0;padding:12px}.note-content{overflow:visible}footer{font-size:14px}&lt;/style&gt;
+
+&lt;main&gt;
+&lt;div class=&quot;body&quot;&gt;&lt;h1&gt;Leader Matching&lt;/h1&gt;&lt;p&gt;Rank five partner campaigns by role, geography, licensing context, production, and recruiting priorities. Choose a leader to see what fits, what holds the match back, and up to three alternatives.&lt;/p&gt;
+&lt;form id=&quot;match&quot;&gt;&lt;label for=&quot;candidate&quot;&gt;Candidate scenario&lt;/label&gt;&lt;div class=&quot;controls&quot;&gt;&lt;select id=&quot;candidate&quot;&gt;&lt;option value=&quot;0&quot;&gt;Texas solo loan officer&lt;/option&gt;&lt;option value=&quot;1&quot;&gt;Atlanta protected partner&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;Charlotte consumer-direct loan officer&lt;/option&gt;&lt;option value=&quot;3&quot;&gt;Charlotte county-level loan officer&lt;/option&gt;&lt;option value=&quot;4&quot;&gt;Western Pennsylvania branch manager&lt;/option&gt;&lt;/select&gt;&lt;button class=&quot;primary&quot; id=&quot;run&quot;&gt;Run Leader Match&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;stop&quot; disabled&gt;Stop&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;reset&quot;&gt;Reset&lt;/button&gt;&lt;/div&gt;&lt;div class=&quot;focus&quot;&gt;&lt;label for=&quot;leader&quot;&gt;Leader of focus&lt;/label&gt;&lt;select id=&quot;leader&quot;&gt;&lt;option value=&quot;&quot;&gt;None · rank across campaigns&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;&lt;/form&gt;
+&lt;p class=&quot;status&quot; id=&quot;status&quot; role=&quot;status&quot;&gt;Ready to check the selected candidate.&lt;/p&gt;
+&lt;div class=&quot;grid&quot;&gt;&lt;section class=&quot;panel&quot;&gt;&lt;h2&gt;Matching audit&lt;/h2&gt;&lt;ol id=&quot;audit&quot;&gt;&lt;/ol&gt;&lt;section class=&quot;sources&quot;&gt;&lt;h2&gt;Sources&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;#research&quot; data-source=&quot;candidate&quot;&gt;Sanitized candidate case&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#research&quot; data-source=&quot;matrix&quot;&gt;Partner campaign matrix · rows 13–384&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;#research&quot; data-source=&quot;dnc&quot;&gt;Do Not Call protections · column AL&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;&lt;/section&gt;
+&lt;section class=&quot;panel&quot;&gt;&lt;h2&gt;Routing decision&lt;/h2&gt;&lt;div class=&quot;note-content&quot;&gt;&lt;p id=&quot;placeholder&quot;&gt;The recommendation appears after the checks.&lt;/p&gt;&lt;div id=&quot;result&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;
+&lt;footer&gt;Simulation only. Candidate and partner identities are sanitized. Routing decisions stay in this demo.&lt;/footer&gt;
+&lt;/div&gt;&lt;/main&gt;
+&lt;dialog id=&quot;preview&quot; aria-labelledby=&quot;source-title&quot;&gt;&lt;h2 id=&quot;source-title&quot;&gt;&lt;/h2&gt;&lt;p id=&quot;source-text&quot;&gt;&lt;/p&gt;&lt;form method=&quot;dialog&quot;&gt;&lt;button autofocus&gt;Close&lt;/button&gt;&lt;/form&gt;&lt;/dialog&gt;
+&lt;script&gt;
+'use strict';
+const cases = [[&quot;Texas solo loan officer&quot;,&quot;Austin, Travis County, TX · 34 units · $11.4M / 14 months&quot;,&quot;Leader F · Pond Foxtrot (row 203)&quot;,&quot;Texas and the loan officer role fit. 18% refi is below the 70% ceiling. G and H require producing direct reports. Confirm $2.5M in six-month self-generated volume before routing. The study cites $5.5M over seven months, a different window and measure.&quot;,&quot;Role fit · production evidence pending&quot;],[&quot;Atlanta protected partner&quot;,&quot;Atlanta, Fulton County, GA · Producing Branch Manager · $45.5M branch volume&quot;,&quot;No routing · Do Not Call&quot;,&quot;Protected Partner 01 triggers the sheet-wide employer and DBA check in column AL. The study also flags internal anti-poaching rules. Geography and volume cannot override the stop.&quot;,&quot;Blocked · protected partner&quot;],[&quot;Charlotte consumer-direct loan officer&quot;,&quot;Charlotte, Mecklenburg County, NC · 138 units · $32.4M / 14 months&quot;,&quot;No routing · Self-generation and mix&quot;,&quot;Zero self-generated business and zero purchase share disqualify the candidate under the applicable campaign rules. The 53% refi share also exceeds Leader B’s 35% cap.&quot;,&quot;Blocked · campaign requirements&quot;],[&quot;Charlotte county-level loan officer&quot;,&quot;Charlotte, Mecklenburg County, NC · 51 units · $28.3M / 14 months&quot;,&quot;Leader E · Pond Echo (row 185)&quot;,&quot;Mecklenburg is an exact county match and 37% refi clears the 70% cap. The study ranks F, D and A as alternatives. Confirm the required self-generated volume and units in the correct windows before routing.&quot;,&quot;Exact county fit · production evidence pending&quot;],[&quot;Western Pennsylvania branch manager&quot;,&quot;Pittsburgh, Allegheny County, PA · 47 personal units · 114 branch units&quot;,&quot;Leader A · Pond Alpha (row 13)&quot;,&quot;Exact Western PA metro and role fit. The study lists Leader B as secondary, with 17% refi below its 35% cap. Confirm campaign-specific self-generated thresholds. Keep personal, HQ and branch volume separate.&quot;,&quot;Top study recommendation · pending eligibility review&quot;]];
+const get = id =&gt; document.getElementById(id);
+const form = get('match'), candidate = get('candidate'), run = get('run'), stop = get('stop');
+const audit = get('audit'), status = get('status'), result = get('result');
+const checks = ['Employer and Do Not Call', 'Role and geography', 'Production and product mix', 'Routing decision'];
+
+const campaigns = [[&quot;A&quot;,&quot;Alpha&quot;,13,&quot;Western PA, Northern OH, Southeast corridor&quot;,&quot;Loan Officer / Branch Manager&quot;,&quot;8+ self-generated units per month or campaign dollar threshold&quot;,70],[&quot;B&quot;,&quot;Bravo&quot;,56,&quot;PA and Southeast priority; nationwide expansion&quot;,&quot;Loan Officer / Branch Manager&quot;,&quot;$2M self-generated per month&quot;,35],[&quot;C&quot;,&quot;Charlie&quot;,73,&quot;Central/Eastern PA, VA and NC markets&quot;,&quot;Loan Officer / Builder Specialist&quot;,&quot;$6M self-generated over 12 months&quot;,null],[&quot;D&quot;,&quot;Delta&quot;,130,&quot;Mecklenburg and Wake counties; Mid-Atlantic secondary&quot;,&quot;Self-generated Loan Officer&quot;,&quot;$3.5M over 6 months and 2 self-sourced units per month&quot;,70],[&quot;E&quot;,&quot;Echo&quot;,185,&quot;Mecklenburg, Brunswick, New Hanover and Pender counties&quot;,&quot;Loan Officer&quot;,&quot;$6M self-generated over 12 months&quot;,70],[&quot;F&quot;,&quot;Foxtrot&quot;,203,&quot;Midwest, statewide Texas and selected Southeast markets&quot;,&quot;Loan Officer&quot;,&quot;$2.5M self-generated over 6 months&quot;,70],[&quot;G&quot;,&quot;Golf&quot;,380,&quot;Texas first, then South Central and Southeast&quot;,&quot;Branch / Area Manager or Owner with producing reports&quot;,&quot;$2.5M self-generated and producing direct reports&quot;,70],[&quot;H&quot;,&quot;Hotel&quot;,384,&quot;Texas first, then Central/West, TN and FL&quot;,&quot;Branch / Area / National Manager or Owner with producing reports&quot;,&quot;2 self-generated units per month and producing direct reports&quot;,70]];
+const candidateFacts = [[18,82,false,0,{&quot;F&quot;:3,&quot;B&quot;:1}],[45,null,true,null,{&quot;A&quot;:2,&quot;B&quot;:2,&quot;G&quot;:2}],[53,0,false,0,{&quot;E&quot;:3,&quot;D&quot;:3,&quot;A&quot;:2,&quot;C&quot;:1,&quot;B&quot;:1}],[37,63,false,0,{&quot;E&quot;:3,&quot;D&quot;:3,&quot;F&quot;:2,&quot;A&quot;:2,&quot;C&quot;:1,&quot;B&quot;:1}],[17,72,false,4,{&quot;A&quot;:3,&quot;B&quot;:2}]];
+const leader = get('leader');
+for (const [id, pond, row] of campaigns) {
+  const option = document.createElement('option');
+  option.value = id;
+  option.textContent = 'Leader ' + id + ' · Pond ' + pond + ' (row ' + row + ')';
+  leader.append(option);
+}
+function compare(campaign, caseIndex) {
+  const [id, pond, row, market, role, threshold, refiCap] = campaign;
+  const [refi, purchase, protectedEmployer, reports, geography] = candidateFacts[caseIndex];
+  const manager = caseIndex === 1 || caseIndex === 4;
+  const roleFits = manager ? 'ABGH'.includes(id) : !'GH'.includes(id);
+  const geo = geography[id] || 0;
+  const mixFails = (refiCap !== null &amp;&amp; refi &gt;= refiCap) || (id === 'C' &amp;&amp; purchase !== null &amp;&amp; purchase &lt; 80);
+  const productionFails = caseIndex === 2;
+  const blocked = protectedEmployer || !roleFits || mixFails || productionFails;
+  const score = (blocked ? 0 : 100) + geo * 10 + (roleFits ? 4 : 0) + (mixFails ? 0 : 2);
+  const status = protectedEmployer ? 'Blocked · Do Not Call' : blocked ? 'Does not qualify' : geo ? 'Potential fit · evidence pending' : 'Coverage unconfirmed';
+  return {id, pond, row, score, status, geo, roleFits, mixFails, productionFails, protectedEmployer, blocked, reasons:[
+    ['Role', role + ' · ' + (roleFits ? 'role aligns' : 'role mismatch') + ('GH'.includes(id) ? (reports === null ? ' · producing reports unconfirmed' : ' · ' + reports + ' producing LOs on roster · direct reporting unconfirmed') : '')],
+    ['Geography', market + ' · ' + (geo === 3 ? 'priority match' : geo === 2 ? 'regional match' : geo === 1 ? 'secondary coverage' : 'coverage unconfirmed')],
+    ['Production', threshold + ' · ' + (productionFails ? 'candidate has zero self-generated business' : 'confirm self-generated figures for the required period')],
+    ['Product mix', id === 'C' ? 'Purchase minimum 80% · candidate ' + (purchase === null ? 'share unavailable' : purchase + '%') : 'Refi below ' + refiCap + '% · candidate ' + refi + '%'],
+    ['Employer protection', protectedEmployer ? 'Sheet-wide hard stop under column AL' : 'No sheet-wide block recorded for this case. Confirm row-specific employer and DBA rules before routing.']
+  ]};
+}
+function renderRanking(caseIndex) {
+  const matches = campaigns.map(campaign =&gt; compare(campaign, caseIndex)).sort((a,b) =&gt; b.score - a.score || a.row - b.row);
+  const heading = document.createElement('h3');
+  heading.textContent = leader.value ? 'Focused compatibility' : 'Top five leader comparisons';
+  const context = document.createElement('p');
+  context.textContent = cases[caseIndex][1];
+  result.replaceChildren(heading, context);
+  function show(match, prefix, open) {
+    const detail = document.createElement('details');
+    detail.className = 'fit-card';
+    detail.open = open;
+    const summary = document.createElement('summary');
+    summary.textContent = prefix + 'Leader ' + match.id + ' · Pond ' + match.pond + ' · ' + match.status;
+    detail.append(summary);
+    const row = document.createElement('p');
+    row.textContent = 'Partner Sheet row ' + match.row;
+    detail.append(row);
+    for (const [label, finding] of match.reasons) {
+      const p = document.createElement('p');
+      p.textContent = label + ' · ' + finding;
+      detail.append(p);
+    }
+    result.append(detail);
+  }
+  if (!leader.value) {
+    matches.slice(0,5).forEach((match,index) =&gt; show(match, (index+1) + '. ', index === 0));
+    return;
+  }
+  const focus = matches.find(match =&gt; match.id === leader.value);
+  function paragraph(label, text) {
+    const p = document.createElement('p');
+    const strong = document.createElement('strong');
+    strong.textContent = label + ' ';
+    p.append(strong, text);
+    result.append(p);
+  }
+  const strengths = [];
+  if (focus.roleFits) strengths.push('target role aligns');
+  if (focus.geo) strengths.push(focus.geo === 3 ? 'priority market match' : 'market is within campaign coverage');
+  if (!focus.mixFails &amp;&amp; !focus.reasons[3][1].includes('unavailable')) strengths.push(focus.reasons[3][1]);
+  const gaps = [];
+  if (focus.protectedEmployer) gaps.push('Do Not Call blocks routing across all campaigns');
+  if (!focus.roleFits) gaps.push(focus.reasons[0][1]);
+  if (!focus.geo) gaps.push('market coverage is unconfirmed');
+  if (focus.mixFails || focus.reasons[3][1].includes('unavailable')) gaps.push(focus.reasons[3][1]);
+  gaps.push(focus.reasons[2][1]);
+  if (!focus.protectedEmployer) gaps.push('confirm campaign-specific employer and DBA protections');
+  if (focus.roleFits &amp;&amp; 'GH'.includes(focus.id)) gaps.push('confirm producing direct reports');
+  paragraph('Leader ' + focus.id + ' · Pond ' + focus.pond + ' (row ' + focus.row + ')', focus.status);
+  paragraph('Why it fits', strengths.length ? strengths.join(' · ') : 'No confirmed strengths for this campaign.');
+  paragraph('What holds it back', gaps.join(' · '));
+  const alternatives = matches.filter(match =&gt; match.id !== focus.id &amp;&amp; !match.blocked &amp;&amp; match.geo).slice(0,3);
+  if (!alternatives.length) {
+    paragraph('Other leaders', focus.protectedEmployer ? 'None. Do Not Call applies across campaigns.' : 'No other campaign shows enough alignment for a shortlist.');
+    return;
+  }
+  const title = document.createElement('h3');
+  title.textContent = 'Other potential fits';
+  result.append(title);
+  for (const match of alternatives) {
+    const market = match.geo === 3 ? 'priority market' : match.geo === 2 ? 'regional coverage' : 'secondary coverage';
+    paragraph('Leader ' + match.id + ' · Pond ' + match.pond, market + ', role aligns, and ' + match.reasons[3][1] + '.');
+  }
+  paragraph('Before routing', 'Verify each campaign’s self-generated production requirements and employer protections.');
+
+}
+
+let timer;
+function running(value) {
+  clearTimeout(timer);
+  run.disabled = value;
+  stop.disabled = !value;
+  candidate.disabled = value;
+  leader.disabled = value;
+}
+function resetResults() {
+  running(false);
+  audit.replaceChildren(...checks.map(label =&gt; {
+    const row = document.createElement('li');
+    const text = document.createElement('span');
+    text.textContent = label + ' · Waiting';
+    row.append(text);
+    return row;
+  }));
+  result.replaceChildren();
+  get('placeholder').hidden = false;
+  run.textContent = 'Run Leader Match';
+  status.textContent = 'Ready to check the selected candidate.';
+}
+form.addEventListener('submit', event =&gt; {
+  event.preventDefault();
+  if (run.disabled) return;
+  resetResults();
+  const caseIndex = Number(candidate.value);
+  running(true);
+  stop.focus();
+  function advance(index) {
+    const row = audit.children[index];
+    row.setAttribute('aria-current','step');
+    row.firstChild.textContent = checks[index] + ' · Checking';
+    status.textContent = row.firstChild.textContent;
+    timer = setTimeout(() =&gt; {
+      row.removeAttribute('aria-current');
+      row.firstChild.textContent = checks[index] + ' · Reviewed';
+      if (index + 1 &lt; checks.length) return advance(index + 1);
+      const focusRun = document.activeElement === stop;
+      running(false);
+      renderRanking(caseIndex);
+      get('placeholder').hidden = true;
+      run.textContent = 'Rerun Leader Match';
+      status.textContent = 'Routing review complete.';
+      if (focusRun) run.focus();
+    }, 600);
+  }
+  advance(0);
+});
+stop.addEventListener('click', () =&gt; { resetResults(); status.textContent = 'Matching stopped.'; run.focus(); });
+candidate.addEventListener('change', resetResults);
+leader.addEventListener('change', () =&gt; { if (result.children.length) renderRanking(Number(candidate.value)); });
+get('reset').addEventListener('click', () =&gt; { form.reset(); resetResults(); candidate.focus(); });
+for (const link of document.querySelectorAll('[data-source]')) {
+  link.addEventListener('click', event =&gt; {
+    event.preventDefault();
+    const [name, profile] = cases[Number(candidate.value)];
+    const source = link.dataset.source;
+    get('source-title').textContent = link.textContent;
+    get('source-text').textContent = source === 'candidate' ? name + ' · ' + profile : source === 'matrix' ? 'Study pages 2–4 list role, geography, volume and mix thresholds by partner row.' : 'Study pages 5–6 show how the Atlanta case is blocked by employer and DBA protections.';
+    get('preview').showModal();
+  });
+}
+resetResults();
+&lt;/script&gt;&lt;/html&gt;"></iframe></section></section>
+</main>
+<script>
+const tabs = [...document.querySelectorAll('[role=tab]')];
+function activate(index, focus = false) {
+  tabs.forEach((tab, position) => {
+    const selected = position === index;
+    tab.setAttribute('aria-selected', selected);
+    tab.tabIndex = selected ? 0 : -1;
+    document.getElementById(tab.getAttribute('aria-controls')).hidden = !selected;
+  });
+  const frame = document.querySelector('#mission-' + index + ' iframe');
+  if (!frame.hasAttribute('srcdoc')) {
+    frame.addEventListener('load', () => {
+      const content = frame.contentDocument.querySelector('main');
+      if (!content) return;
+      const resize = () => {
+        const height = Math.ceil(content.getBoundingClientRect().height) + 2;
+        if (height > 2) frame.style.height = height + 'px';
+      };
+      new ResizeObserver(resize).observe(content);
+      resize();
+    });
+    frame.srcdoc = frame.dataset.page;
+    frame.removeAttribute('data-page');
+  }
+  if (focus) tabs[index].focus();
+}
+tabs.forEach((tab,index) => {
+  tab.addEventListener('click', () => activate(index));
+  tab.addEventListener('keydown', event => {
+    const destination = {ArrowLeft:(index+2)%3,ArrowRight:(index+1)%3,Home:0,End:2}[event.key];
+    if (destination === undefined) return;
+    event.preventDefault();
+    activate(destination,true);
+  });
+});
+activate(0);
+</script></html>
