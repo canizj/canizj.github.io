@@ -121,3 +121,24 @@
 .teaching-card {
   width: min(100%, 880px);
 }
+
+.credentials-grid .credential {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-width: 0;
+}
+.credential-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+}
+.credential-link {
+  display: block;
+  width: fit-content;
+  margin-top: 14px;
+  color: var(--accent);
+  font-size: 13px;
+  text-underline-offset: 3px;
+}
