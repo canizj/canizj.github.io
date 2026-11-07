@@ -1,0 +1,91 @@
+/* Shared brand treatments for the portfolio and case studies. */
+:root {
+  --brand-lime: #d4ef85;
+}
+main > section:is(.section, .hero) {
+  --section-background: #303136;
+  --section-text: #f6f5f1;
+  --badge-background: #efeee9;
+  --badge-text: #292b31;
+  background: var(--section-background);
+  color: var(--section-text);
+}
+main > section:is(.section, .hero):nth-of-type(even) {
+  --section-background: #efeee9;
+  --section-text: #292b31;
+  --badge-background: #292b31;
+  --badge-text: #efeee9;
+}
+main > section:is(.section, .hero) .eyebrow.eyebrow {
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  padding: .4rem .85rem;
+  border-radius: 999px;
+  background: #292b31;
+  color: var(--brand-lime);
+  letter-spacing: .1em;
+  text-wrap: balance;
+}
+main > section:is(.section, .hero) .expertise,
+main #portfolio .portfolio-title-group .capability-tags,
+main #recruiting-workflows .workflow-capabilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  contain: none;
+  width: auto;
+  max-width: 100%;
+}
+main > section:is(.section, .hero) .expertise span,
+main #portfolio .portfolio-title-group .capability-tags span,
+main #recruiting-workflows .workflow-capabilities span {
+  display: inline-flex;
+  flex: 0 1 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  max-width: 100%;
+  padding: .65rem 1.1rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--badge-background);
+  color: var(--badge-text);
+  font: 600 .875rem/1.4 var(--sans);
+  letter-spacing: .02em;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+main > section:is(.section, .hero):nth-of-type(even) .hero-lead,
+main > section:is(.section, .hero):nth-of-type(even) .about-text > p,
+main > section:is(.section, .hero):nth-of-type(even) .section-top > p,
+main > section:is(.section, .hero):nth-of-type(even) .selected-work-intro {
+  color: #40474a;
+}
+main > section:is(.section, .hero):nth-of-type(odd) .about-text > p,
+main > section:is(.section, .hero):nth-of-type(odd) .section-top > p {
+  color: #dedee0;
+}
+main > section:is(.section, .hero):nth-of-type(even) h1 em,
+main > section:is(.section, .hero):nth-of-type(even) h2 em,
+main > section:is(.section, .hero):nth-of-type(even) .workflow-guides h3 em {
+  color: #476b5e;
+}
+main > section:is(.section, .hero):nth-of-type(odd) h1 em,
+main > section:is(.section, .hero):nth-of-type(odd) h2 em {
+  color: #b5d2c3;
+}
+main > section:is(.section, .hero):nth-of-type(even) .project-result {
+  background: #e1e1da;
+  border-color: #adb5b1;
+}
+main > section:is(.section, .hero):nth-of-type(even) .project-result strong {
+  color: #292b31;
+}
+main .workflow-guides .guide-button {
+  color: #fff;
+}
+main #about .eyebrow {
+  display: block;
+  margin-inline: auto;
+}
