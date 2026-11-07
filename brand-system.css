@@ -111,3 +111,14 @@ main #recruiting-workflows .workflow-capabilities {
     justify-content: flex-start;
   }
 }
+
+/* Spread the opening capabilities across the title area. */
+main #mr-e-overview .capability-tags {
+  justify-content: space-between;
+  width: 100%;
+}
+#mr-e-overview .hero-lead {
+  max-width: 70ch;
+  margin-inline: auto;
+  text-align: center;
+}
