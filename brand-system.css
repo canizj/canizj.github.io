@@ -1,7 +1,4 @@
 /* Shared brand treatments for the portfolio and case studies. */
-:root {
-  --brand-lime: #d4ef85;
-}
 main > section:is(.section, .hero) {
   --section-background: #303136;
   --section-text: #f6f5f1;
@@ -17,15 +14,13 @@ main > section:is(.section, .hero):nth-of-type(even) {
   --badge-text: #efeee9;
 }
 main > section:is(.section, .hero) .eyebrow.eyebrow {
-  display: inline-block;
-  width: fit-content;
-  max-width: 100%;
-  padding: .4rem .85rem;
-  border-radius: 999px;
-  background: #292b31;
-  color: var(--brand-lime);
-  letter-spacing: .1em;
-  text-wrap: balance;
+  color: #aaaeb0;
+}
+main > section:is(.section, .hero):nth-of-type(even) .eyebrow.eyebrow {
+  color: #656e70;
+}
+.google-case-study > section:is(.section, .hero):nth-of-type(even) .eyebrow.eyebrow {
+  color: #596b6b;
 }
 main > section:is(.section, .hero) .expertise,
 main #portfolio .portfolio-title-group .capability-tags,
@@ -84,8 +79,4 @@ main > section:is(.section, .hero):nth-of-type(even) .project-result strong {
 }
 main .workflow-guides .guide-button {
   color: #fff;
-}
-main #about .eyebrow {
-  display: block;
-  margin-inline: auto;
 }
