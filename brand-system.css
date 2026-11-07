@@ -80,3 +80,8 @@ main > section:is(.section, .hero):nth-of-type(even) .project-result strong {
 main .workflow-guides .guide-button {
   color: #fff;
 }
+
+/* Match the challenge content to the adjacent section margins. */
+#challenge .about-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
