@@ -122,3 +122,13 @@ main #mr-e-overview .capability-tags {
   margin-inline: auto;
   text-align: center;
 }
+
+/* Center the recruiting workflow introduction. */
+#recruiting-workflows > .wrap > h2 {
+  text-align: center;
+}
+#recruiting-workflows > .wrap > .hero-lead {
+  max-width: 70ch;
+  margin-inline: auto;
+  text-align: center;
+}
