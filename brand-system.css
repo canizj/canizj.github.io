@@ -97,3 +97,17 @@ main .workflow-guides .guide-button {
   margin-left: 0;
   margin-right: 0;
 }
+
+/* Distribute the workflow badges beneath the full instructions and chat row. */
+main #recruiting-workflows .workflow-capabilities {
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (max-width: 520px) {
+  main #recruiting-workflows .workflow-capabilities {
+    justify-content: flex-start;
+  }
+}
