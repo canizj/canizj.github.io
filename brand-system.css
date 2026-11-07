@@ -85,3 +85,15 @@ main .workflow-guides .guide-button {
 #challenge .about-grid {
   grid-template-columns: minmax(0, 1fr);
 }
+
+/* Keep Mr. E content on the shared page gutter. */
+.mr-e-case-study .project-evidence {
+  max-width: 1230px;
+}
+.mr-e-case-study .about-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+.mr-e-case-study .workflow-layout {
+  margin-left: 0;
+  margin-right: 0;
+}
