@@ -132,3 +132,51 @@ main #mr-e-overview .capability-tags {
   margin-inline: auto;
   text-align: center;
 }
+
+/* Prominent links to the supporting project documents. */
+.document-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+.document-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  border: 1px solid #c5d4ca;
+  border-radius: 18px;
+  background: #efeee9;
+  color: #292b31;
+  text-decoration: none;
+}
+.document-card strong {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+.document-card > span {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.document-card .document-action {
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #292b31;
+  color: #efeee9;
+  font-weight: 700;
+}
+.document-card:hover {
+  background: #dce6df;
+}
+.document-card:focus-visible {
+  outline: 3px solid #a7d9ce;
+  outline-offset: 5px;
+}
+@media (max-width: 650px) {
+  .document-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
