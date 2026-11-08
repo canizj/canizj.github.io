@@ -180,3 +180,20 @@ main #mr-e-overview .capability-tags {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* Consistent case-study footer; homepage/About footer retains its own layout. */
+main:is(.mr-e-case-study,.case-study) + footer .footer-inner{
+  box-sizing:border-box;width:100%;max-width:1230px;margin-inline:auto;
+  padding:33px 38px;display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+main:is(.mr-e-case-study,.case-study) + footer .footer-inner p{
+  margin:0;font:400 25px/1.3 var(--serif);color:#969791;
+}
+main:is(.mr-e-case-study,.case-study) + footer .footer-inner p span{font:inherit;color:#292b31}
+main:is(.mr-e-case-study,.case-study) + footer .footer-inner > span{
+  font:400 16px/1.5 var(--sans);color:#707176;text-align:right;
+}
+@media(max-width:650px){
+  main:is(.mr-e-case-study,.case-study) + footer .footer-inner{padding:28px 20px;flex-direction:column;align-items:flex-start;gap:12px}
+  main:is(.mr-e-case-study,.case-study) + footer .footer-inner > span{text-align:left}
+}
