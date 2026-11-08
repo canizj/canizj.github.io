@@ -9,7 +9,7 @@ Production baseline: `4f2384c4f5c1c76beab186d65c656e7df5569603`. Previous versio
 - Update the three supplied case-study pages while preserving the existing employer card, brand, navigation, and supporting capstone assets.
 - Preserve the supplied revised PDF unchanged, with visible viewing and download links. The editable Word source is excluded from the public branch.
 - Feature Power BI and Tableau dashboard images, supplementary chart images and workflow diagrams. Power BI is a static image, with image zoom and pan rather than live report interaction.
-- Add top-of-page section shortcuts to the six current case-study pages. The homepage remains unchanged.
+- Add top-of-page section shortcuts to the six current case-study pages. Homepage layout remains unchanged; its badge labels are included in the uniqueness audit.
 - Add compact zoom controls inside analytical images. Dragging pans zoomed images. Fit resets the image position. Original-image links remain available.
 - Preserve all PDFs and the existing report viewer behavior.
 
@@ -34,7 +34,7 @@ On the capstone page, choose Datafolio. Select +, drag the image, and select Fit
 - Tested report page-turn and zoom controls without changing their code.
 - Tested image zoom, horizontal and vertical mouse dragging, and Fit resetting both scroll offsets. Controls fit inside the narrow viewport. Desktop control bar measures 145 by 40 pixels, with larger touch targets on touchscreens.
 - JavaScript syntax checks pass for script.js, capstone-documents.js, amazon-connected.js and simulation-frames.js. No first-party JavaScript errors observed during tested browser flows.
-- styles.css, brand-system.css, script.js, homepage, original PDFs and capstone media are unchanged. Only image-viewer code is extended in capstone-documents.js; report-viewer code is unchanged.
+- styles.css, brand-system.css, script.js, original PDFs and capstone media are unchanged. Only image-viewer code is extended in capstone-documents.js; report-viewer code is unchanged.
 
 ## Limits
 
@@ -43,3 +43,7 @@ No live Power BI embed is implemented. External embed controls were not exhausti
 ## Review image
 
 ![Compact image tools](correlation-one-image-controls.jpg)
+
+## Power-word labels
+
+Audited 76 capability badges across the homepage, six current case studies and Correlation One overview. All labels are unique after case and whitespace normalization. Keep each term in the section with the strongest supporting evidence; use a distinct, accurate label elsewhere. Exploratory analysis stays in the capstone analytical approach, Data storytelling in the individual contribution, and Dashboard design beside the Tableau dashboard. Eight repeated or overlapping labels were replaced without changing narrative copy or layout.
