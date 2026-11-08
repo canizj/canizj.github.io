@@ -17,13 +17,6 @@
 .project-expanded{padding:0 1rem 1.25rem}
 .project-expanded h4{margin:1rem 0 .5rem}
 .project-expanded a{color:inherit;text-decoration:underline}
-.case-study-trigger{padding:0;border:0;background:none;color:inherit;font:inherit;text-decoration:underline;cursor:pointer}
-.case-study-dialog{box-sizing:border-box;width:min(28rem,calc(100% - 2rem));padding:clamp(1rem,5vw,2rem);border:1px solid var(--accent);border-radius:1rem;background:var(--off);color:var(--ink)}
-.case-study-dialog::backdrop{background:rgba(41,43,49,.72)}
-.case-study-dialog h2{margin:0 0 1.25rem;font:600 1.25rem/1.5 var(--sans)}
-.case-study-dialog button{padding:.55rem 1rem;border:1px solid var(--ink);border-radius:.5rem;background:var(--ink);color:var(--off);font:inherit;cursor:pointer}
-.case-study-trigger:focus-visible,.case-study-dialog button:focus-visible{outline:2px solid currentColor;outline-offset:3px}
-.case-study-dialog button:focus-visible{outline-color:var(--ink)}
 .project-result{background:#232e39;border:1px solid #586974;padding:.75rem;margin:.6rem 0}
 .project-result strong,.project-result span{display:block}
 .project-result strong{color:#cee9ef;font-size:1.15rem}
@@ -134,15 +127,5 @@
       </div></div></div></section>
   </main>
   <footer><div class="wrap footer-inner"><p>Jason Caniz<span>.</span></p><span>Business Operations · Data Analytics · Process Engineering</span></div></footer>
-  <dialog class="case-study-dialog" id="case-study-status" aria-labelledby="case-study-status-title">
-    <h2 id="case-study-status-title">Case study in progress: coming soon</h2>
-    <form method="dialog"><button autofocus>Close</button></form>
-  </dialog>
-  <script>
-    const caseStudyStatus = document.getElementById('case-study-status');
-    document.querySelectorAll('.case-study-trigger').forEach((trigger) => {
-      trigger.addEventListener('click', () => caseStudyStatus.showModal());
-    });
-  </script>
 </body>
 </html>
