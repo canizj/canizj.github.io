@@ -46,4 +46,6 @@ No live Power BI embed is implemented. External embed controls were not exhausti
 
 ## Power-word labels
 
-Audited 76 capability badges across the homepage, six current case studies and Correlation One overview. All labels are unique after case and whitespace normalization. Keep each term in the section with the strongest supporting evidence; use a distinct, accurate label elsewhere. Exploratory analysis stays in the capstone analytical approach, Data storytelling in the individual contribution, and Dashboard design beside the Tableau dashboard. Eight repeated or overlapping labels were replaced without changing narrative copy or layout.
+Use exactly three badges in each selected section, and only two or three selected sections per project. Every badge label must be unique across the current website. Keep each label beside the strongest supporting evidence.
+
+Validated 66 badges with 66 unique labels across the homepage, six current case studies and Correlation One overview. Each case study and the homepage use three selected badge sections; the short overview retains one three-badge summary. Removed badge groups from the other sections without changing their narrative content, navigation or media.
