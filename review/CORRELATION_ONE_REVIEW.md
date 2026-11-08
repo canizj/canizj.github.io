@@ -49,3 +49,7 @@ No live Power BI embed is implemented. External embed controls were not exhausti
 Use exactly three badges in each selected section, and only two or three selected sections per project. Every badge label must be unique across the current website. Keep each label beside the strongest supporting evidence.
 
 Validated 66 badges with 66 unique labels across the homepage, six current case studies and Correlation One overview. Each case study and the homepage use three selected badge sections; the short overview retains one three-badge summary. Removed badge groups from the other sections without changing their narrative content, navigation or media.
+
+## Operations case-study framing
+
+Present Distinguished Scholar Selection as an additional operations case study completed for Correlation One. Apply this wording to the homepage card, case-study introduction, metadata, overview and related navigation. Original source PDFs are preserved unchanged.
