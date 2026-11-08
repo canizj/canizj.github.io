@@ -36,19 +36,44 @@ document.querySelectorAll('[data-document-viewer]').forEach((viewer) => {
 
 document.querySelectorAll('[data-image-zoom]').forEach(viewer => {
   let zoom = 100;
+  let drag = null;
   const image = viewer.querySelector('img');
   const stage = viewer.querySelector('.datafolio-image-stage');
   const minus = viewer.querySelector('[data-zoom-out]');
   const plus = viewer.querySelector('[data-zoom-in]');
+  const stopDrag = () => { drag = null; stage.classList.remove('is-dragging'); };
   const update = () => {
     image.style.width = `${zoom}%`;
     viewer.querySelector('[data-zoom-status]').textContent = `${zoom}%`;
     minus.disabled = zoom === 100;
     plus.disabled = zoom === 250;
     stage.classList.toggle('is-zoomed', zoom > 100);
+    stopDrag();
     if (zoom === 100) { stage.scrollTop = 0; stage.scrollLeft = 0; }
   };
   minus.addEventListener('click', () => { zoom = Math.max(100, zoom - 50); update(); });
   plus.addEventListener('click', () => { zoom = Math.min(250, zoom + 50); update(); });
   viewer.querySelector('[data-zoom-fit]').addEventListener('click', () => { zoom = 100; update(); });
+  image.draggable = false;
+  stage.addEventListener('pointerdown', event => {
+    if (zoom === 100 || event.button !== 0 || !event.isPrimary) return;
+    drag = { x: event.clientX, y: event.clientY, left: stage.scrollLeft, top: stage.scrollTop };
+    stage.setPointerCapture(event.pointerId);
+    stage.classList.add('is-dragging');
+    stage.focus({ preventScroll: true });
+    event.preventDefault();
+  });
+  stage.addEventListener('pointermove', event => {
+    if (!drag) return;
+    stage.scrollLeft = drag.left + drag.x - event.clientX;
+    stage.scrollTop = drag.top + drag.y - event.clientY;
+  });
+  const release = event => {
+    if (stage.hasPointerCapture(event.pointerId)) stage.releasePointerCapture(event.pointerId);
+    stopDrag();
+  };
+  stage.addEventListener('pointerup', release);
+  stage.addEventListener('pointercancel', release);
+  stage.addEventListener('lostpointercapture', stopDrag);
+  update();
 });
