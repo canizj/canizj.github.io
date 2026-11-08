@@ -7,6 +7,16 @@
 .mr-e-case-study .workflow-layout{max-width:none;width:100%;grid-template-columns:minmax(0,1fr) minmax(0,550px)}
 main.mr-e-case-study #recruiting-workflows .workflow-capabilities{max-width:none;width:100%}
 @media(max-width:760px){.mr-e-case-study .workflow-layout{grid-template-columns:minmax(0,1fr)}}
+</style><style id="mr-e-capability-alignment">
+main.mr-e-case-study #recruiting-workflows > .wrap > h2,
+main.mr-e-case-study #recruiting-workflows > .wrap > .hero-lead{text-align:left}
+main.mr-e-case-study #mr-e-overview .capability-tags,
+main.mr-e-case-study #recruiting-workflows .workflow-capabilities{
+display:flex;flex-wrap:wrap;justify-content:flex-start;gap:.65rem;
+width:fit-content;max-width:100%;margin:24px 0;
+}
+main.mr-e-case-study #mr-e-overview .capability-tags span,
+main.mr-e-case-study #recruiting-workflows .workflow-capabilities span{flex:0 1 auto}
 </style></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -32,9 +42,10 @@ main.mr-e-case-study #recruiting-workflows .workflow-capabilities{max-width:none
 <section class="section" id="recruiting-workflows"><div class="wrap">
 <p class="eyebrow">04 / THREE RECRUITING WORKFLOWS</p>
 <h2>AI-assisted workflows <em>for recruiting decisions.</em></h2>
+<div class="expertise capability-tags workflow-capabilities" aria-label="Core capabilities"><span>Candidate dossiers</span><span>CRM audits</span><span>Leader matching</span></div>
 <p class="hero-lead">Try the three workflows I designed to consolidate research, surface corrections, and explain candidate fit. Each simulation uses fictional or sanitized records.</p>
 <div class="workflow-layout"><aside class="workflow-guides" aria-labelledby="guides-title"><h3 id="guides-title">Workflow <em>instructions.</em></h3><button type="button" class="guide-button" data-guide="0" aria-haspopup="dialog">Candidate Research</button><button type="button" class="guide-button" data-guide="1" aria-haspopup="dialog">Quality Check</button><button type="button" class="guide-button" data-guide="2" aria-haspopup="dialog">Leader Matching</button></aside><article class="workflow-demo"><iframe title="Mr. E unified recruiting bot" src="simulations/mr-e-smooth-chat.html" data-simulation allow="clipboard-write" loading="lazy"></iframe></article></div>
-<div class="expertise capability-tags workflow-capabilities" aria-label="Core capabilities"><span>Candidate dossiers</span><span>CRM audits</span><span>Leader matching</span></div>
+
 </div></section>
 
 
