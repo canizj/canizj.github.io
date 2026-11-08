@@ -18,3 +18,10 @@
 /* Place each tab’s focus badges after its supporting examples. */
 .amazon-case-study .amazon-tab-focus{margin-top:32px;margin-bottom:0;gap:.65rem}
 .amazon-case-study .amazon-tab-focus span{max-width:100%;overflow-wrap:anywhere}
+
+/* Distribute tab focus badges across the full reading width. */
+.amazon-case-study .amazon-panel .amazon-tab-focus{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;align-items:center;gap:16px}
+.amazon-case-study .amazon-panel .amazon-tab-focus span{justify-self:start;min-width:0}
+.amazon-case-study .amazon-panel .amazon-tab-focus span:nth-child(2){justify-self:center}
+.amazon-case-study .amazon-panel .amazon-tab-focus span:nth-child(3){justify-self:end}
+@media(max-width:650px){.amazon-case-study .amazon-panel .amazon-tab-focus{grid-template-columns:minmax(0,1fr);gap:12px}.amazon-case-study .amazon-panel .amazon-tab-focus span:nth-child(n){justify-self:stretch}}
