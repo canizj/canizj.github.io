@@ -27,14 +27,14 @@ On the capstone page, choose Datafolio. Select +, drag the image, and select Fit
 
 ## Validation
 
-- Checked 223 local href/src/poster references across the homepage, six case studies and legacy landing page. No missing files or fragment targets.
+- Checked 224 local href/src/poster references across the homepage, six case studies and legacy landing page. No missing files or fragment targets.
 - Checked duplicate IDs, image alt attributes and H1 counts.
 - Browser viewport checks at 390, 768 and 1440 pixels for all six case studies: no page-wide overflow. Narrow-screen menu open/close and section navigation tested.
 - Opened the revised PDF in Chrome and rendered both pages with Poppler. The original report remains unchanged.
 - Tested report page-turn and zoom controls without changing their code.
 - Tested image zoom, horizontal and vertical mouse dragging, and Fit resetting both scroll offsets. Controls fit inside the narrow viewport. Desktop control bar measures 145 by 40 pixels, with larger touch targets on touchscreens.
 - JavaScript syntax checks pass for script.js, capstone-documents.js, amazon-connected.js and simulation-frames.js. No first-party JavaScript errors observed during tested browser flows.
-- styles.css, brand-system.css, script.js, original PDFs and capstone media are unchanged. Only image-viewer code is extended in capstone-documents.js; report-viewer code is unchanged.
+- styles.css, original PDFs and capstone media are unchanged. Shared footer branding and final navigation are also applied by script.js. The shared footer styling is standardized in brand-system.css. Only image-viewer code is extended in capstone-documents.js; report-viewer code is unchanged.
 
 ## Limits
 
@@ -53,3 +53,13 @@ Validated 66 badges with 66 unique labels across the homepage, six current case 
 ## Operations case-study framing
 
 Present Distinguished Scholar Selection as an additional operations case study completed for Correlation One. Apply this wording to the homepage card, case-study introduction, metadata, overview and related navigation. Original source PDFs are preserved unchanged.
+
+## Scholar terminology and shared footer
+
+Use review exercises and applied assignments to describe the two score categories on the Scholar webpage. Remove comparisons to Project Ruby from its analysis copy. Original charts and source PDFs retain their original labels.
+
+All current pages use Jason Caniz on the left and Business Operations · Data Analytics · Process Engineering on the right. Footer return links are removed. Case-study Back to projects navigation appears only in the final section; Mr. E uses the shared main navigation instead of a top return shortcut. The footer keeps its left/right arrangement on narrow screens.
+
+## Narrow-screen Google card
+
+The delivery diagram uses content-driven height and compact column spacing below 650 pixels, separating its diagram from the card category and title. Mr. E's body HTML is unchanged; the shared script applies public footer branding and final-section navigation without republishing its body content.

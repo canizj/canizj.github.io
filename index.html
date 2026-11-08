@@ -45,6 +45,16 @@
     grid-auto-rows: auto;
   }
 }
+</style><style>
+/* Let the Google delivery diagram size itself on narrow screens. */
+@media(max-width:650px){
+#portfolio .project-visual.visual-ops{height:auto;min-height:0;padding:20px}
+#portfolio .visual-ops .method-columns{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:22px}
+#portfolio .visual-ops .method-columns>div{min-width:0;padding:12px;gap:10px}
+#portfolio .visual-ops .method-columns label{font-size:10px;line-height:1.5;min-height:30px}
+#portfolio .visual-ops .method-columns span{display:flex;align-items:center;min-height:42px;padding:8px;font-size:11px;line-height:1.45;overflow-wrap:anywhere}
+#portfolio .visual-ops+.card-copy{padding-top:24px}
+}
 </style></head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -123,7 +133,7 @@
         <a class="button button-dark" href="https://wa.me/50231136824" aria-label="GT Clients on WhatsApp">GT Clients</a>
       </div></div></div></section>
   </main>
-  <footer><div class="wrap footer-inner"><p>Thanks for visiting<span>!</span></p><span>© <span id="year">2026</span> Jason Caniz</span><a href="#home">Back to top ↑</a></div></footer>
+  <footer><div class="wrap footer-inner"><p>Jason Caniz<span>.</span></p><span>Business Operations · Data Analytics · Process Engineering</span></div></footer>
   <dialog class="case-study-dialog" id="case-study-status" aria-labelledby="case-study-status-title">
     <h2 id="case-study-status-title">Case study in progress: coming soon</h2>
     <form method="dialog"><button autofocus>Close</button></form>
