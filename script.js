@@ -1,14 +1,6 @@
 document.addEventListener('DOMContentLoaded',()=>{const t=document.querySelector('.menu-toggle');const n=document.getElementById('site-nav');t?.addEventListener('click',()=>{const opened=n.classList.toggle('open');t.setAttribute('aria-expanded',String(opened));});n?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');t?.setAttribute('aria-expanded','false');}));const y=document.getElementById('year');if(y)y.textContent=String(new Date().getFullYear());});
 // Shared public footer branding and final-section return navigation.
 document.addEventListener('DOMContentLoaded',()=>{
-  document.querySelectorAll('footer .footer-inner').forEach(footer=>{
-    const name=document.createElement('p');
-    name.append('Jason Caniz');
-    const dot=document.createElement('span');dot.textContent='.';name.append(dot);
-    const tagline=document.createElement('span');
-    tagline.textContent='Business Operations · Data Analytics · Process Engineering';
-    footer.replaceChildren(name,tagline);
-  });
   document.querySelectorAll('main > .wrap.project-return').forEach(block=>{
     const section=document.createElement('section');section.className='project-return';
     section.setAttribute('aria-label','Continue exploring');
