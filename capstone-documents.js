@@ -12,12 +12,12 @@ document.querySelectorAll('[data-document-viewer]').forEach((viewer) => {
   const update = () => {
     const report = !documentSelect || documentSelect.value === 'report';
     const total = report ? 13 : 1;
-    const src = report ? `assets/capstone/report/page-${String(page).padStart(2, '0')}.jpg` : 'assets/capstone/datafolio.jpg';
+    const src = report ? `/assets/capstone/report/page-${String(page).padStart(2, '0')}.jpg` : '/assets/capstone/datafolio.jpg';
     image.src = src;
     image.alt = `${report ? 'Housing affordability final report' : 'Original capstone datafolio'}, page ${page} of ${total}`;
     fullImage.href = src;
     fullImage.style.width = `${zoom.value}%`;
-    original.href = `assets/capstone/${report ? 'report' : 'datafolio'}.pdf`;
+    original.href = `/assets/capstone/${report ? 'report' : 'datafolio'}.pdf`;
     previous.disabled = page === 1;
     next.disabled = page === total;
     status.textContent = `Page ${page} of ${total}`;
