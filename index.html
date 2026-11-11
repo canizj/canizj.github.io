@@ -53,6 +53,42 @@
 #credentials .credential-agile h3 a{text-decoration:none}
 #credentials .credential-agile h3 a:hover{text-decoration:underline}
 @media(max-width:650px){#credentials .credential-agile{grid-column:auto;width:100%}}
+</style><style>
+/* Selected work: project documentation and data visualization separation */
+#work .work-division{max-width:1120px;margin:12px auto 46px}
+#work .work-division-heading{text-align:center;max-width:780px;margin:0 auto 27px}
+#work .work-division-index{display:block;color:#52665b;font-size:.78rem;font-weight:750;letter-spacing:.12em;margin-bottom:10px}
+#work .work-division-heading h3{font-size:clamp(1.65rem,3vw,2.35rem);line-height:1.17;margin:0 0 12px;color:#292b31}
+#work .work-division-heading>p{line-height:1.65;max-width:68ch;margin:auto}
+#work .documentation-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+#work .documentation-card{display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid #d9dfe0;border-radius:12px;overflow:hidden;box-shadow:0 10px 25px rgba(30,44,50,.07)}
+#work .documentation-preview{height:235px;padding:20px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#202f37,#31434b)}
+#work .documentation-preview-charter{background:linear-gradient(135deg,#283039,#476255)}
+#work .documentation-preview-kickoff{background:linear-gradient(135deg,#27343b,#617264)}
+#work .doc-sheet{background:#f5f6f3;border:1px solid #b8c6b5;width:220px;height:195px;padding:13px 16px;box-shadow:10px 10px 0 rgba(0,0,0,.2);color:#283039}
+#work .doc-sheet-top{background:#283039;color:#f7f7f2;padding:5px;font-size:10px;font-weight:700;text-align:center;letter-spacing:.09em}
+#work .doc-sheet-title{font-size:17px;text-align:center;font-weight:750;line-height:1.16;margin:12px 0}
+#work .doc-sheet-line{height:6px;background:#c2ccc2;margin:5px 0;border-radius:2px}
+#work .doc-sheet-line.short{width:70%}
+#work .doc-sheet-columns{display:flex;gap:5px;margin:13px 0 8px}
+#work .doc-sheet-columns i{flex:1;height:24px;background:#c6d5c8;border-top:4px solid #e1bb43}
+#work .doc-sheet-footer{font-size:7px;letter-spacing:.08em;font-weight:750;text-align:center}
+#work .slide-sheet{border:1px solid rgba(240,241,225,.55);background:linear-gradient(145deg,#112623,#315347);width:320px;max-width:100%;height:190px;color:#faf9ed;padding:18px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+#work .slide-sheet-top{font-size:10px;letter-spacing:.16em;color:#f1d277}
+#work .slide-sheet strong{font-size:24px;line-height:1.13;margin:13px 0}
+#work .slide-sheet-sub{font-size:9px;letter-spacing:.09em}
+#work .slide-sheet-farm{color:#abc58b;opacity:.45;letter-spacing:12px;font-size:21px;transform:rotate(-17deg);position:absolute;bottom:-12px;right:-40px}
+#work .documentation-copy{padding:25px 25px 22px;flex:1;display:flex;flex-direction:column}
+#work .documentation-kicker{font-size:.73rem;letter-spacing:.1em;color:#52665b;font-weight:750}
+#work .documentation-copy h4{font-size:1.37rem;line-height:1.25;margin:9px 0 12px;color:#283039}
+#work .documentation-copy>p{line-height:1.65;margin:0 0 18px}
+#work .documentation-details{margin-top:auto;border-top:1px solid #d9dfe0}
+#work .documentation-details summary{cursor:pointer;padding:15px 0;color:#28483f;font-weight:700;list-style-position:inside}
+#work .documentation-details summary:focus-visible{outline:2px solid #315d4b;outline-offset:3px}
+#work .documentation-details>div{padding:0 0 14px;line-height:1.6}
+#work .documentation-disclaimer{font-size:.84rem;color:#53636a}
+#work .work-division-data{border-top:1px solid #d6dedb;padding-top:39px;margin-bottom:30px}
+@media(max-width:720px){#work .documentation-grid{grid-template-columns:1fr;gap:18px}#work .documentation-preview{height:205px}#work .documentation-copy{padding:21px}#work .work-division{margin-bottom:35px}}
 </style></head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -114,7 +150,20 @@
     </svg>
   </a>
 </div><h2>Evidence, not just <em>claims.</em></h2><div class="expertise capability-tags" aria-label="Core capabilities"><span>Visual evidence</span><span>Applied statistics</span><span>Analytics Education</span></div></div></div>
-        <p class="selected-work-intro">Explore the Tableau dashboards and watch a Correlation One teaching session in the video below. The dashboard links also open each workbook directly in Tableau Public.</p>
+        <div class="work-division" id="project-documentation">
+          <div class="work-division-heading"><span class="work-division-index">01 / PROJECT DOCUMENTATION</span><h3>Project planning, <em>documented.</em></h3><p>Selected work samples demonstrating how I translate business needs into defined scope, delivery priorities, stakeholder responsibilities, and clear kickoff communication.</p></div>
+          <div class="documentation-grid">
+            <article class="documentation-card" id="crop-project-charter">
+              <div class="documentation-preview documentation-preview-charter" aria-hidden="true"><div class="doc-sheet"><div class="doc-sheet-top">PROJECT CHARTER</div><div class="doc-sheet-title">Crop Farm<br>Traceability System</div><div class="doc-sheet-line"></div><div class="doc-sheet-line short"></div><div class="doc-sheet-columns"><i></i><i></i><i></i></div><div class="doc-sheet-footer">GOALS · SCOPE · STAKEHOLDERS</div></div></div>
+              <div class="documentation-copy"><span class="documentation-kicker">DOCUMENTATION / PROJECT INITIATION</span><h4>Project Charter &amp; Scope Documentation</h4><p>A crop-farm traceability system planning example spanning business objectives, in-scope and excluded services, timelines, stakeholder responsibilities, success criteria, risks, and estimated costs.</p><details class="documentation-details"><summary>Explore document overview</summary><div><p><strong>Planning focus:</strong> Initial scope across Accra and Nairobi, agricultural traceability, operational data collection, implementation training, and stakeholder approval.</p><p><strong>Artifacts demonstrated:</strong> Charter, deliverables, scope boundaries, risk and assumption review, success measures, stakeholder register, and cost estimates.</p><p class="documentation-disclaimer">Document example. Proposed plans, timelines, and budget figures are not reported as completed results.</p></div></details></div>
+            </article>
+            <article class="documentation-card" id="crop-kickoff">
+              <div class="documentation-preview documentation-preview-kickoff" aria-hidden="true"><div class="slide-sheet"><span class="slide-sheet-top">PROJECT KICKOFF</span><strong>Crop Farm<br>Traceability System</strong><span class="slide-sheet-sub">OBJECTIVES · SCOPE · DELIVERY</span><span class="slide-sheet-farm">▰ ▰ ▰ ▰ ▰<br>▰ ▰ ▰ ▰ ▰</span></div></div>
+              <div class="documentation-copy"><span class="documentation-kicker">PRESENTATION / STAKEHOLDER ALIGNMENT</span><h4>Project Kickoff Presentation</h4><p>A companion stakeholder presentation outlining the traceability initiative, project priorities, scope, phased site activities, success criteria, and implementation considerations.</p><details class="documentation-details"><summary>Explore presentation overview</summary><div><p><strong>Communication focus:</strong> Make the case for the initiative, align stakeholders on what is included and excluded, and explain how implementation and handover would be approached.</p><p><strong>Presentation structure:</strong> Project brief, priorities and deliverables, scope, action plan, success criteria, and constraints.</p><p class="documentation-disclaimer">Illustrative kickoff deck. Stakeholder approval and project execution are not presented as completed.</p></div></details></div>
+            </article>
+          </div>
+        </div>
+        <div class="work-division work-division-data" id="data-visualizations"><div class="work-division-heading"><span class="work-division-index">02 / DATA VISUALIZATIONS</span><h3>Data made <em>actionable.</em></h3><p>Explore the Tableau dashboards and a Correlation One teaching session below. Dashboard links open the interactive workbooks in Tableau Public.</p></div></div>
         <div class="evidence-grid">
           <article class="evidence-card housing-card" id="housing-dashboard"><iframe class="tableau-view tableau-housing" width="1000" height="827" src="https://public.tableau.com/views/CapstoneTeam4Dashboard/Dashboard1?:embed=yes&amp;:showVizHome=no&amp;:tabs=no&amp;:toolbar=yes" title="Interactive housing market dashboard" loading="lazy" allowfullscreen></iframe><div class="evidence-copy"><span>TABLEAU / HOUSING DATA</span><h3>Home prices, income & market patterns</h3><p>Historical housing and income comparisons, investor activity, and supporting market indicators.</p><a class="evidence-link" target="_blank" rel="noopener noreferrer" href="https://public.tableau.com/app/profile/jason.caniz/viz/CapstoneTeam4Dashboard/Dashboard1">Open housing dashboard <span aria-hidden="true">↗</span></a><a class="evidence-link" href="/housing-affordability-capstone/#dashboard">See the capstone case study ↗</a></div></article>
           <article class="evidence-card cohort-card"><iframe class="tableau-view tableau-cohort" width="650" height="887" src="https://public.tableau.com/views/CorrelationOneDemographics_16999316959520/CorralationOneCaseStudy?:embed=yes&amp;:showVizHome=no&amp;:tabs=no&amp;:toolbar=yes" title="Interactive cohort metrics dashboard" loading="lazy" allowfullscreen></iframe><div class="evidence-copy"><span>TABLEAU / PROGRAM ANALYTICS</span><h3>Cohort metrics & learner insights</h3><p>Demographic breakdowns and learning-support performance data organized for program visibility.</p><a class="evidence-link" target="_blank" rel="noopener noreferrer" href="https://public.tableau.com/app/profile/jason.caniz/viz/CorrelationOneDemographics_16999316959520/CorralationOneCaseStudy">Open cohort dashboard <span aria-hidden="true">↗</span></a></div></article>
