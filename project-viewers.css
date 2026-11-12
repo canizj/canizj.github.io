@@ -11,7 +11,14 @@
 }
 
 .project-viewer--charter {
-  max-width: 660px;
+  max-width: none;
+  padding-inline: clamp(8px, 2vw, 24px);
+}
+
+#work .documentation-details--charter {
+  margin: 0 0 18px;
+  border-top: 0;
+  border-bottom: 1px solid #d9dfe0;
 }
 
 .project-viewer__stage {
@@ -31,7 +38,7 @@
 }
 
 .project-viewer__pages {
-  height: min(70svh, 760px);
+  height: min(80svh, 880px);
   overflow: auto;
   padding: clamp(6px, 2vw, 14px);
   scrollbar-gutter: stable;
@@ -107,7 +114,7 @@
 
 .project-viewer:fullscreen .project-viewer__pages,
 .project-viewer-dialog .project-viewer__pages {
-  max-width: 960px;
+  max-width: 1120px;
   flex: 1;
 }
 
