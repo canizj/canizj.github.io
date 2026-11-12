@@ -62,22 +62,6 @@
 #work .work-division-heading>p{line-height:1.65;max-width:68ch;margin:auto}
 #work .documentation-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
 #work .documentation-card{display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid #d9dfe0;border-radius:12px;overflow:hidden;box-shadow:0 10px 25px rgba(30,44,50,.07)}
-#work .documentation-preview{height:235px;padding:20px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#202f37,#31434b)}
-#work .documentation-preview-charter{background:linear-gradient(135deg,#283039,#476255)}
-#work .documentation-preview-kickoff{background:linear-gradient(135deg,#27343b,#617264)}
-#work .doc-sheet{background:#f5f6f3;border:1px solid #b8c6b5;width:220px;height:195px;padding:13px 16px;box-shadow:10px 10px 0 rgba(0,0,0,.2);color:#283039}
-#work .doc-sheet-top{background:#283039;color:#f7f7f2;padding:5px;font-size:10px;font-weight:700;text-align:center;letter-spacing:.09em}
-#work .doc-sheet-title{font-size:17px;text-align:center;font-weight:750;line-height:1.16;margin:12px 0}
-#work .doc-sheet-line{height:6px;background:#c2ccc2;margin:5px 0;border-radius:2px}
-#work .doc-sheet-line.short{width:70%}
-#work .doc-sheet-columns{display:flex;gap:5px;margin:13px 0 8px}
-#work .doc-sheet-columns i{flex:1;height:24px;background:#c6d5c8;border-top:4px solid #e1bb43}
-#work .doc-sheet-footer{font-size:7px;letter-spacing:.08em;font-weight:750;text-align:center}
-#work .slide-sheet{border:1px solid rgba(240,241,225,.55);background:linear-gradient(145deg,#112623,#315347);width:320px;max-width:100%;height:190px;color:#faf9ed;padding:18px;display:flex;flex-direction:column;position:relative;overflow:hidden}
-#work .slide-sheet-top{font-size:10px;letter-spacing:.16em;color:#f1d277}
-#work .slide-sheet strong{font-size:24px;line-height:1.13;margin:13px 0}
-#work .slide-sheet-sub{font-size:9px;letter-spacing:.09em}
-#work .slide-sheet-farm{color:#abc58b;opacity:.45;letter-spacing:12px;font-size:21px;transform:rotate(-17deg);position:absolute;bottom:-12px;right:-40px}
 #work .documentation-copy{padding:25px 25px 22px;flex:1;display:flex;flex-direction:column}
 #work .documentation-kicker{font-size:.73rem;letter-spacing:.1em;color:#52665b;font-weight:750}
 #work .documentation-copy h4{font-size:1.37rem;line-height:1.25;margin:9px 0 12px;color:#283039}
@@ -88,8 +72,10 @@
 #work .documentation-details>div{padding:0 0 14px;line-height:1.6}
 #work .documentation-disclaimer{font-size:.84rem;color:#53636a}
 #work .work-division-data{border-top:1px solid #d6dedb;padding-top:39px;margin-bottom:30px}
-@media(max-width:720px){#work .documentation-grid{grid-template-columns:1fr;gap:18px}#work .documentation-preview{height:205px}#work .documentation-copy{padding:21px}#work .work-division{margin-bottom:35px}}
-</style></head>
+@media(max-width:720px){#work .documentation-grid{grid-template-columns:1fr;gap:18px}#work .documentation-copy{padding:21px}#work .work-division{margin-bottom:35px}}
+</style>  <link rel="stylesheet" href="/project-viewers.css">
+  <script src="/project-viewers.js" defer></script>
+</head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
@@ -154,12 +140,48 @@
           <div class="work-division-heading"><span class="work-division-index">01 / PROJECT DOCUMENTATION</span><h3>Project planning, <em>documented.</em></h3><p>Selected work samples demonstrating how I translate business needs into defined scope, delivery priorities, stakeholder responsibilities, and clear kickoff communication.</p></div>
           <div class="documentation-grid">
             <article class="documentation-card" id="crop-project-charter">
-              <div class="documentation-preview documentation-preview-charter" aria-hidden="true"><div class="doc-sheet"><div class="doc-sheet-top">PROJECT CHARTER</div><div class="doc-sheet-title">Crop Farm<br>Traceability System</div><div class="doc-sheet-line"></div><div class="doc-sheet-line short"></div><div class="doc-sheet-columns"><i></i><i></i><i></i></div><div class="doc-sheet-footer">GOALS · SCOPE · STAKEHOLDERS</div></div></div>
               <div class="documentation-copy"><span class="documentation-kicker">DOCUMENTATION / PROJECT INITIATION</span><h4>Project Charter &amp; Scope Documentation</h4><p>A crop-farm traceability system planning example spanning business objectives, in-scope and excluded services, timelines, stakeholder responsibilities, success criteria, risks, and estimated costs.</p><details class="documentation-details"><summary>Explore document overview</summary><div><p><strong>Planning focus:</strong> Initial scope across Accra and Nairobi, agricultural traceability, operational data collection, implementation training, and stakeholder approval.</p><p><strong>Artifacts demonstrated:</strong> Charter, deliverables, scope boundaries, risk and assumption review, success measures, stakeholder register, and cost estimates.</p><p class="documentation-disclaimer">Document example. Proposed plans, timelines, and budget figures are not reported as completed results.</p></div></details></div>
+              <div class="project-viewer project-viewer--charter" data-label="Crop Farm Traceability System charter">
+                <div class="project-viewer__stage project-viewer__pages" role="region" aria-label="Scrollable project charter, 7 pages" tabindex="0">
+                  <img src="/assets/crop-traceability/page-1.webp" width="1237" height="1600" alt="Charter page 1 of 7" loading="lazy" decoding="async">
+                  <img src="/assets/crop-traceability/page-2.webp" width="1237" height="1600" alt="Charter page 2 of 7" loading="lazy" decoding="async">
+                  <img src="/assets/crop-traceability/page-3.webp" width="1237" height="1600" alt="Charter page 3 of 7" loading="lazy" decoding="async">
+                  <img src="/assets/crop-traceability/page-4.webp" width="1237" height="1600" alt="Charter page 4 of 7" loading="lazy" decoding="async">
+                  <img src="/assets/crop-traceability/page-5.webp" width="1237" height="1600" alt="Charter page 5 of 7" loading="lazy" decoding="async">
+                  <img src="/assets/crop-traceability/page-6.webp" width="1237" height="1600" alt="Charter page 6 of 7" loading="lazy" decoding="async">
+                  <img src="/assets/crop-traceability/page-7.webp" width="1237" height="1600" alt="Charter page 7 of 7" loading="lazy" decoding="async">
+                </div>
+                <div class="project-viewer__controls">
+                  <span>7 pages</span>
+                  <button type="button" data-fullscreen aria-pressed="false">Fullscreen</button>
+                  <a href="/assets/crop-traceability/project-charter.pdf" download>Download PDF</a>
+                </div>
+              </div>
             </article>
             <article class="documentation-card" id="crop-kickoff">
-              <div class="documentation-preview documentation-preview-kickoff" aria-hidden="true"><div class="slide-sheet"><span class="slide-sheet-top">PROJECT KICKOFF</span><strong>Crop Farm<br>Traceability System</strong><span class="slide-sheet-sub">OBJECTIVES · SCOPE · DELIVERY</span><span class="slide-sheet-farm">▰ ▰ ▰ ▰ ▰<br>▰ ▰ ▰ ▰ ▰</span></div></div>
               <div class="documentation-copy"><span class="documentation-kicker">PRESENTATION / STAKEHOLDER ALIGNMENT</span><h4>Project Kickoff Presentation</h4><p>A companion stakeholder presentation outlining the traceability initiative, project priorities, scope, phased site activities, success criteria, and implementation considerations.</p><details class="documentation-details"><summary>Explore presentation overview</summary><div><p><strong>Communication focus:</strong> Make the case for the initiative, align stakeholders on what is included and excluded, and explain how implementation and handover would be approached.</p><p><strong>Presentation structure:</strong> Project brief, priorities and deliverables, scope, action plan, success criteria, and constraints.</p><p class="documentation-disclaimer">Illustrative kickoff deck. Stakeholder approval and project execution are not presented as completed.</p></div></details></div>
+              <div class="project-viewer project-viewer--kickoff" data-label="Project Kickoff Presentation">
+                <div class="project-viewer__stage project-viewer__slides" role="region" aria-label="Project kickoff slides" tabindex="0">
+                  <img src="/assets/crop-traceability/slide-01.webp" width="1600" height="900" alt="Crop Farm Traceability System kickoff" loading="lazy" decoding="async">
+                  <img src="/assets/crop-traceability/slide-02.webp" width="1600" height="900" alt="Project brief and justification" loading="lazy" decoding="async" hidden>
+                  <img src="/assets/crop-traceability/slide-03.webp" width="1600" height="900" alt="Project priorities and deliverables" loading="lazy" decoding="async" hidden>
+                  <img src="/assets/crop-traceability/slide-04.webp" width="1600" height="900" alt="In-scope and out-of-scope work" loading="lazy" decoding="async" hidden>
+                  <img src="/assets/crop-traceability/slide-05.webp" width="1600" height="900" alt="Project action plan" loading="lazy" decoding="async" hidden>
+                  <img src="/assets/crop-traceability/slide-06.webp" width="1600" height="900" alt="Project success criteria" loading="lazy" decoding="async" hidden>
+                  <img src="/assets/crop-traceability/slide-07.webp" width="1600" height="900" alt="Project constraints" loading="lazy" decoding="async" hidden>
+                  <img src="/assets/crop-traceability/slide-08.webp" width="1600" height="900" alt="Project stakeholders" loading="lazy" decoding="async" hidden>
+                  <img src="/assets/crop-traceability/slide-09.webp" width="1600" height="900" alt="Supporting team members" loading="lazy" decoding="async" hidden>
+                  <img src="/assets/crop-traceability/slide-10.webp" width="1600" height="900" alt="Project cost estimate" loading="lazy" decoding="async" hidden>
+                  <img src="/assets/crop-traceability/slide-11.webp" width="1600" height="900" alt="Questions and answers" loading="lazy" decoding="async" hidden>
+                </div>
+                <div class="project-viewer__controls">
+                  <button type="button" data-slide-prev aria-label="Previous slide" aria-disabled="true">Previous</button>
+                  <span data-slide-status role="status">Slide 1 of 11</span>
+                  <button type="button" data-slide-next aria-label="Next slide" aria-disabled="false">Next</button>
+                  <button type="button" data-fullscreen aria-pressed="false">Fullscreen</button>
+                  <a href="/assets/crop-traceability/project-kickoff.pptx" download>Download PowerPoint</a>
+                </div>
+              </div>
             </article>
           </div>
         </div>
@@ -182,5 +204,6 @@
       </div></div></div></section>
   </main>
   <footer class="homepage-footer"><div class="wrap footer-inner"><p>Thanks for visiting<span>!</span></p><span class="footer-copyright">© <span id="year">2026</span> Jason Caniz</span><span class="footer-tagline">Business Operations · Data Analytics · Process Engineering</span></div></footer>
+  <dialog class="project-viewer-dialog"></dialog>
 </body>
 </html>

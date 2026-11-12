@@ -1,0 +1,130 @@
+#work .documentation-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.project-viewer {
+  width: 100%;
+  max-width: 960px;
+  margin-inline: auto;
+  padding: 0 clamp(12px, 3vw, 24px) 22px;
+  color: #283039;
+}
+
+.project-viewer--charter {
+  max-width: 660px;
+}
+
+.project-viewer__stage {
+  background: #e9eeeb;
+  border: 1px solid #d9dfe0;
+  border-radius: 8px;
+}
+
+.project-viewer__stage img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-viewer__stage img[hidden] {
+  display: none;
+}
+
+.project-viewer__pages {
+  height: min(70svh, 760px);
+  overflow: auto;
+  padding: clamp(6px, 2vw, 14px);
+  scrollbar-gutter: stable;
+}
+
+.project-viewer__pages img + img {
+  margin-top: 12px;
+}
+
+.project-viewer__slides {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.project-viewer__slides img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-viewer__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 12px;
+  margin-top: 12px;
+  font-size: .9rem;
+}
+
+.project-viewer__controls button {
+  min-height: 44px;
+  border: 1px solid #52665b;
+  border-radius: 6px;
+  padding: 6px 12px;
+  background: #fff;
+  color: #28483f;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.project-viewer__controls button[aria-disabled="true"] {
+  opacity: .55;
+  cursor: default;
+}
+
+.project-viewer__controls a {
+  color: #28483f;
+}
+
+.project-viewer :focus-visible {
+  outline: 2px solid #315d4b;
+  outline-offset: 2px;
+}
+
+.project-viewer:fullscreen,
+.project-viewer-dialog .project-viewer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: none;
+  height: 100%;
+  padding: 12px;
+  background: #f5f6f3;
+}
+
+.project-viewer:fullscreen .project-viewer__stage,
+.project-viewer-dialog .project-viewer__stage {
+  min-height: 0;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.project-viewer:fullscreen .project-viewer__pages,
+.project-viewer-dialog .project-viewer__pages {
+  max-width: 960px;
+  flex: 1;
+}
+
+.project-viewer:fullscreen .project-viewer__slides,
+.project-viewer-dialog .project-viewer__slides {
+  max-width: 1600px;
+  max-height: calc(100% - 112px);
+}
+
+.project-viewer-dialog {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
