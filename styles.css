@@ -157,7 +157,9 @@
 }
 .credential-image {
   display: block;
-  width: 100%;
+  width: 68%;
+  margin-left: 0;
+  margin-right: auto;
   height: auto;
   aspect-ratio: 4 / 3;
   object-fit: contain;
