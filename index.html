@@ -104,13 +104,6 @@
 #contact .contact-grid>div:first-child h2{margin-inline:auto}
 @media(max-width:650px){#portfolio .section-top,#credentials .section-top{gap:10px}}
 </style><style>
-/* Official Credly badge alongside the hero portrait, without changing the hero copy. */
-.hero-portrait-credentials{position:relative;display:flex;justify-content:center;align-items:center;min-width:0}
-.hero-portrait-credentials .hero-portrait{display:block;max-width:100%;height:auto}
-.hero-credly-badge{position:absolute;left:-85px;bottom:-120px;z-index:2;width:150px;min-height:270px;filter:drop-shadow(0 5px 12px rgba(0,0,0,.14))}
-@media(max-width:1050px){.hero-credly-badge{left:-35px;bottom:-135px}}
-@media(max-width:760px){.hero-portrait-credentials{flex-direction:column}.hero-credly-badge{position:static;margin:12px auto 0;filter:none}}
-</style><style>
 /* Approved spacious credential cards */
 #credentials .wrap{max-width:1320px}
 #credentials .credentials-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 28px;align-items:stretch;margin-top:34px}
@@ -130,13 +123,23 @@
 #credentials .credential .credential-link{color:#10233c;margin-top:8px}
 #credentials .google-credential-art{max-width:78%;min-height:230px!important;background:rgba(255,255,255,.82)!important;box-shadow:0 4px 15px rgba(0,0,0,.12)}
 @media(max-width:760px){#credentials .credentials-grid{grid-template-columns:1fr;gap:20px}#credentials .credentials-grid>.credential:nth-child(3){grid-column:auto;width:100%}#credentials .credentials-grid>.credential{padding:22px}#credentials .credential:before{font-size:140px}#credentials .credential:nth-child(3):before{font-size:65px}#credentials .credential .credential-image{max-width:90%}}
-</style><style>.hero-portrait-credentials .hero-badge-circle{position:absolute;left:-48px;bottom:-23px;z-index:3;display:flex;flex-direction:column;justify-content:center;align-items:center;width:124px;height:124px;min-height:0;box-sizing:border-box;border-radius:50%;border:4px solid #fff;background:#1b73e8;color:#fff;text-align:center;text-decoration:none;box-shadow:0 0 0 2px #f5b83d,0 6px 20px rgba(0,0,0,.2);filter:none}.hero-badge-circle .hero-badge-google{position:absolute;right:8px;top:5px;font:bold 22px Arial,sans-serif;color:#fff}.hero-badge-circle .hero-badge-title{font:600 12px/1.2 Arial,sans-serif;color:#fff}.hero-badge-circle:hover{transform:translateY(-2px)}@media(max-width:760px){.hero-portrait-credentials .hero-badge-circle{position:relative;left:auto;bottom:auto;margin:-34px auto 8px}}</style><style>
-/* Preserve only the original small official Credly badge at portrait bottom left */
-.hero-portrait-credentials .hero-credly-original{position:absolute;left:-30px;bottom:-75px;z-index:4;width:72px;height:78px;min-height:0;overflow:hidden;filter:none;transform:none}
-.hero-credly-original>div{width:150px;height:270px;transform:scale(.47);transform-origin:top left}
-.hero-credly-original iframe{max-width:none!important}
-@media(max-width:760px){.hero-portrait-credentials .hero-credly-original{position:absolute;left:5px;bottom:-55px;margin:0}}
-</style></head>
+</style><style>
+/* Full official badge below the portrait, in normal flow so it cannot be clipped. */
+.hero-portrait-credentials{display:flex;flex-direction:column;align-items:center;min-width:0;gap:12px}
+.hero-portrait-credentials .hero-portrait{display:block;width:min(100%,400px);height:auto}
+.hero-google-badge{display:block;align-self:flex-start;width:112px;height:112px;margin-left:12px;background:transparent;flex:none}
+.hero-google-badge img{display:block;width:100%;height:100%;object-fit:contain;border:0;background:transparent}
+.hero-google-badge:focus-visible{outline:2px solid #fff;outline-offset:5px;border-radius:8px}
+/* Equal paper frames and aligned copy for every certificate card. */
+#credentials .credential>a.credential-image-frame{display:block;position:relative;width:100%;height:auto;min-height:0;aspect-ratio:1.41;flex:none;overflow:hidden;background:#fff;box-shadow:0 4px 15px rgba(0,0,0,.12)}
+#credentials .credential .credential-image{display:block;width:100%;max-width:100%;height:100%;max-height:none;object-fit:contain;box-shadow:none}
+#credentials .credential-image-frame-google .credential-image{object-fit:cover;object-position:52% center}
+#credentials .credential>div{flex:1;display:flex;flex-direction:column;gap:12px}
+#credentials .credential>div>p{min-height:2.8em;line-height:1.4}
+#credentials .credential>div>h3{min-height:2.6em;line-height:1.3}
+#credentials .credential .credential-link{margin-top:auto;padding-top:12px}
+@media(max-width:760px){.hero-google-badge{width:104px;height:104px;align-self:center;margin-left:0}#credentials .credential>div>p,#credentials .credential>div>h3{min-height:0}}
+</style><style>#credentials .credential>a.google-credential-art{width:100%;max-width:100%;height:auto;min-height:0!important;aspect-ratio:1.41;flex:none;box-sizing:border-box}#credentials .google-credential-art strong{font-size:clamp(1.4rem,2.4vw,2rem)}</style></head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
@@ -158,7 +161,7 @@
           <p class="hero-lead">I lead projects, analyze data, and improve business processes, bringing transferable skills in project management, team leadership, and thoughtful automation to help teams move from information to action.</p>
           <div class="hero-actions"><a class="button button-light" href="#portfolio">Explore projects <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#about">Get to know me</a></div>
         </div>
-        <div class="hero-portrait-credentials"><img class="hero-portrait" src="/jason-portrait.png" alt="Jason Caniz smiling in glasses, a dark shirt, and a tie" width="400" height="400" fetchpriority="high"><div class="hero-credly-badge hero-credly-original" aria-label="Official Google Project Management badge"><div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="7d35d021-d152-4b24-9950-618f22040298" data-share-badge-host="https://www.credly.com"></div></div></div>
+        <div class="hero-portrait-credentials"><img class="hero-portrait" src="/jason-portrait.png" alt="Jason Caniz smiling in glasses, a dark shirt, and a tie" width="400" height="400" fetchpriority="high"><a class="hero-google-badge" href="https://www.credly.com/badges/7d35d021-d152-4b24-9950-618f22040298/public_url" target="_blank" rel="noopener noreferrer" aria-label="Verify Google Project Management badge"><img src="/google-project-management-badge.png" alt="Google Project Management Certificate badge" width="340" height="340"></a></div>
       </div>
       <div class="hero-bottom wrap"><span>01 / 04 / FOUR DIMENSIONS OF MY WORK</span><span>SCROLL TO EXPLORE ↓</span></div>
     </section>
@@ -256,7 +259,7 @@
         </div>
       </div>
     </section>
-    <section class="section credentials-section" id="credentials"><div class="wrap"><div class="section-top"><div><p class="eyebrow">04 / CONTINUOUS LEARNING</p><h2>Credentials & <em>recognition.</em></h2></div><p>Each certificate image and verification link opens the individual credential directly.</p></div><div class="credentials-grid"><div class="credential credential-google"><a class="google-credential-art" href="https://www.coursera.org/account/accomplishments/specialization/YCOF9KMB3G6N" target="_blank" rel="noopener noreferrer" aria-label="View Google Project Management Professional Certificate"><span class="google-credential-g" aria-hidden="true">G</span><span class="google-credential-art-label">GOOGLE CAREER CERTIFICATES</span><strong>Project Management</strong><span>Professional Certificate · 7 courses</span><span class="google-credential-art-action">View official certificate ↗</span></a><div><p>GOOGLE · COURSERA · NOVEMBER 13, 2026</p><h3><a href="https://www.coursera.org/account/accomplishments/specialization/YCOF9KMB3G6N" target="_blank" rel="noopener noreferrer">Google Project Management Professional Certificate</a></h3><span>Completed the seven-course program covering project initiation, planning, execution, Agile delivery, and practical project management.</span><a class="credential-link" href="https://www.coursera.org/account/accomplishments/specialization/YCOF9KMB3G6N" target="_blank" rel="noopener noreferrer">Verify Google Project Management certificate</a></div></div><div class="credential"><a href="https://credentials.correlation-one.com/1e6b71f8-539b-4866-bb54-752960228c96#acc.mgD43cK1"><img class="credential-image" src="/data-analytics-certificate.png" width="1509" height="1070" loading="lazy" alt="Correlation One Data Analytics certificate for Jason Caniz"></a><div><p>CORRELATION ONE · OCTOBER 15, 2022</p><h3>Data Analytics 3.0 – Honors, Top 10%</h3><span>Honors recognizes meeting the program’s graduation requirements, including attendance, Extended Case performance, project contribution, and participation. Top 10% / Top Team is separate recognition for our team’s capstone presentation.</span><a class="credential-link" href="https://credentials.correlation-one.com/1e6b71f8-539b-4866-bb54-752960228c96#acc.mgD43cK1">Verify Data Analytics certificate</a></div></div><div class="credential"><a href="https://www.credential.net/96ee2ffd-72a9-470d-9422-3f37c5eee30f?username=jasoncaniz"><img class="credential-image" src="/lean-six-sigma-certificate.png" width="721" height="557" loading="lazy" alt="TELUS Lean Six Sigma Yellow Belt certificate for Jason Caniz"></a><div><p>TELUS · SEPTEMBER 13, 2019</p><h3>Lean Six Sigma Yellow Belt</h3><span>Business process excellence and continuous improvement.</span><a class="credential-link" href="https://www.credential.net/96ee2ffd-72a9-470d-9422-3f37c5eee30f?username=jasoncaniz">Verify Lean Six Sigma certificate</a></div></div></div></div></section>
+    <section class="section credentials-section" id="credentials"><div class="wrap"><div class="section-top"><div><p class="eyebrow">04 / CONTINUOUS LEARNING</p><h2>Credentials & <em>recognition.</em></h2></div><p>Each certificate image and verification link opens the individual credential directly.</p></div><div class="credentials-grid"><div class="credential credential-google"><a class="google-credential-art" href="https://www.coursera.org/account/accomplishments/specialization/YCOF9KMB3G6N" target="_blank" rel="noopener noreferrer" aria-label="View Google Project Management Professional Certificate"><span class="google-credential-g" aria-hidden="true">G</span><span class="google-credential-art-label">GOOGLE CAREER CERTIFICATES</span><strong>Project Management</strong><span>Professional Certificate · 7 courses</span><span class="google-credential-art-action">View official certificate ↗</span></a><div><p>GOOGLE · COURSERA · NOVEMBER 13, 2026</p><h3><a href="https://www.coursera.org/account/accomplishments/specialization/YCOF9KMB3G6N" target="_blank" rel="noopener noreferrer">Google Project Management Professional Certificate</a></h3><span>Completed the seven-course program covering project initiation, planning, execution, Agile delivery, and practical project management.</span><a class="credential-link" href="https://www.coursera.org/account/accomplishments/specialization/YCOF9KMB3G6N" target="_blank" rel="noopener noreferrer">Verify Google Project Management certificate</a></div></div><div class="credential"><a class="credential-image-frame" href="https://credentials.correlation-one.com/1e6b71f8-539b-4866-bb54-752960228c96#acc.mgD43cK1"><img class="credential-image" src="/data-analytics-certificate.png" width="1509" height="1070" loading="lazy" alt="Correlation One Data Analytics certificate for Jason Caniz"></a><div><p>CORRELATION ONE · OCTOBER 15, 2022</p><h3>Data Analytics 3.0 – Honors, Top 10%</h3><span>Honors recognizes meeting the program’s graduation requirements, including attendance, Extended Case performance, project contribution, and participation. Top 10% / Top Team is separate recognition for our team’s capstone presentation.</span><a class="credential-link" href="https://credentials.correlation-one.com/1e6b71f8-539b-4866-bb54-752960228c96#acc.mgD43cK1">Verify Data Analytics certificate</a></div></div><div class="credential"><a class="credential-image-frame" href="https://www.credential.net/96ee2ffd-72a9-470d-9422-3f37c5eee30f?username=jasoncaniz"><img class="credential-image" src="/lean-six-sigma-certificate.png" width="721" height="557" loading="lazy" alt="TELUS Lean Six Sigma Yellow Belt certificate for Jason Caniz"></a><div><p>TELUS · SEPTEMBER 13, 2019</p><h3>Lean Six Sigma Yellow Belt</h3><span>Business process excellence and continuous improvement.</span><a class="credential-link" href="https://www.credential.net/96ee2ffd-72a9-470d-9422-3f37c5eee30f?username=jasoncaniz">Verify Lean Six Sigma certificate</a></div></div></div></div></section>
     <section class="section contact-section" id="contact"><div class="wrap contact-grid"><div><p class="eyebrow dark-eyebrow">05 / LET'S CONNECT</p><h2>Have a challenge<br>worth <em>solving?</em></h2></div><div><p>Have a project in mind? Reach out by email or WhatsApp and tell me what you’re working on.</p>
       <div class="contact-actions">
         <a class="button button-dark contact-email" href="mailto:me@jasoncaniz.com?subject=Portfolio%20Inquiry">Email me <span aria-hidden="true">↗</span></a>
@@ -266,5 +269,5 @@
   </main>
   <footer class="homepage-footer"><div class="wrap footer-inner"><p>Thanks for visiting<span>!</span></p><span class="footer-copyright">© <span id="year">2026</span> Jason Caniz</span><span class="footer-tagline">Business Operations · Data Analytics · Process Engineering</span></div></footer>
   <dialog class="project-viewer-dialog"></dialog>
-<script async src="https://cdn.credly.com/assets/utilities/embed.js"></script></body>
+</body>
 </html>
