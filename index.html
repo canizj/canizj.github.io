@@ -192,6 +192,12 @@
 @media(max-width:1180px){#credentials .credentials-grid.credential-showcase{grid-template-columns:repeat(2,minmax(0,1fr))}#credentials .credentials-grid.credential-showcase>.credential{min-height:590px}#credentials .credentials-grid.credential-showcase>.credential:nth-child(3){grid-column:1/-1;width:calc((100% - 18px)/2);justify-self:center}}
 @media(max-width:720px){#credentials .credentials-grid.credential-showcase{grid-template-columns:1fr;gap:18px}#credentials .credentials-grid.credential-showcase>.credential,#credentials .credentials-grid.credential-showcase>.credential:nth-child(3){grid-column:auto;width:100%;justify-self:stretch;min-height:0;padding:22px 20px 22px}#credentials .credential-showcard .credential-copy h3{min-height:0;font-size:1.45rem}#credentials .credential-showcard .credential-copy .credential-summary{min-height:0;font-size:1rem}#credentials .credential-showcard .credential-copy .credential-date{min-height:0}#credentials .credential-showcard .credential-copy .credential-link{margin-top:18px}#credentials .credential-showcard .watermark-google{font-size:clamp(180px,42vw,300px)}#credentials .credential-showcard .watermark-c1{font-size:180px}#credentials .credential-showcard .panda-watermark{width:80%;left:-18%;top:1%}#credentials .brand-c1-line{font-size:1.25rem}#credentials .brand-amazon{font-size:1.65rem}#credentials .brand-google{font-size:2.15rem}#credentials .brand-telus{font-size:1.75rem}}
 @media(max-width:420px){#credentials .credentials-grid.credential-showcase>.credential{padding:18px 16px 20px}#credentials .brand-c1-line{font-size:1rem}#credentials .brand-amazon{font-size:1.35rem}#credentials .brand-telus{font-size:1.35rem}#credentials .credential-showcard .credential-copy h3{font-size:1.28rem}}
+
+/* Keep sponsor wordmarks legible against the navy card background despite legacy span rules. */
+#credentials .credential-showcard .credential-brands .brand-amazon,
+#credentials .credential-showcard .credential-brands .brand-c1-line,
+#credentials .credential-showcard .credential-brands .brand-telus,
+#credentials .credential-showcard .credential-brands .brand-telus small{color:#fff}
 </style></head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
