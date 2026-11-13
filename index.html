@@ -130,7 +130,13 @@
 #credentials .credential .credential-link{color:#10233c;margin-top:8px}
 #credentials .google-credential-art{max-width:78%;min-height:230px!important;background:rgba(255,255,255,.82)!important;box-shadow:0 4px 15px rgba(0,0,0,.12)}
 @media(max-width:760px){#credentials .credentials-grid{grid-template-columns:1fr;gap:20px}#credentials .credentials-grid>.credential:nth-child(3){grid-column:auto;width:100%}#credentials .credentials-grid>.credential{padding:22px}#credentials .credential:before{font-size:140px}#credentials .credential:nth-child(3):before{font-size:65px}#credentials .credential .credential-image{max-width:90%}}
-</style><style>.hero-portrait-credentials .hero-badge-circle{position:absolute;left:-48px;bottom:-23px;z-index:3;display:flex;flex-direction:column;justify-content:center;align-items:center;width:124px;height:124px;min-height:0;box-sizing:border-box;border-radius:50%;border:4px solid #fff;background:#1b73e8;color:#fff;text-align:center;text-decoration:none;box-shadow:0 0 0 2px #f5b83d,0 6px 20px rgba(0,0,0,.2);filter:none}.hero-badge-circle .hero-badge-google{position:absolute;right:8px;top:5px;font:bold 22px Arial,sans-serif;color:#fff}.hero-badge-circle .hero-badge-title{font:600 12px/1.2 Arial,sans-serif;color:#fff}.hero-badge-circle:hover{transform:translateY(-2px)}@media(max-width:760px){.hero-portrait-credentials .hero-badge-circle{position:relative;left:auto;bottom:auto;margin:-34px auto 8px}}</style></head>
+</style><style>.hero-portrait-credentials .hero-badge-circle{position:absolute;left:-48px;bottom:-23px;z-index:3;display:flex;flex-direction:column;justify-content:center;align-items:center;width:124px;height:124px;min-height:0;box-sizing:border-box;border-radius:50%;border:4px solid #fff;background:#1b73e8;color:#fff;text-align:center;text-decoration:none;box-shadow:0 0 0 2px #f5b83d,0 6px 20px rgba(0,0,0,.2);filter:none}.hero-badge-circle .hero-badge-google{position:absolute;right:8px;top:5px;font:bold 22px Arial,sans-serif;color:#fff}.hero-badge-circle .hero-badge-title{font:600 12px/1.2 Arial,sans-serif;color:#fff}.hero-badge-circle:hover{transform:translateY(-2px)}@media(max-width:760px){.hero-portrait-credentials .hero-badge-circle{position:relative;left:auto;bottom:auto;margin:-34px auto 8px}}</style><style>
+/* Preserve only the original small official Credly badge at portrait bottom left */
+.hero-portrait-credentials .hero-credly-original{position:absolute;left:-30px;bottom:-75px;z-index:4;width:72px;height:78px;min-height:0;overflow:hidden;filter:none;transform:none}
+.hero-credly-original>div{width:150px;height:270px;transform:scale(.47);transform-origin:top left}
+.hero-credly-original iframe{max-width:none!important}
+@media(max-width:760px){.hero-portrait-credentials .hero-credly-original{position:absolute;left:5px;bottom:-55px;margin:0}}
+</style></head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
@@ -152,7 +158,7 @@
           <p class="hero-lead">I lead projects, analyze data, and improve business processes, bringing transferable skills in project management, team leadership, and thoughtful automation to help teams move from information to action.</p>
           <div class="hero-actions"><a class="button button-light" href="#portfolio">Explore projects <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#about">Get to know me</a></div>
         </div>
-        <div class="hero-portrait-credentials"><img class="hero-portrait" src="/jason-portrait.png" alt="Jason Caniz smiling in glasses, a dark shirt, and a tie" width="400" height="400" fetchpriority="high"><a class="hero-credly-badge hero-badge-circle" href="https://www.credly.com/badges/7d35d021-d152-4b24-9950-618f22040298" target="_blank" rel="noopener noreferrer" aria-label="View official Google Project Management badge on Credly"><span class="hero-badge-google" aria-hidden="true">G</span><span class="hero-badge-title">Project<br>Management<br>Certificate</span></a></div>
+        <div class="hero-portrait-credentials"><img class="hero-portrait" src="/jason-portrait.png" alt="Jason Caniz smiling in glasses, a dark shirt, and a tie" width="400" height="400" fetchpriority="high"><div class="hero-credly-badge hero-credly-original" aria-label="Official Google Project Management badge"><div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="7d35d021-d152-4b24-9950-618f22040298" data-share-badge-host="https://www.credly.com"></div></div></div>
       </div>
       <div class="hero-bottom wrap"><span>01 / 04 / FOUR DIMENSIONS OF MY WORK</span><span>SCROLL TO EXPLORE ↓</span></div>
     </section>
@@ -260,5 +266,5 @@
   </main>
   <footer class="homepage-footer"><div class="wrap footer-inner"><p>Thanks for visiting<span>!</span></p><span class="footer-copyright">© <span id="year">2026</span> Jason Caniz</span><span class="footer-tagline">Business Operations · Data Analytics · Process Engineering</span></div></footer>
   <dialog class="project-viewer-dialog"></dialog>
-</body>
+<script async src="https://cdn.credly.com/assets/utilities/embed.js"></script></body>
 </html>
