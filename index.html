@@ -139,7 +139,60 @@
 #credentials .credential>div>h3{min-height:2.6em;line-height:1.3}
 #credentials .credential .credential-link{margin-top:auto;padding-top:12px}
 @media(max-width:760px){.hero-google-badge{width:104px;height:104px;align-self:center;margin-left:0}#credentials .credential>div>p,#credentials .credential>div>h3{min-height:0}}
-</style><style>#credentials .credential>a.google-credential-art{width:100%;max-width:100%;height:auto;min-height:0!important;aspect-ratio:1.41;flex:none;box-sizing:border-box}#credentials .google-credential-art strong{font-size:clamp(1.4rem,2.4vw,2rem)}</style></head>
+</style><style>#credentials .credential>a.google-credential-art{width:100%;max-width:100%;height:auto;min-height:0!important;aspect-ratio:1.41;flex:none;box-sizing:border-box}#credentials .google-credential-art strong{font-size:clamp(1.4rem,2.4vw,2rem)}</style><style id="credential-showcase-v2-css">
+/* Scoped three-card credentials showcase. Original certificates and links are untouched. */
+#credentials.credential-showcase-v2 .wrap{max-width:1480px}
+#credentials .credentials-grid.credential-showcase{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:stretch;margin-top:34px}
+#credentials .credentials-grid.credential-showcase>.credential{grid-column:auto;width:100%;justify-self:stretch;position:relative;isolation:isolate;display:flex;flex-direction:column;gap:0;min-height:615px;overflow:hidden;padding:24px 20px 20px;background:linear-gradient(145deg,#10121b 0%,#131524 55%,#17182b 100%);color:#f4f3f6;border:1px solid #666473;border-radius:20px;box-shadow:none}
+#credentials .credentials-grid.credential-showcase>.credential::before,
+#credentials .credentials-grid.credential-showcase>.credential::after{content:none!important;display:none!important}
+#credentials .credential-showcard .credential-inner{position:relative;z-index:2;display:flex;flex-direction:column;gap:0;width:100%;height:100%;flex:1;min-width:0}
+#credentials .credential-showcard a.credential-image-frame{position:relative;z-index:3;display:block;flex:none;align-self:auto;width:74%!important;max-width:74%!important;aspect-ratio:1.41;min-height:0;background:#fff;overflow:hidden;border-radius:8px;box-shadow:0 3px 16px rgba(0,0,0,.24)}
+#credentials .credential-showcard .credential-image-frame .credential-image{display:block;width:100%;max-width:100%;height:100%;max-height:none;object-fit:contain;object-position:center;background:#fff;box-shadow:none}
+#credentials .credential-google a.credential-image-frame{margin-right:auto;margin-left:0}
+#credentials .credential-c1 a.credential-image-frame{margin-right:auto;margin-left:auto}
+#credentials .credential-telus a.credential-image-frame{margin-left:auto;margin-right:0}
+#credentials .credential-showcard .credential-copy{position:relative;z-index:3;display:flex;flex-direction:column;flex:1;gap:0;margin-top:22px;color:#f4f3f6}
+#credentials .credential-showcard .credential-copy .credential-date{font-size:.72rem;font-weight:650;letter-spacing:.105em;line-height:1.45;min-height:2.9em;margin:0;color:#e1e2ed}
+#credentials .credential-showcard .credential-copy h3{font-family:var(--serif,Georgia,serif);font-size:clamp(1.1rem,1.35vw,1.5rem);line-height:1.25;letter-spacing:-.017em;min-height:3.15em;margin:7px 0 0;color:#fff}
+#credentials .credential-showcard .credential-copy .credential-summary{font-size:clamp(.84rem,1.05vw,1rem);line-height:1.52;margin:9px 0 0;min-height:7.4em;color:#e5e5ea}
+#credentials .credential-showcard .credential-copy .credential-link{position:relative;z-index:5;align-self:flex-start;color:#fff;text-underline-offset:4px;text-decoration:underline;margin-top:auto;padding:14px 0 2px;font-size:clamp(.78rem,.96vw,.94rem);line-height:1.35}
+#credentials .credential-showcard .credential-brands{position:relative;z-index:4;display:flex;align-items:center;min-height:59px;gap:9px;margin-top:20px}
+#credentials .credential-showcard .credential-brands-center{justify-content:center}
+#credentials .credential-showcard .credential-brands-spread{justify-content:space-between}
+#credentials .credential-showcard .watermark{position:absolute;z-index:0;pointer-events:none;user-select:none}
+#credentials .credential-showcard .watermark-google{top:9%;right:-2%;font-family:Arial,sans-serif;font-weight:850;font-size:clamp(220px,24vw,340px);line-height:.95;color:#2c72e1;opacity:.20;transform:translateX(-10%)}
+#credentials .credential-showcard .watermark-amazon{top:4%;left:6%;font-family:Arial,sans-serif;font-size:clamp(45px,5.3vw,87px);font-weight:750;letter-spacing:-.07em;color:#e2e2e5;opacity:.15;line-height:1.2}
+#credentials .credential-showcard .watermark-amazon-smile{position:absolute;display:block;top:70%;left:8%;width:75%;height:22px;border-bottom:5px solid #f7a21a;border-radius:0 0 90% 60%;transform:rotate(5deg)}
+#credentials .credential-showcard .watermark-c1{top:22%;right:0;font-family:Arial,sans-serif;font-weight:850;font-size:clamp(125px,15vw,210px);line-height:1;color:#8c57c5;opacity:.21}
+#credentials .credential-showcard .panda-watermark{position:absolute;z-index:0;pointer-events:none;width:88%;height:auto;left:-24%;top:0;opacity:.22;filter:grayscale(1);transform:rotate(-6deg)}
+#credentials .credential-showcard .brand-google{font-family:Arial,sans-serif;font-size:clamp(1.6rem,2.4vw,2.25rem);font-weight:650;letter-spacing:-.055em;white-space:nowrap;line-height:1}
+#credentials .brand-google span:nth-child(1),#credentials .brand-google span:nth-child(4){color:#4285f4}
+#credentials .brand-google span:nth-child(2),#credentials .brand-google span:nth-child(6){color:#ea4335}
+#credentials .brand-google span:nth-child(3){color:#fbbc05}
+#credentials .brand-google span:nth-child(5){color:#34a853}
+#credentials .brand-amazon{position:relative;display:inline-flex;flex-direction:column;align-items:center;color:#fff;font:700 clamp(1.1rem,1.8vw,1.8rem) Arial,sans-serif;letter-spacing:-.065em;white-space:nowrap;line-height:1}
+#credentials .brand-amazon svg{width:89%;height:15px;margin-top:-1px}
+#credentials .brand-c1{display:inline-flex;flex-direction:column;align-items:flex-end;min-width:0;white-space:nowrap}
+#credentials .brand-c1-line{display:inline-flex;align-items:center;color:#fff;font-family:Georgia,serif;font-size:clamp(.8rem,1.4vw,1.37rem);letter-spacing:-.06em;white-space:nowrap;line-height:1}
+#credentials .brand-c1-dots{display:inline-grid;grid-template-columns:repeat(2,3.4px);grid-template-rows:repeat(2,3.4px);column-gap:1px;row-gap:1px;margin:0 3px;transform:translateY(-1px)}
+#credentials .brand-c1-dots i{width:3.4px;height:3.4px;background:#fff;border-radius:50%;display:block}
+#credentials .brand-c1-dots i:nth-child(1){grid-column:1/-1;justify-self:center}
+#credentials .brand-c1-stripes{width:100%;display:flex;align-items:center;gap:3px;justify-content:flex-end;margin-top:7px}
+#credentials .brand-c1-stripes i{height:3px;display:block;border-radius:3px}
+#credentials .brand-c1-stripes i:nth-child(1){background:#8c43d4;width:15%}
+#credentials .brand-c1-stripes i:nth-child(2){background:#bf79fa;width:16%}
+#credentials .brand-c1-stripes i:nth-child(3){background:#53cfcb;width:29%}
+#credentials .brand-c1-stripes i:nth-child(4){background:#1a7cda;width:34%}
+#credentials .brand-telus{display:inline-flex;align-items:center;gap:9px;font-family:Arial,sans-serif;font-weight:750;font-size:clamp(1.15rem,2vw,1.9rem);letter-spacing:.11em;white-space:nowrap;color:#fff;line-height:1}
+#credentials .brand-telus small{font-weight:400;font-size:.7em;letter-spacing:-.03em}
+#credentials .telus-swoosh{position:relative;display:inline-block;width:38px;height:33px;transform:skew(-13deg)}
+#credentials .telus-swoosh i{display:block;position:absolute;left:1px;top:13px;width:35px;height:6px;border-radius:60%;background:#62d527;transform:rotate(-18deg)}
+#credentials .telus-swoosh b{display:block;position:absolute;left:15px;top:1px;width:8px;height:31px;border:3px solid #8d43e2;border-radius:60%;transform:rotate(34deg)}
+@media(max-width:1180px){#credentials .credentials-grid.credential-showcase{grid-template-columns:repeat(2,minmax(0,1fr))}#credentials .credentials-grid.credential-showcase>.credential{min-height:590px}#credentials .credentials-grid.credential-showcase>.credential:nth-child(3){grid-column:1/-1;width:calc((100% - 18px)/2);justify-self:center}}
+@media(max-width:720px){#credentials .credentials-grid.credential-showcase{grid-template-columns:1fr;gap:18px}#credentials .credentials-grid.credential-showcase>.credential,#credentials .credentials-grid.credential-showcase>.credential:nth-child(3){grid-column:auto;width:100%;justify-self:stretch;min-height:0;padding:22px 20px 22px}#credentials .credential-showcard .credential-copy h3{min-height:0;font-size:1.45rem}#credentials .credential-showcard .credential-copy .credential-summary{min-height:0;font-size:1rem}#credentials .credential-showcard .credential-copy .credential-date{min-height:0}#credentials .credential-showcard .credential-copy .credential-link{margin-top:18px}#credentials .credential-showcard .watermark-google{font-size:clamp(180px,42vw,300px)}#credentials .credential-showcard .watermark-c1{font-size:180px}#credentials .credential-showcard .panda-watermark{width:80%;left:-18%;top:1%}#credentials .brand-c1-line{font-size:1.25rem}#credentials .brand-amazon{font-size:1.65rem}#credentials .brand-google{font-size:2.15rem}#credentials .brand-telus{font-size:1.75rem}}
+@media(max-width:420px){#credentials .credentials-grid.credential-showcase>.credential{padding:18px 16px 20px}#credentials .brand-c1-line{font-size:1rem}#credentials .brand-amazon{font-size:1.35rem}#credentials .brand-telus{font-size:1.35rem}#credentials .credential-showcard .credential-copy h3{font-size:1.28rem}}
+</style></head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
@@ -259,7 +312,55 @@
         </div>
       </div>
     </section>
-    <section class="section credentials-section" id="credentials"><div class="wrap"><div class="section-top"><div><p class="eyebrow">04 / CONTINUOUS LEARNING</p><h2>Credentials & <em>recognition.</em></h2></div><p>Each certificate image and verification link opens the individual credential directly.</p></div><div class="credentials-grid"><div class="credential credential-google"><a class="credential-image-frame credential-image-frame-google" style="width:74% !important;max-width:74% !important;align-self:flex-start" href="https://www.coursera.org/account/accomplishments/specialization/YCOF9KMB3G6N" target="_blank" rel="noopener noreferrer" aria-label="View Google Project Management Professional Certificate"><img class="credential-image" src="/google-project-management-certificate.jpg" width="1772" height="928" loading="lazy" alt="Google Project Management Professional Certificate awarded to Jason Caniz, November 13, 2026"></a><div><p>GOOGLE · COURSERA · NOVEMBER 13, 2026</p><h3><a href="https://www.coursera.org/account/accomplishments/specialization/YCOF9KMB3G6N" target="_blank" rel="noopener noreferrer">Google Project Management Professional Certificate</a></h3><span>Completed the seven-course program covering project initiation, planning, execution, Agile delivery, and practical project management.</span><a class="credential-link" href="https://www.coursera.org/account/accomplishments/specialization/YCOF9KMB3G6N" target="_blank" rel="noopener noreferrer">Verify Google Project Management certificate</a></div></div><div class="credential"><a class="credential-image-frame" style="width:74% !important;max-width:74% !important;align-self:flex-start" href="https://credentials.correlation-one.com/1e6b71f8-539b-4866-bb54-752960228c96#acc.mgD43cK1"><img class="credential-image" src="/data-analytics-certificate.png" width="1509" height="1070" loading="lazy" alt="Correlation One Data Analytics certificate for Jason Caniz"></a><div><p>CORRELATION ONE · OCTOBER 15, 2022</p><h3>Data Analytics 3.0 – Honors, Top 10%</h3><span>Honors recognizes meeting the program’s graduation requirements, including attendance, Extended Case performance, project contribution, and participation. Top 10% / Top Team is separate recognition for our team’s capstone presentation.</span><a class="credential-link" href="https://credentials.correlation-one.com/1e6b71f8-539b-4866-bb54-752960228c96#acc.mgD43cK1">Verify Data Analytics certificate</a></div></div><div class="credential"><a class="credential-image-frame" style="width:74% !important;max-width:74% !important;align-self:flex-start" href="https://www.credential.net/96ee2ffd-72a9-470d-9422-3f37c5eee30f?username=jasoncaniz"><img class="credential-image" src="/lean-six-sigma-certificate.png" width="721" height="557" loading="lazy" alt="TELUS Lean Six Sigma Yellow Belt certificate for Jason Caniz"></a><div><p>TELUS DIGITAL · SEPTEMBER 13, 2019</p><h3>Lean Six Sigma Yellow Belt</h3><span>Business process excellence and continuous improvement.</span><a class="credential-link" href="https://www.credential.net/96ee2ffd-72a9-470d-9422-3f37c5eee30f?username=jasoncaniz">Verify Lean Six Sigma certificate</a></div></div></div></div></section>
+    <section class="section credentials-section credential-showcase-v2" id="credentials">
+<div class="wrap">
+  <div class="section-top"><div><p class="eyebrow">04 / CONTINUOUS LEARNING</p><h2>Credentials &amp; <em>recognition.</em></h2></div><p>Select a certificate image or its verification link to view the original credential.</p></div>
+  <div class="credentials-grid credential-showcase">
+    <article class="credential credential-google credential-showcard">
+      <span class="watermark watermark-google" aria-hidden="true">G</span>
+      <div class="credential-inner">
+        <a class="credential-image-frame credential-image-frame-google" href="https://www.coursera.org/account/accomplishments/specialization/YCOF9KMB3G6N" target="_blank" rel="noopener noreferrer" aria-label="View the original Google Project Management Professional Certificate"><img class="credential-image" src="/google-project-management-certificate.jpg" width="1772" height="928" loading="lazy" alt="Google Project Management Professional Certificate issued to Jason Caniz on November 13, 2026"></a>
+        <div class="credential-copy"><p class="credential-date">GOOGLE · NOVEMBER 13, 2026</p><h3>Google Project Management Professional Certificate</h3><p class="credential-summary">Seven-course training in project initiation, planning, execution, Agile delivery, and stakeholder management.</p><a class="credential-link" href="https://www.coursera.org/account/accomplishments/specialization/YCOF9KMB3G6N" target="_blank" rel="noopener noreferrer">Verify Project Management certificate</a></div>
+        <div class="credential-brands credential-brands-center"><span class="brand-google" aria-label="Google"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></span></div>
+      </div>
+    </article>
+    <article class="credential credential-c1 credential-showcard">
+      <span class="watermark watermark-amazon" aria-hidden="true">amazon<span class="watermark-amazon-smile"></span></span>
+      <span class="watermark watermark-c1" aria-hidden="true">C1</span>
+      <div class="credential-inner">
+        <a class="credential-image-frame" href="https://credentials.correlation-one.com/1e6b71f8-539b-4866-bb54-752960228c96#acc.mgD43cK1" target="_blank" rel="noopener noreferrer" aria-label="View the original Correlation One Data Analytics 3.0 certificate"><img class="credential-image" src="/data-analytics-certificate.png" width="1509" height="1070" loading="lazy" alt="Correlation One Data Analytics 3.0 Honors certificate issued to Jason Caniz"></a>
+        <div class="credential-copy"><p class="credential-date">CORRELATION ONE · OCTOBER 15, 2022</p><h3>Data Analytics 3.0 – Honors, Top 10%</h3><p class="credential-summary">Honors recognizes attendance, Extended Case performance, and teamwork. Top 10% / Top Team separately recognizes our team's capstone presentation.</p><a class="credential-link" href="https://credentials.correlation-one.com/1e6b71f8-539b-4866-bb54-752960228c96#acc.mgD43cK1" target="_blank" rel="noopener noreferrer">Verify Data Analytics certificate</a></div>
+        <div class="credential-brands credential-brands-spread"><span class="brand-amazon" aria-label="Amazon"><span>amazon</span><svg viewBox="0 0 118 24" focusable="false" aria-hidden="true"><path d="M12 4Q62 28 108 5" fill="none" stroke="#ff9900" stroke-width="5" stroke-linecap="round"/><path d="M95 3l15 1-8 12" fill="none" stroke="#ff9900" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-c1" aria-label="Correlation One"><span class="brand-c1-line">correlation<span class="brand-c1-dots" aria-hidden="true"><i></i><i></i><i></i></span>one</span><span class="brand-c1-stripes" aria-hidden="true"><i></i><i></i><i></i><i></i></span></span></div>
+      </div>
+    </article>
+    <article class="credential credential-telus credential-showcard">
+      <svg class="panda-watermark" viewBox="0 0 440 390" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="pwfur"><stop offset="0" stop-color="#fff"/><stop offset=".73" stop-color="#e4e4e4"/><stop offset="1" stop-color="#bbb"/></radialGradient>
+  <radialGradient id="pwblack"><stop offset="0" stop-color="#464646"/><stop offset="1" stop-color="#080808"/></radialGradient>
+</defs>
+<ellipse cx="97" cy="100" rx="46" ry="57" transform="rotate(-28 97 100)" fill="url(#pwblack)"/>
+<ellipse cx="321" cy="76" rx="50" ry="56" transform="rotate(21 321 76)" fill="url(#pwblack)"/>
+<ellipse cx="222" cy="202" rx="165" ry="147" fill="url(#pwfur)" />
+<ellipse cx="131" cy="184" rx="49" ry="62" transform="rotate(28 131 184)" fill="url(#pwblack)"/>
+<ellipse cx="286" cy="183" rx="48" ry="66" transform="rotate(-25 286 183)" fill="url(#pwblack)"/>
+<ellipse cx="146" cy="177" rx="11" ry="14" transform="rotate(20 146 177)" fill="#fafafa"/>
+<ellipse cx="276" cy="176" rx="11" ry="14" transform="rotate(-15 276 176)" fill="#fafafa"/>
+<circle cx="147" cy="178" r="5.3" fill="#151515"/><circle cx="275" cy="176" r="5.3" fill="#151515"/>
+<ellipse cx="214" cy="252" rx="31" ry="20" fill="url(#pwblack)" transform="rotate(-7 214 252)"/>
+<path d="M214 264q-23 35-56 2 M214 264q23 38 57 1" fill="none" stroke="#262626" stroke-width="5" stroke-linecap="round"/>
+<path d="M336 234c47-34 91-25 98 10 8 36-28 62-65 62-36 0-68-17-72-39" fill="url(#pwblack)"/>
+<ellipse cx="365" cy="258" rx="34" ry="26" fill="#151515" transform="rotate(-20 365 258)"/>
+</svg>
+      <div class="credential-inner">
+        <a class="credential-image-frame" href="https://www.credential.net/96ee2ffd-72a9-470d-9422-3f37c5eee30f?username=jasoncaniz" target="_blank" rel="noopener noreferrer" aria-label="View the original TELUS Lean Six Sigma Yellow Belt certificate"><img class="credential-image" src="/lean-six-sigma-certificate.png" width="721" height="557" loading="lazy" alt="Original TELUS Digital Lean Six Sigma Yellow Belt certificate issued to Jason Caniz on September 13, 2019"></a>
+        <div class="credential-copy"><p class="credential-date">TELUS DIGITAL · SEPTEMBER 13, 2019</p><h3>Lean Six Sigma Yellow Belt</h3><p class="credential-summary">Business process excellence and continuous improvement.</p><a class="credential-link" href="https://www.credential.net/96ee2ffd-72a9-470d-9422-3f37c5eee30f?username=jasoncaniz" target="_blank" rel="noopener noreferrer">Verify Lean Six Sigma certificate</a></div>
+        <div class="credential-brands credential-brands-center"><span class="brand-telus" aria-label="TELUS Digital"><span class="telus-swoosh" aria-hidden="true"><i></i><b></b></span><span>TELUS <small>Digital</small></span></span></div>
+      </div>
+    </article>
+  </div>
+</div>
+</section>
     <section class="section contact-section" id="contact"><div class="wrap contact-grid"><div><p class="eyebrow dark-eyebrow">05 / LET'S CONNECT</p><h2>Have a challenge<br>worth <em>solving?</em></h2></div><div><p>Have a project in mind? Reach out by email or WhatsApp and tell me what you’re working on.</p>
       <div class="contact-actions">
         <a class="button button-dark contact-email" href="mailto:me@jasoncaniz.com?subject=Portfolio%20Inquiry">Email me <span aria-hidden="true">↗</span></a>
