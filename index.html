@@ -103,7 +103,14 @@
 #contact .contact-grid>div:first-child{text-align:center}
 #contact .contact-grid>div:first-child h2{margin-inline:auto}
 @media(max-width:650px){#portfolio .section-top,#credentials .section-top{gap:10px}}
-</style></head>
+</style><style>
+/* Official Credly badge alongside the hero portrait, without changing the hero copy. */
+.hero-portrait-credentials{position:relative;display:flex;justify-content:center;align-items:center;min-width:0}
+.hero-portrait-credentials .hero-portrait{display:block;max-width:100%;height:auto}
+.hero-credly-badge{position:absolute;left:-85px;bottom:-120px;z-index:2;width:150px;min-height:270px;filter:drop-shadow(0 5px 12px rgba(0,0,0,.14))}
+@media(max-width:1050px){.hero-credly-badge{left:-35px;bottom:-135px}}
+@media(max-width:760px){.hero-portrait-credentials{flex-direction:column}.hero-credly-badge{position:static;margin:12px auto 0;filter:none}}
+</style><script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script></head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
@@ -125,7 +132,7 @@
           <p class="hero-lead">I lead projects, analyze data, and improve business processes, bringing transferable skills in project management, team leadership, and thoughtful automation to help teams move from information to action.</p>
           <div class="hero-actions"><a class="button button-light" href="#portfolio">Explore projects <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#about">Get to know me</a></div>
         </div>
-        <img class="hero-portrait" src="/jason-portrait.png" alt="Jason Caniz smiling in glasses, a dark shirt, and a tie" width="400" height="400" fetchpriority="high">
+        <div class="hero-portrait-credentials"><img class="hero-portrait" src="/jason-portrait.png" alt="Jason Caniz smiling in glasses, a dark shirt, and a tie" width="400" height="400" fetchpriority="high"><div class="hero-credly-badge" aria-label="Verified Google Project Management credential"><div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="7d35d021-d152-4b24-9950-618f22040298" data-share-badge-host="https://www.credly.com"></div></div></div>
       </div>
       <div class="hero-bottom wrap"><span>01 / 04 / FOUR DIMENSIONS OF MY WORK</span><span>SCROLL TO EXPLORE ↓</span></div>
     </section>
