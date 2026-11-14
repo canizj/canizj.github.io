@@ -144,10 +144,12 @@
 #credentials .wrap{width:min(1600px,calc(100% - 48px));max-width:none;padding-inline:0}
 #credentials .section-top h2,#credentials .section-top h2 em,#credentials .section-top p{color:#10233c}
 #credentials .credentials-grid.approved-credential-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-#credentials .approved-credential-card{display:block;position:relative;min-width:0}
+#credentials .approved-credential-card{display:block;position:relative;min-width:0;border-radius:4.35% / 3.86%;overflow:hidden;background:#292b31}
 #credentials .approved-credential-card img{display:block;width:100%;height:auto}
-#credentials .approved-credential-card:focus-visible{outline:3px solid #164777;outline-offset:4px}
-#credentials .credential-description{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+#credentials .credential-copy{position:absolute;inset:0;width:100%;height:100%;fill:#f5f7fd;font-family:Calibri,Arial,sans-serif;pointer-events:none}
+#credentials .credential-copy text{pointer-events:auto;user-select:text;cursor:text}
+#credentials .credential-target{position:absolute;display:block}
+#credentials .credential-target:focus-visible{outline:3px solid #52c7ef;outline-offset:2px}
 @media(max-width:900px){
   #credentials .wrap{width:min(600px,calc(100% - 32px))}
   #credentials .credentials-grid.approved-credential-grid{grid-template-columns:1fr}
@@ -272,20 +274,49 @@
         </div>
       </div>
     </section>
-    <section class="section credentials-section" id="credentials"><div class="wrap"><div class="section-top"><div><p class="eyebrow">04 / CONTINUOUS LEARNING</p><h2>Credentials & <em>recognition.</em></h2></div><p>Each certificate image and verification link opens the individual credential directly.</p></div>
+    <section class="section credentials-section" id="credentials"><div class="wrap"><div class="section-top"><div><p class="eyebrow">04 / CONTINUOUS LEARNING</p><h2>Credentials & <em>recognition.</em></h2></div><p>Open a certificate or its verification icon to view the individual credential.</p></div>
       <div class="credentials-grid approved-credential-grid">
-        <a class="approved-credential-card" href="https://www.coursera.org/account/accomplishments/specialization/YCOF9KMB3G6N" target="_blank" rel="noopener noreferrer" aria-label="Verify Google Project Management Professional Certificate" aria-describedby="credential-description-1">
-          <img src="/assets/credentials/google-project-management.png" width="1470" height="1660" loading="lazy" decoding="async" alt="">
-          <span class="credential-description" id="credential-description-1">Google Project Management Professional Certificate. Issued on November 13, 2026 by Google. Seven hands-on courses cover project initiation, planning and delivery using traditional and Agile methods, with practice on real-world scenarios.</span>
-        </a>
-        <a class="approved-credential-card" href="https://credentials.correlation-one.com/1e6b71f8-539b-4866-bb54-752960228c96#acc.mgD43cK1" target="_blank" rel="noopener noreferrer" aria-label="Verify Amazon Data Analytics Certificate" aria-describedby="credential-description-2">
-          <img src="/assets/credentials/amazon-data-analytics.png" width="1470" height="1660" loading="lazy" decoding="async" alt="">
-          <span class="credential-description" id="credential-description-2">Amazon Data Analytics Certificate. Issued on October 15, 2022 by Correlation One. Honors recognizes exceptional attendance, extended case performance and teamwork. Top 10% recognizes the team’s capstone presentation.</span>
-        </a>
-        <a class="approved-credential-card" href="https://www.credential.net/96ee2ffd-72a9-470d-9422-3f37c5eee30f?username=jasoncaniz" target="_blank" rel="noopener noreferrer" aria-label="Verify TELUS Digital Lean Six Sigma Yellow Belt" aria-describedby="credential-description-3">
-          <img src="/assets/credentials/telus-lean-six-sigma.png" width="1470" height="1660" loading="lazy" decoding="async" alt="">
-          <span class="credential-description" id="credential-description-3">TELUS Digital Lean Six Sigma Yellow Belt. Issued on September 13, 2019 by TELUS Digital. Applied Lean Six Sigma tools in a Yellow Belt project. Yellow Belts help teams collect data, identify process issues and support improvement.</span>
-        </a>
+        <article class="approved-credential-card">
+          <img src="/assets/credentials/google-project-management-art.png" width="1470" height="1660" loading="lazy" decoding="async" alt="">
+          <svg class="credential-copy" viewBox="0 0 1470 1660" xmlns="http://www.w3.org/2000/svg">
+            <text x="96" y="906" font-size="38" font-weight="400" textLength="626" lengthAdjust="spacingAndGlyphs">Issued on November 13, 2026 by Google</text>
+            <text x="68" y="1008" font-size="66" font-weight="700" textLength="784" lengthAdjust="spacingAndGlyphs">Google Project Management</text>
+            <text x="68" y="1086" font-size="66" font-weight="700" textLength="633" lengthAdjust="spacingAndGlyphs">Professional Certificate</text>
+            <text x="68" y="1179" font-size="37" font-weight="400" textLength="714" lengthAdjust="spacingAndGlyphs">Seven hands-on courses cover project initiation,</text>
+            <text x="68" y="1226" font-size="37" font-weight="400" textLength="709" lengthAdjust="spacingAndGlyphs">planning and delivery using traditional and Agile</text>
+            <text x="68" y="1273" font-size="37" font-weight="400" textLength="708" lengthAdjust="spacingAndGlyphs">methods, with practice on real-world scenarios.</text>
+            <text x="152" y="1528" font-size="42" font-weight="700" textLength="307" lengthAdjust="spacingAndGlyphs">Verify Credential:</text>
+          </svg>
+          <a class="credential-target" href="https://www.coursera.org/account/accomplishments/specialization/YCOF9KMB3G6N" target="_blank" rel="noopener noreferrer" aria-label="Open certificate for Google Project Management Professional Certificate" style="left:4.625850%;top:6.024096%;width:61.224490%;height:41.927711%"></a>
+          <a class="credential-target" href="https://www.coursera.org/account/accomplishments/specialization/YCOF9KMB3G6N" target="_blank" rel="noopener noreferrer" aria-label="Verify credential for Google Project Management Professional Certificate" style="left:32.721088%;top:89.457831%;width:4.421769%;height:3.915663%"></a>
+        </article>
+        <article class="approved-credential-card">
+          <img src="/assets/credentials/amazon-data-analytics-art.png" width="1470" height="1660" loading="lazy" decoding="async" alt="">
+          <svg class="credential-copy" viewBox="0 0 1470 1660" xmlns="http://www.w3.org/2000/svg">
+            <text x="372" y="906" font-size="38" font-weight="400" textLength="726" lengthAdjust="spacingAndGlyphs">Issued on October 15, 2022 by Correlation One</text>
+            <text x="419" y="1008" font-size="66" font-weight="700" textLength="632" lengthAdjust="spacingAndGlyphs">Amazon Data Analytics</text>
+            <text x="414" y="1179" font-size="37" font-weight="400" textLength="641" lengthAdjust="spacingAndGlyphs">Honors recognizes exceptional attendance,</text>
+            <text x="409" y="1226" font-size="37" font-weight="400" textLength="651" lengthAdjust="spacingAndGlyphs">extended case performance and teamwork.</text>
+            <text x="329" y="1273" font-size="37" font-weight="400" textLength="812" lengthAdjust="spacingAndGlyphs">Top 10% recognizes the team’s capstone presentation.</text>
+            <text x="580" y="1528" font-size="42" font-weight="700" textLength="307" lengthAdjust="spacingAndGlyphs">Verify Credential:</text>
+          </svg>
+          <a class="credential-target" href="https://credentials.correlation-one.com/1e6b71f8-539b-4866-bb54-752960228c96#acc.mgD43cK1" target="_blank" rel="noopener noreferrer" aria-label="Open certificate for Amazon Data Analytics Certificate" style="left:40.340136%;top:62.650602%;width:19.319728%;height:2.831325%"></a>
+          <a class="credential-target" href="https://credentials.correlation-one.com/1e6b71f8-539b-4866-bb54-752960228c96#acc.mgD43cK1" target="_blank" rel="noopener noreferrer" aria-label="Verify credential for Amazon Data Analytics Certificate" style="left:61.836735%;top:89.879518%;width:4.421769%;height:3.012048%"></a>
+        </article>
+        <article class="approved-credential-card">
+          <img src="/assets/credentials/telus-lean-six-sigma-art.png" width="1470" height="1660" loading="lazy" decoding="async" alt="">
+          <svg class="credential-copy" viewBox="0 0 1470 1660" xmlns="http://www.w3.org/2000/svg">
+            <text x="646" y="906" font-size="38" font-weight="400" textLength="726" lengthAdjust="spacingAndGlyphs">Issued on September 13, 2019 by TELUS Digital</text>
+            <text x="999" y="1007" font-size="66" font-weight="700" textLength="401" lengthAdjust="spacingAndGlyphs">Lean Six Sigma</text>
+            <text x="1093" y="1085" font-size="66" font-weight="700" textLength="307" lengthAdjust="spacingAndGlyphs">Yellow Belt</text>
+            <text x="747" y="1179" font-size="37" font-weight="400" textLength="653" lengthAdjust="spacingAndGlyphs">Applied Lean Six Sigma tools in a Yellow Belt</text>
+            <text x="736" y="1226" font-size="37" font-weight="400" textLength="664" lengthAdjust="spacingAndGlyphs">project. Yellow Belts help teams collect data,</text>
+            <text x="662" y="1273" font-size="37" font-weight="400" textLength="738" lengthAdjust="spacingAndGlyphs">identify process issues and support improvement.</text>
+            <text x="1006" y="1528" font-size="42" font-weight="700" textLength="307" lengthAdjust="spacingAndGlyphs">Verify Credential:</text>
+          </svg>
+          <a class="credential-target" href="https://www.credential.net/96ee2ffd-72a9-470d-9422-3f37c5eee30f?username=jasoncaniz" target="_blank" rel="noopener noreferrer" aria-label="Open certificate for TELUS Digital Lean Six Sigma Yellow Belt" style="left:34.013605%;top:6.024096%;width:61.224490%;height:40.662651%"></a>
+          <a class="credential-target" href="https://www.credential.net/96ee2ffd-72a9-470d-9422-3f37c5eee30f?username=jasoncaniz" target="_blank" rel="noopener noreferrer" aria-label="Verify credential for TELUS Digital Lean Six Sigma Yellow Belt" style="left:90.816327%;top:89.879518%;width:4.421769%;height:3.012048%"></a>
+        </article>
       </div>
     </div></section>
     <section class="section contact-section" id="contact"><div class="wrap contact-grid"><div><p class="eyebrow dark-eyebrow">05 / LET'S CONNECT</p><h2>Have a challenge<br>worth <em>solving?</em></h2></div><div><p>Have a project in mind? Reach out by email or WhatsApp and tell me what you’re working on.</p>
